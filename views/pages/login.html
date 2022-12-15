@@ -27,28 +27,31 @@
       sizes="96x96"
     />
 
-    <title>Market Place</title>
+    <title>Login Market Place</title>
   </head>
   <body>
-    <header>
-      <h1 class="logo">
-        <img src="/imgs/posible_logo/logo.png" alt="" />
-      </h1>
-      <div class="search">
-        <p>
+    <section class="login">
+      <article>
+        <h3>Login</h3>
+        <form action="">
           <input
-            type="search"
-            name="busqueda"
-            placeholder="Buscar productos, marcas"
+            placeholder="user name"
+            type="text"
+            required
+            maxlength="16"
+            id="user_name"
+            name="user_name"
           />
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </p>
-      </div>
-      <div class="user">
-        <p><i class="fa-solid fa-circle-user"></i></p>
-      </div>
-    </header>
-
-    <h1>Market Place</h1>
+          <input
+            placeholder="password"
+            type="password"
+            required
+            maxlength="16"
+            id="password"
+            name="password"
+          />
+        </form>
+      </article>
+    </section>
   </body>
 </html>

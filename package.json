@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "node-sass": "^8.0.0",
     "nodemon": "^1.19.4"
   }
 }

@@ -8,6 +8,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   __dirname + res.sendFile(path.resolve(__dirname, "views/index.html"));
 });
+app.get("/login", (req, res) => {
+  __dirname + res.sendFile(path.resolve(__dirname, "views/pages/login.html"));
+});
 
 app.listen(3000, () => {
   console.log("Server prendido");

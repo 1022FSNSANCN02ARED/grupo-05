@@ -2,8 +2,9 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .header{
+  display: block;
   width: 100%;
-  min-height: 100vh;
+  height: 40vh;
   color: #fff;
   background: linear-gradient(45deg, #602dac, #3723b8, #2973da, #030724);
   background-size: 400% 400%;
@@ -66,3 +67,16 @@ body {
         margin-bottom: 1.5rem; }
       .login .login__container .login__form button i {
         font-size: 1em; }
+
+nav{
+  display: inline-block;
+  color:#030724;
+}        
+.nav-1 .nav-2{
+  display: inline-block;
+  font-size: 18px;
+  color: #030724;
+  
+
+}
+

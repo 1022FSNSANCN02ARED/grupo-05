@@ -1,13 +1,15 @@
 body {
   font-family: "Poppins", sans-serif;
+}
+.header{
   width: 100%;
   min-height: 100vh;
   color: #fff;
   background: linear-gradient(45deg, #602dac, #3723b8, #2973da, #030724);
   background-size: 400% 400%;
   position: relative;
-  animation: cambiar 10s ease-in-out infinite; }
-
+  animation: cambiar 10s ease-in-out infinite;
+}
 @keyframes cambiar {
   0% {
     background-position: 0 50%; }

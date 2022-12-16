@@ -71,12 +71,17 @@ body {
 nav{
   display: inline-block;
   color:#030724;
+  padding: 5px;
 }        
 .nav-1 .nav-2{
-  display: inline-block;
+  
   font-size: 18px;
   color: #030724;
   
 
 }
 
+nav a{
+  text-decoration: none;
+  color: antiquewhite;
+}

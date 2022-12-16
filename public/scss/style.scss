@@ -2,8 +2,9 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .header{
+ 
   width: 100%;
-  min-height: 100vh;
+  height: 40vh;
   color: #fff;
   background: linear-gradient(45deg, #602dac, #3723b8, #2973da, #030724);
   background-size: 400% 400%;
@@ -45,3 +46,4 @@ body {
   font-size: 30px;
 }
 @import "login.scss";
+

@@ -38,4 +38,29 @@ body {
   font-size: 30px; }
 
 .login {
-  border: 2px solid red; }
+  border: 2px solid red;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .login .login__container {
+    border: 2px solid red;
+    background-color: #110042;
+    border-radius: 6px;
+    text-align: center; }
+    .login .login__container .login__title {
+      color: #0fd3ff;
+      padding: 1rem;
+      font-size: 1.5em; }
+    .login .login__container .login__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.5rem; }
+      .login .login__container .login__form #password {
+        margin-bottom: 1.5rem; }
+      .login .login__container .login__form button i {
+        font-size: 1em; }

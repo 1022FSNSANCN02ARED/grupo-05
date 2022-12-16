@@ -31,16 +31,16 @@
   </head>
   <body>
     <section class="login">
-      <article>
-        <h3>Login</h3>
-        <form action="">
+      <div class="login__container">
+        <h3 class="login__title">Login</h3>
+        <form action="" class="login__form">
           <input
             placeholder="user name"
             type="text"
             required
             maxlength="16"
             id="user_name"
-            name="user_name"
+            name="user__name"
           />
           <input
             placeholder="password"
@@ -50,8 +50,14 @@
             id="password"
             name="password"
           />
+          <button class="login__google">
+            <i class="fa-brands fa-google"></i> Ingresa con Google
+          </button>
+          <button class="login__apple">
+            <i class="fa-brands fa-apple"></i> Ingresa con apple
+          </button>
         </form>
-      </article>
+      </div>
     </section>
   </body>
 </html>

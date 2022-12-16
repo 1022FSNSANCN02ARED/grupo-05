@@ -1,0 +1,39 @@
+.login {
+  border: 2px solid red;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login__container {
+    border: 2px solid red;
+    background-color: #110042;
+    border-radius: 6px;
+    text-align: center;
+    .login__title {
+      color: #0fd3ff;
+      padding: 1rem;
+      font-size: 1.5em;
+    }
+
+    .login__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.5rem;
+
+      #password {
+        margin-bottom: 1.5rem;
+      }
+
+      button {
+        i {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

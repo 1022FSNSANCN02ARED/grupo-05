@@ -1,8 +1,8 @@
+@import "style_root.scss";
 body {
   font-family: "Poppins", sans-serif;
 }
-.header{
- 
+.header {
   width: 100%;
   height: 40vh;
   color: #fff;
@@ -46,4 +46,3 @@ body {
   font-size: 30px;
 }
 @import "login.scss";
-

@@ -1,3 +1,5 @@
+@import "style_root.scss";
+
 .login {
   border: 2px solid red;
   width: 100vw;
@@ -8,11 +10,11 @@
 
   .login__container {
     border: 2px solid red;
-    background-color: #110042;
+    background-color: var($fondo_obscuro);
     border-radius: 6px;
     text-align: center;
     .login__title {
-      color: #0fd3ff;
+      color: var($titulos);
       padding: 1rem;
       font-size: 1.5em;
     }

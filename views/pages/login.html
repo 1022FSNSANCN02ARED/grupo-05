@@ -29,7 +29,7 @@
 
     <title>Login Market Place</title>
   </head>
-  <body>
+  <body class="bg_animado">
     <section class="login">
       <div class="login__container">
         <h3 class="login__title">Login</h3>
@@ -42,6 +42,11 @@
             id="user_name"
             name="user__name"
           />
+          <div class="show_password">
+            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-eye-slash"></i>
+            <p>Mostrar contraseña</p>
+          </div>
           <input
             placeholder="password"
             type="password"
@@ -50,6 +55,11 @@
             id="password"
             name="password"
           />
+          <a href="#" class="login__a">¿Olvidaste tu contraseña? </a>
+
+          <button id="login__button">Ingresar</button>
+          <p>o</p>
+
           <button class="login__google">
             <i class="fa-brands fa-google"></i> Ingresa con Google
           </button>

@@ -20,24 +20,113 @@ body {
 
 .logo {
   margin: 5px;
-  padding: 5px; }
+  margin-left: 45px;
+ 
+  padding: 5px; 
+}
 
 .logo img {
   width: 80px;
   height: 45px; }
 
-.search {
-  margin-top: -60px;
-  margin-left: 100px; }
+.font-xl {
+    font-size: 18px;
+}
+.title {
+    font-size: 24px;
+}
+.bold {
+  font-weight: bold;
+}
+ 
+.w-50{
+  width: 50%;
+} 
+.vw-90 {
+  width: 90vw;
+}
 
-.search input {
-  width: 250px; }
+.w-100 {
+  width: 100%;
+}
+.b-1 {
+  border-style: solid;
+}
+.bt-1 {
+  border-style: solid;
+  border-width: 1px;
+}
 
+.b-none {
+  border: none;
+}
+.bg-white {
+  background-color: white;
+}  
+.radius-1 {
+  border-radius: 5px;
+}
+.p-1 {
+  padding: 8px;
+}
+.p-2 {
+  padding: 20px;
+}
+.py-1 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.color-white {
+  color: white;
+}
+.color-black{
+  color: #0e0e0e;
+}
+.text-center {
+  text-align: center;
+}
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+.margin-lef{
+  margin-left: 130px;
+
+}
+.margin-top{
+  margin-top: -80px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.outline-none {
+  outline: none;
+}
+.hide {
+  display: none;
+}
 .user {
-  margin-top: -35px;
-  float: right;
-  margin-right: 10px;
-  font-size: 30px; }
+ display: none;
+} 
+
+.burger-menu{
+  margin-top: -60px;
+  margin-left: 20px;
+}
 
 .login {
   width: 100vw;
@@ -76,3 +165,32 @@ body {
         font-size: 1em;
         padding: 10px 25px;
         cursor: pointer; }
+
+        @media (min-width: 481px) {
+          /* tablet */
+          .md-w-50 {
+            width: 48%;
+          }
+          
+        }
+        
+        
+        @media (min-width: 769px) {
+          /* laptop */
+          .lg-w-25 {
+            width: 23%;
+          }
+        
+          .product-shadow {
+            box-shadow: none;
+          }
+        
+          .description {
+            display: none;
+          }
+        }
+        
+        
+        @media (min-width: 1281px) {
+          /* desktop */
+        }        

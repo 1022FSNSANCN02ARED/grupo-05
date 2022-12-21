@@ -1,8 +1,13 @@
 # grupo-05
 
+Enlace al TRELLO:
+
+https://trello.com/b/VkGfasKX/marketplace
+
 Formado por:
 
-[PA] Agustín Tarico
+[PA] Agustín Tarico: Tengo 31 años, soy fan del basquet y el rugby. Siempre me gustó el mundo informático pero nunca me animé a entrar de lleno, era mas un hobbie, hasta principios de éste año que dejé mi trabajo como admin de consorcios y me dediqué de lleno a la programación.
+
 [ADM] Lautaro Sayavedra
 [BE] Baltazar Demichele
 [DB] Federico Gay
@@ -19,13 +24,19 @@ Al comprador devolución en caso de fallas en el producto o el dinero en caso de
 Centrandonos de los sitios:
 
 • Mercado libre
+https://www.mercadolibre.com.ar/
 • Amazon
+https://www.amazon.com/
 • AliExpress
+https://www.aliexpress.com/
 • Best Buy
+https://www.bestbuy.com/
 • Rakuten
+https://rakuten.es/
 • Steam
+https://store.steampowered.com/
 • Google PlayStore
-• AppStore
+https://play.google.com/store/games
 
 Podemos ver que la pág poseen la misma estructura elemental, un navbar con algunas opciones como ofertas, un carrito y un login, un banner con publicidad y novedades, una sección de ofertas, algunos elementos que redirigen a las categorías mas populares y varias listas con elementos que se pueden adquirir
 Elegimos estas webs por la solidez que presentan y lo intuitivas que son muchas veces al momento de comprar un producto

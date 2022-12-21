@@ -26,61 +26,108 @@
       type="image/x-icon"
       sizes="96x96"
     />
+    <!-- Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Market Place</title>
   </head>
   <body>
     <header class="header bg_animado">
-      <div class="main-header">
-        <h1 class="logo">
+      <div class="main-header p-1 flex flex-wrap">
+        <h1 class="logo w-50">
           <img src="/imgs/posible_logo/logo.png" alt="" />
         </h1>
-        <div class="search">
-          <p>
+        <div class="p-2 w-50 align-center margin-lef margin-top">
+          <form action="/" class="p-1 flex radius-1 bg-white">
             <input
-              type="search"
-              name="busqueda"
-              placeholder="Buscar productos, marcas"
+              class="flex-grow b-none outline-none font-xl w-50"
+              type="text"
+              name="search"
+              placeholder="Buscá productos por nombre, marcas o palabras clave"
             />
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-          </p>
+            <button type="submit" class="bg-white b-none">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
       </div>
-      <div class="user">
+
+      <div class="user text-center w-100">
         <p><i class="fa-solid fa-circle-user"></i></p>
       </div>
 
-      <div class="burger-menu">
-        <i class="fas fa-bars"></i>
+      <div class="burger-menu  w-100">
+        <i class="fas fa-bars p-1 bg-white radius-1 color-black bold"></i>
       </div>
-      <nav>
-        <div class="nav-1">
-          <ul>
-            <li><a href="#">Ofertas</a></li>
-            <li><a href="#">Tiendas Oficiales</a></li>
-            <li><a href="#">Vender</a></li>
-            <li><a href="#">Ayuda</a></li>
-          </ul>
-        </div>
 
-        <div class="nav-2">
-          <ul>
-            <li>
-              <a href="#">Crea tu cuenta</a> <i class="fa-solid fa-id-card"></i>
-            </li>
-            <li>
-              <a href="#">Ingresá</a>
-              <i class="fa-solid fa-right-to-bracket"></i>
-            </li>
-            <li>
-              <a href="#">Mis Compras</a>
-              <i class="fa-solid fa-basket-shopping"></i>
-            </li>
-          </ul>
-        </div>
+      <nav class="hide">
+        <ul class="py-1">
+          <li><a class="nav-link" href="#">Ofertas</a></li>
+          <li><a class="nav-link" href="#">Tiendas Oficiales</a></li>
+          <li><a class="nav-link" href="#">Vender</a></li>
+          <li><a class="nav-link" href="#">Ayuda</a></li>
+        </ul>
+        <ul class="py-1">
+          <li>
+            <a class="nav-link" href="#"
+              >Crea tu cuenta <i class="fa-solid fa-address-card"></i
+            ></a>
+          </li>
+          <li>
+            <a class="nav-link" href="/login"
+              >Ingresá <i class="fa-solid fa-right-to-bracket"></i
+            ></a>
+          </li>
+          <li>
+            <a class="nav-link" href="#"
+              >Mis Compras <i class="fa-solid fa-basket-shopping"></i
+            ></a>
+          </li>
+        </ul>
       </nav>
     </header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/imgs/carrusel/belleza.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/imgs/carrusel/compras compus.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/carrusel/juguetes.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/carrusel/renova hogar.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/carrusel/suma alegria.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/carrusel/videos jegos.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/carrusel/envios.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-    <h1>Market Place</h1>
+   
   </body>
+
+  <!--Boostrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

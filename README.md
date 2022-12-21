@@ -1,10 +1,10 @@
 # grupo-05
 
-Enlace al TRELLO:
+ENLACE A TRELLO:
 
 https://trello.com/b/VkGfasKX/marketplace
 
-Formado por:
+INTEGRANTES:
 
 [PA] Agustín Tarico: Tengo 31 años, soy fan del basquet y el rugby. Siempre me gustó el mundo informático pero nunca me animé a entrar de lleno, era mas un hobbie, hasta principios de éste año que dejé mi trabajo como admin de consorcios y me dediqué de lleno a la programación.
 
@@ -13,7 +13,7 @@ Formado por:
 [DB] Federico Gay
 [FE] Mariana Martínez
 
-Temática elegida:
+TEMÁTICA ELEGIDA:
 
 Pensamos armar nuestro sitio como un MARKET PLACE, permitirá a los usuarios comprar o vender productos
 Está destinado al público en general, mayores de 18 años. Quienes quieran comprar o vender productos en la plataforma
@@ -21,22 +21,30 @@ Ofrecemos al público en general una interfaz simple, práctica, muy intuitiva y
 Al vendedor comisiones bajas por ventas
 Al comprador devolución en caso de fallas en el producto o el dinero en caso de siniestro y un cashback por compra o regalo dentro de la plataforma
 
-Centrandonos de los sitios:
+CENTRANDONOS EN LOS SITIOS:
 
 • Mercado libre
 https://www.mercadolibre.com.ar/
+
 • Amazon
 https://www.amazon.com/
+
 • AliExpress
 https://www.aliexpress.com/
+
 • Best Buy
 https://www.bestbuy.com/
+
 • Rakuten
 https://rakuten.es/
+
 • Steam
 https://store.steampowered.com/
+
 • Google PlayStore
 https://play.google.com/store/games
+
+POSIBILIDADES:
 
 Podemos ver que la pág poseen la misma estructura elemental, un navbar con algunas opciones como ofertas, un carrito y un login, un banner con publicidad y novedades, una sección de ofertas, algunos elementos que redirigen a las categorías mas populares y varias listas con elementos que se pueden adquirir
 Elegimos estas webs por la solidez que presentan y lo intuitivas que son muchas veces al momento de comprar un producto

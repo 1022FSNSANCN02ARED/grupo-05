@@ -8,8 +8,8 @@
   align-items: center;
 
   .login__container {
-    width: 80%;
-    max-width: 25rem;
+    width: 90%;
+    max-width: 28rem;
     border: 2px solid $lineas;
     background-color: $fondo_obscuro;
     box-shadow: 0px 2px 4px $negro;
@@ -30,7 +30,7 @@
       padding: 1.5rem;
 
       .show_password {
-        width: 80%;
+        width: 90%;
         padding: 0.5rem 0;
         display: flex;
         justify-content: flex-end;
@@ -46,7 +46,7 @@
       }
 
       input {
-        width: 80%;
+        width: 90%;
         padding: 10px 26px;
         border: none;
         border-radius: 4px;
@@ -54,11 +54,11 @@
       }
       span {
         border-bottom: 2px solid $lineas;
-        width: 90%;
+        width: 96%;
         margin: 1.5rem 0;
       }
       .button {
-        width: 80%;
+        width: 90%;
         background-color: $lineas;
         border-radius: 6px;
         border: none;
@@ -66,7 +66,7 @@
         padding: 10px 26px;
         cursor: pointer;
         button {
-          width: 80%;
+          width: 90%;
           background-color: transparent;
           border: none;
           font-size: 1em;

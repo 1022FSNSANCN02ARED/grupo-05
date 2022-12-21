@@ -46,8 +46,8 @@ body {
   justify-content: center;
   align-items: center; }
   .login .login__container {
-    width: 80%;
-    max-width: 25rem;
+    width: 90%;
+    max-width: 28rem;
     border: 2px solid #f516cc;
     background-color: #110042;
     box-shadow: 0px 2px 4px #0e0e0e;
@@ -65,7 +65,7 @@ body {
       gap: 0.5rem;
       padding: 1.5rem; }
       .login .login__container .login__form .show_password {
-        width: 80%;
+        width: 90%;
         padding: 0.5rem 0;
         display: flex;
         justify-content: flex-end; }
@@ -76,17 +76,17 @@ body {
         font-size: 0.8em;
         margin-bottom: 1.5rem; }
       .login .login__container .login__form input {
-        width: 80%;
+        width: 90%;
         padding: 10px 26px;
         border: none;
         border-radius: 4px;
         margin-bottom: 0.5rem; }
       .login .login__container .login__form span {
         border-bottom: 2px solid #f516cc;
-        width: 90%;
+        width: 96%;
         margin: 1.5rem 0; }
       .login .login__container .login__form .button {
-        width: 80%;
+        width: 90%;
         background-color: #f516cc;
         border-radius: 6px;
         border: none;
@@ -94,7 +94,7 @@ body {
         padding: 10px 26px;
         cursor: pointer; }
         .login .login__container .login__form .button button {
-          width: 80%;
+          width: 90%;
           background-color: transparent;
           border: none;
           font-size: 1em; }

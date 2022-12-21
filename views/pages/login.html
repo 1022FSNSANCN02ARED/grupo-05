@@ -42,11 +42,6 @@
             id="user_name"
             name="user__name"
           />
-          <div class="show_password">
-            <i class="fa-solid fa-eye"></i>
-            <i class="fa-solid fa-eye-slash"></i>
-            <p>Mostrar contraseña</p>
-          </div>
           <input
             placeholder="password"
             type="password"
@@ -55,17 +50,30 @@
             id="password"
             name="password"
           />
+          <div class="show_password">
+            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-eye-slash"></i>
+            <p>Mostrar contraseña</p>
+          </div>
           <a href="#" class="login__a">¿Olvidaste tu contraseña? </a>
 
-          <button id="login__button">Ingresar</button>
-          <p>o</p>
+          <div class="button">
+            <button id="login__button">
+              <span>Ingresar</span>
+            </button>
+          </div>
+          <span>o</span>
 
-          <button class="login__google">
-            <i class="fa-brands fa-google"></i> Ingresa con Google
-          </button>
-          <button class="login__apple">
-            <i class="fa-brands fa-apple"></i> Ingresa con apple
-          </button>
+          <div class="button login__with">
+            <button class="login__google">
+              <i class="fa-brands fa-google"></i> Ingresa con Google
+            </button>
+          </div>
+          <div class="button login__with">
+            <button class="login__apple">
+              <i class="fa-brands fa-apple"></i> Ingresa con apple
+            </button>
+          </div>
         </form>
       </div>
     </section>

@@ -12,6 +12,6 @@ app.get("/login", (req, res) => {
   __dirname + res.sendFile(path.resolve(__dirname, "views/pages/login.html"));
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("Server prendido");
 });

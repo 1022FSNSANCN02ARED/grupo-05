@@ -90,3 +90,23 @@
         }
     }
 }
+
+.description {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    border: 3px solid $lineas;
+    border-radius: 5px;
+
+    background-color: $fondo_obscuro;
+
+    h2 {
+        color: $titulos;
+        margin-left: 5px;
+    }
+
+    .text {
+        margin-left: 5px;
+    }
+}

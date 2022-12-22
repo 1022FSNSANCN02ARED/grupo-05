@@ -163,3 +163,16 @@ body {
     color: inherit; }
     .buttom button span {
       font-size: 19px; }
+
+.description {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 3px solid #f516cc;
+  border-radius: 5px;
+  background-color: #110042; }
+  .description h2 {
+    color: #0fd3ff;
+    margin-left: 5px; }
+  .description .text {
+    margin-left: 5px; }

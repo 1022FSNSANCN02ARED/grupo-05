@@ -103,3 +103,63 @@ body {
             font-weight: 600; }
       .login .login__container .login__form .login__with {
         background: #e0e0e0; }
+
+.product-f {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 3px solid #f516cc;
+  border-radius: 5px;
+  height: 50vh;
+  text-align: center;
+  background-color: #110042; }
+  .product-f h2 {
+    color: #0fd3ff; }
+  .product-f .stars {
+    margin-left: 10px;
+    text-align: left; }
+  .product-f .img-s {
+    margin-top: 10px; }
+    .product-f .img-s img {
+      width: 23rem;
+      height: 23rem; }
+
+.ammount {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 3px solid #f516cc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #110042; }
+  .ammount h2 {
+    color: #0fd3ff; }
+  .ammount .ammount-f {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #f516cc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #f516cc; }
+
+.buttom {
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+  height: 2rem;
+  background-color: #f516cc;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 15px; }
+  .buttom button {
+    background: none;
+    border: 0;
+    color: inherit; }
+    .buttom button span {
+      font-size: 19px; }

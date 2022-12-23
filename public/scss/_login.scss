@@ -29,6 +29,18 @@
       gap: 0.5rem;
       padding: 1.5rem;
 
+      input {
+        width: 90%;
+        padding: 10px 26px;
+        border: none;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+      }
+      .login__error {
+        color: #ff0000;
+        text-decoration: underline;
+        display: none;
+      }
       .show_password {
         width: 90%;
         padding: 0.5rem 0;
@@ -43,16 +55,9 @@
       .login__a {
         font-size: 0.8em;
         margin-bottom: 1.5rem;
+        color: $titulos;
       }
-
-      input {
-        width: 90%;
-        padding: 10px 26px;
-        border: none;
-        border-radius: 4px;
-        margin-bottom: 0.5rem;
-      }
-      span {
+      .login__or {
         border-bottom: 2px solid $lineas;
         width: 96%;
         margin: 1.5rem 0;
@@ -65,11 +70,12 @@
         box-shadow: 0 2px 4px $negro;
         padding: 10px 26px;
         cursor: pointer;
-        button {
+        .login__button {
           width: 90%;
           background-color: transparent;
           border: none;
           font-size: 1em;
+          cursor: pointer;
           span {
             color: $blanco;
             font-weight: 600;

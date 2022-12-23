@@ -64,6 +64,16 @@ body {
       flex-direction: column;
       gap: 0.5rem;
       padding: 1.5rem; }
+      .login .login__container .login__form input {
+        width: 90%;
+        padding: 10px 26px;
+        border: none;
+        border-radius: 4px;
+        margin-bottom: 0.5rem; }
+      .login .login__container .login__form .login__error {
+        color: #ff0000;
+        text-decoration: underline;
+        display: none; }
       .login .login__container .login__form .show_password {
         width: 90%;
         padding: 0.5rem 0;
@@ -74,14 +84,9 @@ body {
           margin-left: 0.5rem; }
       .login .login__container .login__form .login__a {
         font-size: 0.8em;
-        margin-bottom: 1.5rem; }
-      .login .login__container .login__form input {
-        width: 90%;
-        padding: 10px 26px;
-        border: none;
-        border-radius: 4px;
-        margin-bottom: 0.5rem; }
-      .login .login__container .login__form span {
+        margin-bottom: 1.5rem;
+        color: #0fd3ff; }
+      .login .login__container .login__form .login__or {
         border-bottom: 2px solid #f516cc;
         width: 96%;
         margin: 1.5rem 0; }
@@ -93,12 +98,13 @@ body {
         box-shadow: 0 2px 4px #0e0e0e;
         padding: 10px 26px;
         cursor: pointer; }
-        .login .login__container .login__form .button button {
+        .login .login__container .login__form .button .login__button {
           width: 90%;
           background-color: transparent;
           border: none;
-          font-size: 1em; }
-          .login .login__container .login__form .button button span {
+          font-size: 1em;
+          cursor: pointer; }
+          .login .login__container .login__form .button .login__button span {
             color: #e0e0e0;
             font-weight: 600; }
       .login .login__container .login__form .login__with {

@@ -50,6 +50,9 @@
             id="password"
             name="password"
           />
+          <span class="login__error"
+            >Nombre de usuario o contraseña inválido</span
+          >
           <div class="show_password">
             <i class="fa-solid fa-eye"></i>
             <i class="fa-solid fa-eye-slash"></i>
@@ -58,19 +61,19 @@
           <a href="#" class="login__a">¿Olvidaste tu contraseña? </a>
 
           <div class="button">
-            <button id="login__button">
+            <button class="login__button" id="login__button">
               <span>Ingresar</span>
             </button>
           </div>
-          <span>o</span>
+          <span class="login__or">o</span>
 
           <div class="button login__with">
-            <button class="login__google">
+            <button class="login__button login__google">
               <i class="fa-brands fa-google"></i> Ingresa con Google
             </button>
           </div>
           <div class="button login__with">
-            <button class="login__apple">
+            <button class="login__button login__apple">
               <i class="fa-brands fa-apple"></i> Ingresa con apple
             </button>
           </div>

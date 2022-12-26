@@ -39,7 +39,7 @@
       .login__error {
         color: #ff0000;
         text-decoration: underline;
-        display: none;
+        display: block; /* esto va con un display none y aparecería cuando hay un error en el form */
       }
       .show_password {
         width: 90%;

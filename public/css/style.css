@@ -714,10 +714,8 @@ body {
     margin-left: 10px;
     text-align: left; }
   .product-f .img-s {
-    margin-top: 10px; }
-    .product-f .img-s img {
-      width: 23rem;
-      height: 23rem; }
+    margin-top: 10px;
+    width: 90%; }
 
 .ammount {
   margin-top: 10px;

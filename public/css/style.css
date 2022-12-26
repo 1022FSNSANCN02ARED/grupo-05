@@ -705,7 +705,6 @@ body {
   margin-right: 10px;
   border: 3px solid #f516cc;
   border-radius: 5px;
-  height: 50vh;
   text-align: center;
   background-color: #110042; }
   .product-f h2 {
@@ -715,7 +714,11 @@ body {
     text-align: left; }
   .product-f .img-s {
     margin-top: 10px;
-    width: 90%; }
+    overflow: hidden;
+    padding: 1rem; }
+    .product-f .img-s .product-img {
+      width: 90%;
+      margin-bottom: 1rem; }
 
 .ammount {
   margin-top: 10px;

@@ -11,7 +11,6 @@
   border: 3px solid $lineas;
   border-radius: 5px;
 
-  height: 50vh;
   text-align: center;
 
   background-color: $fondo_obscuro;
@@ -27,9 +26,12 @@
 
   .img-s {
     margin-top: 10px;
-    width: 90%;
+    overflow: hidden;
+    padding: 1rem;
 
-    img {
+    .product-img {
+      width: 90%;
+      margin-bottom: 1rem;
     }
   }
 }

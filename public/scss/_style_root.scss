@@ -5,7 +5,7 @@ $fondo_obscuro: #110042;
 $fondo_claro: #34265e;
 $lineas: #f516cc;
 
-/* --------------------------------- width ------------------------------------------- */
+/* ====================== Width ====================== */
 .vw-100 {
   width: 100vw;
 }
@@ -19,20 +19,44 @@ $lineas: #f516cc;
 .w-50 {
   width: 50%;
 }
+/* ========================================================== */
 
-/*------------------------------------------- heigth -------------------------------------------*/
+/* ====================== Height ====================== */
 
 .vh-100 {
   height: 100vh;
 }
+/* ========================================================== */
 
-/*------------------------------------------- flex CONTAINER -------------------------------------------*/
+/* ====================== Text (Center, Left, Right) ====================== */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+/* ========================================================== */
+
+/* ====================== Flex Container ====================== */
 .flex {
   display: flex;
 }
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-sp-ar {
+  justify-content: space-around;
+}
+
+.justify-content-sp-ev {
+  justify-content: space-evenly;
 }
 
 .align-center {
@@ -47,7 +71,12 @@ $lineas: #f516cc;
   flex-wrap: wrap;
 }
 
-/*------------------------------------------- displays -------------------------------------------*/
+.flex-d-column {
+  flex-direction: column;
+}
+/* ========================================================== */
+
+/* ====================== Displays ====================== */
 .block {
   display: block;
 }
@@ -59,11 +88,13 @@ $lineas: #f516cc;
 .none {
   display: none;
 }
+/* ========================================================== */
 
-/*------------------------------------------- margins -------------------------------------------*/
+/* ====================== Margins ====================== */
 
+/* ========== General ========== */
 .m-1 {
-  margin: 1rem;
+  margin: 1rem; /* 1rem = 16 px */
 }
 .m-2 {
   margin: 2rem;
@@ -78,8 +109,9 @@ $lineas: #f516cc;
   margin: 5rem;
 }
 
+/* ========== Top ========== */
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: 1rem; /* 1rem = 16 px */
 }
 .mt-2 {
   margin-top: 2rem;
@@ -93,9 +125,13 @@ $lineas: #f516cc;
 .mt-5 {
   margin-top: 5rem;
 }
+.mt-6 {
+  margin-top: 6rem;
+}
 
+/* ========== Right ========== */
 .mr-1 {
-  margin-right: 1rem;
+  margin-right: 1rem; /* 1rem = 16 px */
 }
 .mr-2 {
   margin-right: 2rem;
@@ -109,9 +145,13 @@ $lineas: #f516cc;
 .mr-5 {
   margin-right: 5rem;
 }
+.mr-6 {
+  margin-right: 6rem;
+}
 
+/* ========== Bottom ========== */
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* 1rem = 16 px */
 }
 .mb-2 {
   margin-bottom: 2rem;
@@ -125,9 +165,13 @@ $lineas: #f516cc;
 .mb-5 {
   margin-bottom: 5rem;
 }
+.mb-6 {
+  margin-bottom: 6rem;
+}
 
+/* ========== Left ========== */
 .ml-1 {
-  margin-left: 1rem;
+  margin-left: 1rem; /* 1rem = 16 px */
 }
 .ml-2 {
   margin-left: 2rem;
@@ -141,8 +185,12 @@ $lineas: #f516cc;
 .ml-5 {
   margin-left: 5rem;
 }
+.ml-6 {
+  margin-left: 6rem;
+}
+/* ========================================================== */
 
-/*------------------------------------------- paddings -------------------------------------------*/
+/* ====================== Paddings ====================== */
 
 .p-1 {
   padding: 1rem;
@@ -223,3 +271,4 @@ $lineas: #f516cc;
 .pl-5 {
   padding-left: 5rem;
 }
+/* ========================================================== */

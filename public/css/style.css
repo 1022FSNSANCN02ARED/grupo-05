@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* --------------------------------- width ------------------------------------------- */
+/* ====================== Width ====================== */
 .vw-100 {
   width: 100vw; }
 
@@ -12,16 +12,35 @@
 .w-50 {
   width: 50%; }
 
-/*------------------------------------------- heigth -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Height ====================== */
 .vh-100 {
   height: 100vh; }
 
-/*------------------------------------------- flex CONTAINER -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Text (Center, Left, Right) ====================== */
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+/* ========================================================== */
+/* ====================== Flex Container ====================== */
 .flex {
   display: flex; }
 
 .justify-content-center {
   justify-content: center; }
+
+.justify-content-sp-ar {
+  justify-content: space-around; }
+
+.justify-content-sp-ev {
+  justify-content: space-evenly; }
 
 .align-center {
   align-items: center; }
@@ -32,7 +51,11 @@
 .flex-wrap {
   flex-wrap: wrap; }
 
-/*------------------------------------------- displays -------------------------------------------*/
+.flex-d-column {
+  flex-direction: column; }
+
+/* ========================================================== */
+/* ====================== Displays ====================== */
 .block {
   display: block; }
 
@@ -42,9 +65,12 @@
 .none {
   display: none; }
 
-/*------------------------------------------- margins -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Margins ====================== */
+/* ========== General ========== */
 .m-1 {
-  margin: 1rem; }
+  margin: 1rem;
+  /* 1rem = 16 px */ }
 
 .m-2 {
   margin: 2rem; }
@@ -58,8 +84,10 @@
 .m-5 {
   margin: 5rem; }
 
+/* ========== Top ========== */
 .mt-1 {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  /* 1rem = 16 px */ }
 
 .mt-2 {
   margin-top: 2rem; }
@@ -73,8 +101,13 @@
 .mt-5 {
   margin-top: 5rem; }
 
+.mt-6 {
+  margin-top: 6rem; }
+
+/* ========== Right ========== */
 .mr-1 {
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  /* 1rem = 16 px */ }
 
 .mr-2 {
   margin-right: 2rem; }
@@ -88,8 +121,13 @@
 .mr-5 {
   margin-right: 5rem; }
 
+.mr-6 {
+  margin-right: 6rem; }
+
+/* ========== Bottom ========== */
 .mb-1 {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  /* 1rem = 16 px */ }
 
 .mb-2 {
   margin-bottom: 2rem; }
@@ -103,8 +141,13 @@
 .mb-5 {
   margin-bottom: 5rem; }
 
+.mb-6 {
+  margin-bottom: 6rem; }
+
+/* ========== Left ========== */
 .ml-1 {
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  /* 1rem = 16 px */ }
 
 .ml-2 {
   margin-left: 2rem; }
@@ -118,7 +161,11 @@
 .ml-5 {
   margin-left: 5rem; }
 
-/*------------------------------------------- paddings -------------------------------------------*/
+.ml-6 {
+  margin-left: 6rem; }
+
+/* ========================================================== */
+/* ====================== Paddings ====================== */
 .p-1 {
   padding: 1rem; }
 
@@ -194,6 +241,7 @@
 .pl-5 {
   padding-left: 5rem; }
 
+/* ========================================================== */
 body {
   font-family: "Poppins", sans-serif; }
 
@@ -235,7 +283,7 @@ body {
   margin-right: 10px;
   font-size: 30px; }
 
-/* --------------------------------- width ------------------------------------------- */
+/* ====================== Width ====================== */
 .vw-100 {
   width: 100vw; }
 
@@ -248,16 +296,35 @@ body {
 .w-50 {
   width: 50%; }
 
-/*------------------------------------------- heigth -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Height ====================== */
 .vh-100 {
   height: 100vh; }
 
-/*------------------------------------------- flex CONTAINER -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Text (Center, Left, Right) ====================== */
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+/* ========================================================== */
+/* ====================== Flex Container ====================== */
 .flex {
   display: flex; }
 
 .justify-content-center {
   justify-content: center; }
+
+.justify-content-sp-ar {
+  justify-content: space-around; }
+
+.justify-content-sp-ev {
+  justify-content: space-evenly; }
 
 .align-center {
   align-items: center; }
@@ -268,7 +335,11 @@ body {
 .flex-wrap {
   flex-wrap: wrap; }
 
-/*------------------------------------------- displays -------------------------------------------*/
+.flex-d-column {
+  flex-direction: column; }
+
+/* ========================================================== */
+/* ====================== Displays ====================== */
 .block {
   display: block; }
 
@@ -278,9 +349,12 @@ body {
 .none {
   display: none; }
 
-/*------------------------------------------- margins -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Margins ====================== */
+/* ========== General ========== */
 .m-1 {
-  margin: 1rem; }
+  margin: 1rem;
+  /* 1rem = 16 px */ }
 
 .m-2 {
   margin: 2rem; }
@@ -294,8 +368,10 @@ body {
 .m-5 {
   margin: 5rem; }
 
+/* ========== Top ========== */
 .mt-1 {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  /* 1rem = 16 px */ }
 
 .mt-2 {
   margin-top: 2rem; }
@@ -309,8 +385,13 @@ body {
 .mt-5 {
   margin-top: 5rem; }
 
+.mt-6 {
+  margin-top: 6rem; }
+
+/* ========== Right ========== */
 .mr-1 {
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  /* 1rem = 16 px */ }
 
 .mr-2 {
   margin-right: 2rem; }
@@ -324,8 +405,13 @@ body {
 .mr-5 {
   margin-right: 5rem; }
 
+.mr-6 {
+  margin-right: 6rem; }
+
+/* ========== Bottom ========== */
 .mb-1 {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  /* 1rem = 16 px */ }
 
 .mb-2 {
   margin-bottom: 2rem; }
@@ -339,8 +425,13 @@ body {
 .mb-5 {
   margin-bottom: 5rem; }
 
+.mb-6 {
+  margin-bottom: 6rem; }
+
+/* ========== Left ========== */
 .ml-1 {
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  /* 1rem = 16 px */ }
 
 .ml-2 {
   margin-left: 2rem; }
@@ -354,7 +445,11 @@ body {
 .ml-5 {
   margin-left: 5rem; }
 
-/*------------------------------------------- paddings -------------------------------------------*/
+.ml-6 {
+  margin-left: 6rem; }
+
+/* ========================================================== */
+/* ====================== Paddings ====================== */
 .p-1 {
   padding: 1rem; }
 
@@ -430,6 +525,7 @@ body {
 .pl-5 {
   padding-left: 5rem; }
 
+/* ========================================================== */
 .login {
   width: 100vw;
   min-height: 100vh;
@@ -502,7 +598,7 @@ body {
       .login .login__container .login__form .login__with {
         background: #e0e0e0; }
 
-/* --------------------------------- width ------------------------------------------- */
+/* ====================== Width ====================== */
 .vw-100 {
   width: 100vw; }
 
@@ -515,16 +611,35 @@ body {
 .w-50 {
   width: 50%; }
 
-/*------------------------------------------- heigth -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Height ====================== */
 .vh-100 {
   height: 100vh; }
 
-/*------------------------------------------- flex CONTAINER -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Text (Center, Left, Right) ====================== */
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+/* ========================================================== */
+/* ====================== Flex Container ====================== */
 .flex {
   display: flex; }
 
 .justify-content-center {
   justify-content: center; }
+
+.justify-content-sp-ar {
+  justify-content: space-around; }
+
+.justify-content-sp-ev {
+  justify-content: space-evenly; }
 
 .align-center {
   align-items: center; }
@@ -535,7 +650,11 @@ body {
 .flex-wrap {
   flex-wrap: wrap; }
 
-/*------------------------------------------- displays -------------------------------------------*/
+.flex-d-column {
+  flex-direction: column; }
+
+/* ========================================================== */
+/* ====================== Displays ====================== */
 .block {
   display: block; }
 
@@ -545,9 +664,12 @@ body {
 .none {
   display: none; }
 
-/*------------------------------------------- margins -------------------------------------------*/
+/* ========================================================== */
+/* ====================== Margins ====================== */
+/* ========== General ========== */
 .m-1 {
-  margin: 1rem; }
+  margin: 1rem;
+  /* 1rem = 16 px */ }
 
 .m-2 {
   margin: 2rem; }
@@ -561,8 +683,10 @@ body {
 .m-5 {
   margin: 5rem; }
 
+/* ========== Top ========== */
 .mt-1 {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  /* 1rem = 16 px */ }
 
 .mt-2 {
   margin-top: 2rem; }
@@ -576,8 +700,13 @@ body {
 .mt-5 {
   margin-top: 5rem; }
 
+.mt-6 {
+  margin-top: 6rem; }
+
+/* ========== Right ========== */
 .mr-1 {
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  /* 1rem = 16 px */ }
 
 .mr-2 {
   margin-right: 2rem; }
@@ -591,8 +720,13 @@ body {
 .mr-5 {
   margin-right: 5rem; }
 
+.mr-6 {
+  margin-right: 6rem; }
+
+/* ========== Bottom ========== */
 .mb-1 {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  /* 1rem = 16 px */ }
 
 .mb-2 {
   margin-bottom: 2rem; }
@@ -606,8 +740,13 @@ body {
 .mb-5 {
   margin-bottom: 5rem; }
 
+.mb-6 {
+  margin-bottom: 6rem; }
+
+/* ========== Left ========== */
 .ml-1 {
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  /* 1rem = 16 px */ }
 
 .ml-2 {
   margin-left: 2rem; }
@@ -621,7 +760,11 @@ body {
 .ml-5 {
   margin-left: 5rem; }
 
-/*------------------------------------------- paddings -------------------------------------------*/
+.ml-6 {
+  margin-left: 6rem; }
+
+/* ========================================================== */
+/* ====================== Paddings ====================== */
 .p-1 {
   padding: 1rem; }
 
@@ -697,59 +840,37 @@ body {
 .pl-5 {
   padding-left: 5rem; }
 
+/* ========================================================== */
 .product-f {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
   border: 3px solid #f516cc;
   border-radius: 5px;
-  text-align: center;
   background-color: #110042; }
   .product-f h2 {
     color: #0fd3ff; }
-  .product-f .stars {
-    margin-left: 10px;
-    text-align: left; }
   .product-f .img-s {
-    margin-top: 10px;
-    overflow: hidden;
-    padding: 1rem; }
-    .product-f .img-s .product-img {
-      width: 90%;
-      margin-bottom: 1rem; }
+    overflow: hidden; }
+    .product-f .img-s .arrow-size {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; }
 
 .ammount {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
   border: 3px solid #f516cc;
   border-radius: 5px;
-  text-align: center;
   background-color: #110042; }
   .ammount h2 {
     color: #0fd3ff; }
   .ammount .ammount-f {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     border: 3px solid #f516cc;
     border-radius: 15px;
-    margin-bottom: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
     background-color: #f516cc; }
 
 .buttom {
-  display: flex;
-  justify-content: center;
   width: 8rem;
   height: 2rem;
   background-color: #f516cc;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
   border-radius: 15px; }
   .buttom button {
     background: none;
@@ -759,9 +880,6 @@ body {
       font-size: 19px; }
 
 .description {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
   border: 3px solid #f516cc;
   border-radius: 5px;
   background-color: #110042; }

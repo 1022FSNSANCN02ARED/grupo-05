@@ -1,12 +1,16 @@
-@import "style_root.scss";
-
 body {
   font-family: "Poppins", sans-serif;
 }
 
+@import "style_root.scss";
+@import "header.scss";
+@import "banner.scss";
+@import "ofertas_stories.scss";
+@import "login.scss";
+@import "product.scss";
+
 .bg_animado {
-  width: 100%;
-  height: 40vh;
+  padding: 1rem;
   color: #fff;
   background: linear-gradient(45deg, #602dac, #3723b8, #2973da, #030724);
   background-size: 400% 400%;
@@ -27,32 +31,4 @@ body {
     background-position: 0 50%;
   }
 }
-
-.logo {
-  margin: 5px;
-  padding: 5px;
-}
-
-.logo img {
-  width: 80px;
-  height: 45px;
-}
-
-.search {
-  margin-top: -60px;
-  margin-left: 100px;
-}
-
-.search input {
-  width: 250px;
-}
-
-.user {
-  margin-top: -35px;
-  float: right;
-  margin-right: 10px;
-  font-size: 30px;
-}
-
-@import "login.scss";
-@import "product.scss";
+@import "@media.scss";

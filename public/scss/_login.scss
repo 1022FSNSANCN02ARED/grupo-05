@@ -13,6 +13,7 @@
     box-shadow: 0px 2px 4px $negro;
     border-radius: 6px;
     text-align: center;
+    color: $blanco;
     .login__title {
       color: $titulos;
       padding: 1rem;
@@ -78,6 +79,12 @@
             color: $blanco;
             font-weight: 600;
           }
+        }
+        &:hover {
+          background-color: $fondo_claro;
+          box-shadow: 0 0 6px 6px $lineas;
+          transform: scale(0.9);
+          transition: all 400ms;
         }
       }
       .login__with {

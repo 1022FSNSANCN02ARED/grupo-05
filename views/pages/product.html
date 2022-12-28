@@ -28,9 +28,50 @@
       sizes="96x96"
     />
   </head>
-  <body class="bg_animado">
-    <header>
-      <nav><!-- NAVBAR --></nav>
+  <body>
+    <header class="bg_animado">
+      <div class="header__container">
+        <img
+          class="logo"
+          src="./imgs/posible_logo/logo.png"
+          alt="logo MarketPlace"
+        />
+        <div class="burguer-menu button__navbar">
+          <button class="menu header__button">
+            <i class="fa-solid fa-bars menu__bars"></i>
+          </button>
+        </div>
+        <div class="header__search">
+          <input
+            class="input__search"
+            type="search"
+            placeholder="Buscar en Market Place"
+          />
+          <button class="button__search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="carrito button__navbar">
+          <button class="header__button">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul class="categorias listas">
+          <li><a href="#">categoría</a></li>
+          <li><a href="#">categoría</a></li>
+          <li><a href="#">categoría</a></li>
+          <li><a href="#">categoría</a></li>
+          <li><a href="#">categoría</a></li>
+          <li><a href="#">categoría</a></li>
+        </ul>
+        <ul class="usuario listas">
+          <li><a href="#">usuario</a></li>
+          <li><a href="#">usuario</a></li>
+          <li><a href="#">usuario</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <div class="product-f flex flex-d-column text-center mt-3 ml-1 mr-1">

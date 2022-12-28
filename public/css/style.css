@@ -344,7 +344,8 @@ header {
     background-color: #110042;
     box-shadow: 0px 2px 4px #0e0e0e;
     border-radius: 6px;
-    text-align: center; }
+    text-align: center;
+    color: #e0e0e0; }
     .login .login__container .login__title {
       color: #0fd3ff;
       padding: 1rem;
@@ -400,6 +401,11 @@ header {
           .login .login__container .login__form .button .login__button span {
             color: #e0e0e0;
             font-weight: 600; }
+        .login .login__container .login__form .button:hover {
+          background-color: #34265e;
+          box-shadow: 0 0 6px 6px #f516cc;
+          transform: scale(0.9);
+          transition: all 400ms; }
       .login .login__container .login__form .login__with {
         background: #e0e0e0; }
 

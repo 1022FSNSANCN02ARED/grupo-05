@@ -283,7 +283,7 @@ header {
 
 .button__navbar {
   background-color: #ffffff;
-  padding: 4px 8px;
+  padding: 2px 10px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 4px 4px #0e0e0e; }
@@ -301,8 +301,8 @@ header {
     box-shadow: 0 0 6px #0e0e0e; }
 
 .scroller {
-  height: 300px;
-  max-width: 1500px;
+  height: 120px;
+  max-width: 1200px;
   padding: 10px;
   display: grid;
   grid-auto-flow: column;
@@ -312,9 +312,9 @@ header {
   .scroller .scroller-item {
     box-shadow: 2px 2px 15px #f516cc;
     position: relative;
-    width: 180px;
-    height: 180px;
-    border: 4px solid #34265e;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #34265e;
     border-radius: 50%;
     overflow: hidden;
     transition: all 500ms ease; }
@@ -501,12 +501,7 @@ header {
   a {
     color: #e0e0e0;
     text-transform: uppercase;
-    text-decoration: none; }
-  .scroller {
-    height: 200px; }
-  .scroller-item {
-    width: 140px;
-    height: 140px; } }
+    text-decoration: none; } }
 
 @media (min-width: 900px) {
   nav {
@@ -516,4 +511,9 @@ header {
   .input__search {
     width: 95%; }
   li {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .scroller {
+    height: 300px; }
+    .scroller .scroller-item {
+      width: 180px;
+      height: 180px; } }

@@ -36,13 +36,6 @@
     text-transform: uppercase;
     text-decoration: none;
   }
-  .scroller {
-    height: 200px;
-  }
-  .scroller-item {
-    width: 140px;
-    height: 140px;
-  }
 }
 @media (min-width: 900px) {
   nav {
@@ -55,5 +48,12 @@
   }
   li {
     margin-right: 1rem;
+  }
+  .scroller {
+    height: 300px;
+    .scroller-item {
+      width: 180px;
+      height: 180px;
+    }
   }
 }

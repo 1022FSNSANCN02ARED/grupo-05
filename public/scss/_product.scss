@@ -19,6 +19,10 @@
   }
 }
 
+.stars {
+  color: $lineas;
+}
+
 .ammount {
   border: 3px solid $lineas;
   border-radius: 5px;
@@ -71,5 +75,6 @@
 
   .text {
     margin-left: 5px;
+    color: white;
   }
 }

@@ -422,6 +422,9 @@ header {
       margin-left: 0.5rem;
       margin-right: 0.5rem; }
 
+.stars {
+  color: #f516cc; }
+
 .ammount {
   border: 3px solid #f516cc;
   border-radius: 5px;
@@ -455,7 +458,8 @@ header {
     color: #0fd3ff;
     margin-left: 5px; }
   .description .text {
-    margin-left: 5px; }
+    margin-left: 5px;
+    color: white; }
 
 .product {
   background: #110042;

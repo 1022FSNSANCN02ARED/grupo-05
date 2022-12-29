@@ -15,6 +15,6 @@ app.get("/product", (req, res) => {
   __dirname + res.sendFile(path.resolve(__dirname, "views/pages/product.html"));
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("Server prendido");
 });

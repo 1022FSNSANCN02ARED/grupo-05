@@ -457,6 +457,25 @@ header {
   .description .text {
     margin-left: 5px; }
 
+.selec {
+  background-color: #110042; }
+
+.product {
+  background: #110042;
+  padding: 3rem; }
+  .product .img {
+    width: 25px; }
+
+.description {
+  border: 3px solid #f516cc;
+  border-radius: 5px;
+  background-color: #110042; }
+  .description h2 {
+    color: #0fd3ff;
+    margin-left: 5px; }
+  .description .text {
+    margin-left: 5px; }
+
 .bg_animado {
   padding: 1rem;
   color: #fff;

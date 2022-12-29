@@ -283,7 +283,7 @@ header {
 
 .button__navbar {
   background-color: #ffffff;
-  padding: 2px 10px;
+  padding: 2px 12px;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 4px 4px #0e0e0e; }
@@ -331,13 +331,13 @@ header {
 .scroller::-webkit-scrollbar {
   display: none; }
 
-.login {
+.form {
   width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .login .login__container {
+  .form .form__container {
     width: 90%;
     max-width: 28rem;
     border: 2px solid #f516cc;
@@ -346,45 +346,45 @@ header {
     border-radius: 6px;
     text-align: center;
     color: #e0e0e0; }
-    .login .login__container .login__title {
+    .form .form__container .form__title {
       color: #0fd3ff;
       padding: 1rem;
       font-size: 2em; }
-    .login .login__container .login__form {
+    .form .form__container .form__display {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       gap: 0.5rem;
       padding: 1.5rem; }
-      .login .login__container .login__form input {
+      .form .form__container .form__display input {
         width: 90%;
         padding: 10px 26px;
         border: none;
         border-radius: 4px;
         margin-bottom: 0.5rem; }
-      .login .login__container .login__form .login__error {
+      .form .form__container .form__display .form__error {
         color: #ff0000;
         text-decoration: underline;
         display: block;
         /* esto va con un display none y aparecería cuando hay un error en el form */ }
-      .login .login__container .login__form .show_password {
+      .form .form__container .form__display .show_password {
         width: 90%;
         padding: 0.5rem 0;
         display: flex;
         justify-content: flex-end; }
-        .login .login__container .login__form .show_password p {
+        .form .form__container .form__display .show_password p {
           font-size: 0.6em;
           margin-left: 0.5rem; }
-      .login .login__container .login__form .login__a {
+      .form .form__container .form__display .form__a {
         font-size: 0.8em;
         margin-bottom: 1.5rem;
         color: #0fd3ff; }
-      .login .login__container .login__form .login__or {
+      .form .form__container .form__display .form__or {
         border-bottom: 2px solid #f516cc;
         width: 96%;
         margin: 1.5rem 0; }
-      .login .login__container .login__form .button {
+      .form .form__container .form__display .button {
         width: 90%;
         background-color: #f516cc;
         border-radius: 6px;
@@ -392,21 +392,21 @@ header {
         box-shadow: 0 2px 4px #0e0e0e;
         padding: 10px 26px;
         cursor: pointer; }
-        .login .login__container .login__form .button .login__button {
+        .form .form__container .form__display .button .form__button {
           width: 90%;
           background-color: transparent;
           border: none;
           font-size: 1em;
           cursor: pointer; }
-          .login .login__container .login__form .button .login__button span {
+          .form .form__container .form__display .button .form__button span {
             color: #e0e0e0;
             font-weight: 600; }
-        .login .login__container .login__form .button:hover {
+        .form .form__container .form__display .button:hover {
           background-color: #34265e;
           box-shadow: 0 0 6px 6px #f516cc;
           transform: scale(0.9);
           transition: all 400ms; }
-      .login .login__container .login__form .login__with {
+      .form .form__container .form__display .form__with {
         background: #e0e0e0; }
 
 .product-f {

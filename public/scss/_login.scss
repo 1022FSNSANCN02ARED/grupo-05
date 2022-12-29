@@ -1,11 +1,11 @@
-.login {
+.form {
   width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .login__container {
+  .form__container {
     width: 90%;
     max-width: 28rem;
     border: 2px solid $lineas;
@@ -14,13 +14,13 @@
     border-radius: 6px;
     text-align: center;
     color: $blanco;
-    .login__title {
+    .form__title {
       color: $titulos;
       padding: 1rem;
       font-size: 2em;
     }
 
-    .login__form {
+    .form__display {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,7 +35,7 @@
         border-radius: 4px;
         margin-bottom: 0.5rem;
       }
-      .login__error {
+      .form__error {
         color: #ff0000;
         text-decoration: underline;
         display: block; /* esto va con un display none y aparecería cuando hay un error en el form */
@@ -51,12 +51,12 @@
           margin-left: 0.5rem;
         }
       }
-      .login__a {
+      .form__a {
         font-size: 0.8em;
         margin-bottom: 1.5rem;
         color: $titulos;
       }
-      .login__or {
+      .form__or {
         border-bottom: 2px solid $lineas;
         width: 96%;
         margin: 1.5rem 0;
@@ -69,7 +69,7 @@
         box-shadow: 0 2px 4px $negro;
         padding: 10px 26px;
         cursor: pointer;
-        .login__button {
+        .form__button {
           width: 90%;
           background-color: transparent;
           border: none;
@@ -87,7 +87,7 @@
           transition: all 400ms;
         }
       }
-      .login__with {
+      .form__with {
         background: $blanco;
       }
     }

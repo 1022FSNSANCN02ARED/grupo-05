@@ -76,33 +76,66 @@
     </header>
     <section class="form">
       <div class="form__container">
-        <h3 class="form__title">Login</h3>
+        <h3 class="form__title">Creat an Account</h3>
         <form action="" class="form__display">
           <input
-            placeholder="user name"
+            placeholder="First name"
             type="text"
             required
             maxlength="16"
-            id="user_name"
-            name="user__name"
+            id="First_name"
+            name="First__name"
           />
           <input
-            placeholder="password"
-            type="password"
+            placeholder="Last name"
+            type="text"
             required
             maxlength="16"
-            id="password"
-            name="password"
+            id="Last_name"
+            name="Last__name"
           />
-          <span class="form__error"
-            >Nombre de usuario o contraseña inválido</span
-          >
+          <input
+            placeholder="User name"
+            type="text"
+            required
+            maxlength="16"
+            id="User_name"
+            name="User__name"
+          />
+          <span class="form__error">Nombre de usuario ya existente</span>
+          <input
+            placeholder="Password"
+            type="Password"
+            required
+            maxlength="16"
+            id="Password"
+            name="Password"
+          />
           <div class="show_password">
             <i class="fa-solid fa-eye"></i>
             <!-- esto va con un display none para que no aparezca hasta que el usuario haga click, y cuando ocurra el evento se va a mostrar la contraseña  -->
             <i class="fa-solid fa-eye-slash"></i>
             <p>Mostrar contraseña</p>
           </div>
+          <input
+            placeholder="Confirm Password"
+            type="Password"
+            required
+            maxlength="16"
+            id="Confirm__Password"
+            name="Confirm__Password"
+          />
+          <input
+            placeholder="(011) 1234 5678"
+            type="tel"
+            required
+            maxlength="16"
+            id="Phone"
+            name="Phone"
+            pattern="[0-9]{2||3} [0-9]{4}[0-9]{3||4}"
+          />
+          <span class="note">Format: 011 2345 6789</span>
+
           <a href="#" class="form__a">¿Olvidaste tu contraseña? </a>
 
           <div class="button">

@@ -457,12 +457,10 @@ header {
   .description .text {
     margin-left: 5px; }
 
-.selec {
-  background-color: #110042; }
-
 .product {
   background: #110042;
-  padding: 3rem; }
+  padding: 2rem;
+  box-shadow: 2px 2px 15px #f516cc; }
   .product .img {
     width: 25px; }
 
@@ -475,6 +473,28 @@ header {
     margin-left: 5px; }
   .description .text {
     margin-left: 5px; }
+
+.gap {
+  gap: 10px; }
+
+.my-1 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.truck-icon {
+  color: #f516cc;
+  border: #f516cc solid 1px;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  right: 15px;
+  top: -15px; }
+
+.relative {
+  position: relative; }
+
+.color-white {
+  color: #e0e0e0; }
 
 .bg_animado {
   padding: 1rem;

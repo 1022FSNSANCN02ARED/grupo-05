@@ -1,9 +1,9 @@
-.selec{
-    background-color: $fondo_obscuro;
-}
+
 .product{
     background: $fondo_obscuro;
-    padding: 3rem;
+    padding: 2rem;
+    box-shadow: 2px 2px 15px $lineas;
+    
 
     .img{
         width: 25px;
@@ -23,6 +23,27 @@
     .text {
       margin-left: 5px;
     }
-  }
-
+}
+.gap {
+    gap: 10px;
+}
+.my-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}  
+.truck-icon {
+    color: $lineas;
+    border:$lineas solid 1px;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    top: -15px;
+}
+.relative {
+    position: relative;
+}
+.color-white{
+    color: $blanco;
+}
 

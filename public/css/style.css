@@ -410,7 +410,8 @@ header {
         background: #e0e0e0; }
 
 .product-f {
-  border: 3px solid #f516cc;
+  border: 2px solid #f516cc;
+  box-shadow: 0px 2px 4px #0e0e0e;
   border-radius: 5px;
   background-color: #110042; }
   .product-f h2 {
@@ -426,13 +427,15 @@ header {
   color: #f516cc; }
 
 .ammount {
-  border: 3px solid #f516cc;
+  border: 2px solid #f516cc;
+  box-shadow: 0px 2px 4px #0e0e0e;
   border-radius: 5px;
   background-color: #110042; }
   .ammount h2 {
     color: #0fd3ff; }
   .ammount .ammount-f {
-    border: 3px solid #f516cc;
+    border: 2px solid #f516cc;
+    box-shadow: 0px 2px 4px #0e0e0e;
     border-radius: 15px;
     background-color: #f516cc; }
 
@@ -451,7 +454,8 @@ header {
       font-size: 19px; }
 
 .description {
-  border: 3px solid #f516cc;
+  border: 2px solid #f516cc;
+  box-shadow: 0px 2px 4px #0e0e0e;
   border-radius: 5px;
   background-color: #110042; }
   .description h2 {

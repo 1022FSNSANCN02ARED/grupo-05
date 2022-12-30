@@ -1,5 +1,6 @@
 .product-f {
-  border: 3px solid $lineas;
+  border: 2px solid $lineas;
+  box-shadow: 0px 2px 4px $negro;
   border-radius: 5px;
 
   background-color: $fondo_obscuro;
@@ -24,7 +25,8 @@
 }
 
 .ammount {
-  border: 3px solid $lineas;
+  border: 2px solid $lineas;
+  box-shadow: 0px 2px 4px $negro;
   border-radius: 5px;
 
   background-color: $fondo_obscuro;
@@ -34,7 +36,8 @@
   }
 
   .ammount-f {
-    border: 3px solid $lineas;
+    border: 2px solid $lineas;
+    box-shadow: 0px 2px 4px $negro;
     border-radius: 15px;
 
     background-color: $lineas;
@@ -63,7 +66,9 @@
 }
 
 .description {
-  border: 3px solid $lineas;
+  border: 2px solid $lineas;
+  box-shadow: 0px 2px 4px $negro;
+
   border-radius: 5px;
 
   background-color: $fondo_obscuro;

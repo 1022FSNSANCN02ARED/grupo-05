@@ -1,7 +1,7 @@
 {
   "name": "grupo-05",
   "version": "1.0.0",
-  "description": "",
+  "description": "ENLACE A TRELLO:",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",

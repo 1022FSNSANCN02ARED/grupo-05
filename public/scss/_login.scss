@@ -76,8 +76,10 @@
       strong {
         font-size: 1em;
         margin-top: 2rem;
+        font-weight: 600;
         a {
           font-weight: 500;
+          color: $titulos;
         }
       }
       .form__or {

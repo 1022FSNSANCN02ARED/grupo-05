@@ -4,6 +4,7 @@ $titulos: #0fd3ff;
 $fondo_obscuro: #110042;
 $fondo_claro: #34265e;
 $lineas: #f516cc;
+$rojo: #ff0000;
 
 /* ====================== Width ====================== */
 .vw-100 {
@@ -57,6 +58,10 @@ $lineas: #f516cc;
 
 .justify-content-sp-ev {
   justify-content: space-evenly;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
 }
 
 .align-center {
@@ -272,3 +277,19 @@ $lineas: #f516cc;
   padding-left: 5rem;
 }
 /* ========================================================== */
+
+/* ====================== box shadow ====================== */
+
+.box-shadow {
+  box-shadow: 0px 2px 4px $negro;
+}
+
+/* ====================== border-radius ====================== */
+.border-rad-6 {
+  border-radius: 6px;
+}
+
+/* ====================== cursor-pointer ====================== */
+.cursor-pointer {
+  cursor: pointer;
+}

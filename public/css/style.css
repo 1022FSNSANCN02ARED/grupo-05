@@ -252,11 +252,17 @@ body {
 .box-shadow {
   box-shadow: 0px 2px 4px #0e0e0e; }
 
-/* ====================== border-radius ====================== */
-.border-rad-6 {
-  border-radius: 6px; }
+/* ====================== Border Radius ====================== */
+.border-r-5 {
+  border-radius: 5px; }
 
-/* ====================== cursor-pointer ====================== */
+.border-r-10 {
+  border-radius: 10px; }
+
+.border-redondo {
+  border-radius: 2rem; }
+
+/* ====================== Cursor-pointer ====================== */
 .cursor-pointer {
   cursor: pointer; }
 
@@ -471,6 +477,8 @@ header {
   .ammount .ammount-f {
     border: 2px solid #f516cc;
     box-shadow: 0px 2px 4px #0e0e0e;
+    min-width: 5rem;
+    max-width: 100%;
     border-radius: 15px;
     background-color: #f516cc; }
 
@@ -583,7 +591,70 @@ header {
   a {
     color: #e0e0e0;
     text-transform: uppercase;
-    text-decoration: none; } }
+    text-decoration: none; }
+  /* Product */
+  .opciones {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 2px solid #f516cc;
+    box-shadow: 0px 2px 4px #0e0e0e;
+    border-radius: 5px;
+    background-color: #110042; }
+    .opciones .ammount {
+      margin-bottom: 1rem; }
+    .opciones .categoria {
+      display: flex;
+      justify-content: space-around;
+      border: 2px solid #f516cc;
+      box-shadow: 0px 2px 4px #0e0e0e;
+      margin: 1rem;
+      border-radius: 5px;
+      background-color: #110042; }
+      .opciones .categoria .option-1 {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      .opciones .categoria .option-2 {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      .opciones .categoria .option-3 {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; } }
+
+@media (min-width: 768px) {
+  /* Product  no terminado*/
+  .images {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border: 3px solid #f516cc; }
+    .images .img {
+      transition: 0.4s; }
+    .images .img:hover {
+      transform: scale(1.2); }
+  .img-product {
+    transition: 0.5s;
+    object-fit: cover; }
+  .img-product:hover {
+    transform: scale(1.2); }
+  .container {
+    display: flex; }
+  .container-dos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem; }
+    .container-dos .ammount {
+      margin-top: 0rem; } }
 
 @media (min-width: 900px) {
   nav {
@@ -599,3 +670,6 @@ header {
     .scroller .scroller-item {
       width: 180px;
       height: 180px; } }
+
+@media (min-width: 1280px) {
+  /* Pendiente en product */ }

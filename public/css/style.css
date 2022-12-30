@@ -518,16 +518,16 @@ header {
 .product-shadow {
   box-shadow: 0 4px 4px #0e0e0e; }
 
-.description {
+.description-section {
   border: 3px solid #f516cc;
   border-radius: 5px;
   background-color: #f516cc;
   align-items: center; }
-  .description h2 {
+  .description-section h2 {
     color: #0fd3ff;
     margin-left: 5px;
     text-align: center; }
-  .description .text {
+  .description-section .text {
     margin-left: 5px; }
 
 .my-1 {

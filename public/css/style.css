@@ -363,6 +363,19 @@ header {
         border: none;
         border-radius: 4px;
         margin-bottom: 0.5rem; }
+      .form .form__container .form__display .terms {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0; }
+        .form .form__container .form__display .terms #terms {
+          width: 10%; }
+        .form .form__container .form__display .terms label {
+          font-size: 0.8em;
+          margin-bottom: 0.5rem; }
+          .form .form__container .form__display .terms label a {
+            color: #0fd3ff; }
       .form .form__container .form__display .form__error {
         color: #ff0000;
         text-decoration: underline;
@@ -380,6 +393,11 @@ header {
         font-size: 0.8em;
         margin-bottom: 1.5rem;
         color: #0fd3ff; }
+      .form .form__container .form__display strong {
+        font-size: 1em;
+        margin-top: 2rem; }
+        .form .form__container .form__display strong a {
+          font-weight: 500; }
       .form .form__container .form__display .form__or {
         border-bottom: 2px solid #f516cc;
         width: 96%;

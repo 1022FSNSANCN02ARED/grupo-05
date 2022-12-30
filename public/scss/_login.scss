@@ -35,6 +35,23 @@
         border-radius: 4px;
         margin-bottom: 0.5rem;
       }
+      .terms {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+        #terms {
+          width: 10%;
+        }
+        label {
+          font-size: 0.8em;
+          margin-bottom: 0.5rem;
+          a {
+            color: $titulos;
+          }
+        }
+      }
       .form__error {
         color: #ff0000;
         text-decoration: underline;
@@ -55,6 +72,13 @@
         font-size: 0.8em;
         margin-bottom: 1.5rem;
         color: $titulos;
+      }
+      strong {
+        font-size: 1em;
+        margin-top: 2rem;
+        a {
+          font-weight: 500;
+        }
       }
       .form__or {
         border-bottom: 2px solid $lineas;

@@ -122,6 +122,7 @@
         <div class="container-dos">
           <div class="opciones">
             <div class="categoria none">
+              <h2>Opciones:</h2>
               <div class="option-1">
                 <label for="ram" class="color-label">RAM:</label>
                 <select name="ram">
@@ -152,30 +153,46 @@
               <div
                 class="justify-content-center ammount-f flex justify-content-sp-ev align-center mb-1 ml-6 mr-6"
               >
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus resta-suma"></i>
                 <!-- Esto se cambia por un input type number para darle funcionalidad -->
                 <p>1</p>
-                <i class="fa-solid fa-minus"></i>
+                <i class="fa-solid fa-minus resta-suma"></i>
               </div>
             </div>
-          </div>
-          <div class="buttom flex justify-content-center mt-1">
-            <button type="submit">
-              <span>Comprar</span>
-            </button>
-          </div>
-          <div class="description mt-1 mr-1 ml-1">
-            <h2>Descripcion</h2>
-            <div class="text">
-              <p>
-                La MacBook Pro es la notebook más poderosa de Apple, creada para
-                quienes se proponen nuevos desafíos y logran cosas imposibles.
-                Tiene una pantalla envolvente, procesadores superrápidos,
-                gráficos de última generación, un nuevo teclado Magic Keyboard y
-                un increíble espacio de almacenamiento.
-              </p>
+            <div class="envio none">
+              <h2>Envios</h2>
+              <div class="cp">
+                <h3>Codigo Postal:</h3>
+                <input type="text" id="cp" placeholder="Tu codigo postal..."
+                required maxlength="4" " />
+                <label class="size-label"
+                  ><a
+                    href="https://codigopostal.com.ar/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >¿No sabes cual es tu codigo postal?</a
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="buttom flex justify-content-center mt-1">
+              <button type="submit">
+                <span>Comprar</span>
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="description mt-1 mr-1 ml-1">
+        <h2>Descripcion</h2>
+        <div class="text">
+          <p>
+            La MacBook Pro es la notebook más poderosa de Apple, creada para
+            quienes se proponen nuevos desafíos y logran cosas imposibles. Tiene
+            una pantalla envolvente, procesadores superrápidos, gráficos de
+            última generación, un nuevo teclado Magic Keyboard y un increíble
+            espacio de almacenamiento.
+          </p>
         </div>
       </div>
     </main>

@@ -511,6 +511,9 @@ header {
 .color-label {
   color: white; }
 
+.size-label {
+  font-size: 0.8rem; }
+
 .product {
   background: #110042;
   padding: 3rem;
@@ -651,6 +654,13 @@ header {
     box-shadow: 0px 2px 4px #0e0e0e;
     border-radius: 5px;
     background-color: #110042; }
+    .opciones .categoria {
+      flex-direction: column;
+      color: #0fd3ff;
+      text-align: center; }
+    .opciones .buttom {
+      margin-top: 0;
+      margin-bottom: 1rem; }
     .opciones .ammount {
       margin-bottom: 1rem; }
     .opciones .categoria {
@@ -704,9 +714,55 @@ header {
       margin-top: 3rem;
       padding-right: 1rem; }
       .container .container-dos .ammount {
-        margin-top: 0rem; }
+        margin-top: 0; }
       .container .container-dos .opciones {
-        margin: 0; }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0;
+        height: 100%; }
+        .container .container-dos .opciones .categoria {
+          flex-direction: column;
+          color: #0fd3ff;
+          text-align: center; }
+        .container .container-dos .opciones .resta-suma {
+          transition: 0.5s; }
+        .container .container-dos .opciones .resta-suma:hover {
+          transform: scale(1.1); }
+        .container .container-dos .opciones .buttom {
+          margin-top: 0;
+          margin-top: 1rem;
+          transition: 1s; }
+        .container .container-dos .opciones .buttom:hover {
+          box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px; }
+        .container .container-dos .opciones .envio {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          border: 2px solid #f516cc;
+          box-shadow: 0px 2px 4px #0e0e0e;
+          border-radius: 5px; }
+          .container .container-dos .opciones .envio h2 {
+            color: #0fd3ff;
+            text-align: center; }
+          .container .container-dos .opciones .envio .cp {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem; }
+            .container .container-dos .opciones .envio .cp input {
+              border: white solid 2px;
+              border-radius: 5px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              transition: 0.7s;
+              outline: none; }
+            .container .container-dos .opciones .envio .cp input:focus {
+              border-color: #f516cc; }
+            .container .container-dos .opciones .envio .cp h3 {
+              color: white;
+              margin-bottom: 5px; }
       .container .container-dos .description {
         margin: 0;
         margin-top: 1rem; }

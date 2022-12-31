@@ -1,32 +1,37 @@
 
 .product{
     background: $fondo_obscuro;
-    padding: 2rem;
-    box-shadow: 2px 2px 15px $lineas;
+    padding: 3rem;
+   border: 4px solid $lineas;
+  
     
 
     .img{
         width: 25px;
     }
 }
+.product-shadow{
+    box-shadow: 0 4px 4px #0e0e0e;
+
+}
 .description {
     border: 3px solid $lineas;
     border-radius: 5px;
   
-    background-color: $fondo_obscuro;
+    background-color: $lineas;
+    align-items: center;
   
     h2 {
       color: $titulos;
       margin-left: 5px;
+      text-align: center;
     }
   
     .text {
       margin-left: 5px;
     }
 }
-.gap {
-    gap: 10px;
-}
+
 .my-1 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -46,4 +51,10 @@
 .color-white{
     color: $blanco;
 }
+.lg-w-25 {
+    width: 48%;
+  }
 
+.justify{
+    justify-content: space-around;
+}

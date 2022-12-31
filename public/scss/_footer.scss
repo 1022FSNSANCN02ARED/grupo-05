@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    
+}
+.img-footer1{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.footer .img-footer{
+    width: 100%;
+    margin: auto;
+    align-items: center ;
+    border: 3px solid $lineas;
+    background-color: $fondo_obscuro;
+}
+.info-footer{
+    display: inline-block;
+    float: right;
+}

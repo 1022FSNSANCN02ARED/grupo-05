@@ -1,3 +1,5 @@
+
+
 @media (min-width: 600px) {
   .logo {
     display: block;
@@ -88,7 +90,11 @@
         justify-content: center;
       }
     }
+    .lg-w-25 {
+      width: 48%;
+    }
   }
+
 }
 
 @media (min-width: 768px) {

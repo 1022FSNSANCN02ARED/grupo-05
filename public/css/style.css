@@ -508,6 +508,9 @@ header {
     margin-left: 5px;
     color: white; }
 
+.color-label {
+  color: white; }
+
 .product {
   background: #110042;
   padding: 3rem;
@@ -518,16 +521,16 @@ header {
 .product-shadow {
   box-shadow: 0 4px 4px #0e0e0e; }
 
-.description {
+.description-section {
   border: 3px solid #f516cc;
   border-radius: 5px;
   background-color: #f516cc;
   align-items: center; }
-  .description h2 {
+  .description-section h2 {
     color: #0fd3ff;
     margin-left: 5px;
     text-align: center; }
-  .description .text {
+  .description-section .text {
     margin-left: 5px; }
 
 .my-1 {
@@ -657,36 +660,41 @@ header {
         margin: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: center; }
-    .opciones .lg-w-25 {
-      width: 48%; } }
+        justify-content: center; } }
 
 @media (min-width: 768px) {
-  /* Product  no terminado*/
-  .images {
-    display: flex;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 0.5rem;
-    border: 3px solid #f516cc; }
-    .images .img {
-      transition: 0.4s; }
-    .images .img:hover {
-      transform: scale(1.2); }
-  .img-product {
-    transition: 0.5s;
-    object-fit: cover; }
-  .img-product:hover {
-    transform: scale(1.2); }
+  /* Product */
   .container {
     display: flex; }
-  .container-dos {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem; }
-    .container-dos .ammount {
-      margin-top: 0rem; } }
+    .container .product-f .images {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border: 3px solid #f516cc; }
+      .container .product-f .images .img {
+        transition: 0.4s; }
+      .container .product-f .images .img:hover {
+        transform: scale(1.2); }
+    .container .product-f .img-product {
+      transition: 0.5s;
+      object-fit: cover; }
+    .container .product-f .img-product:hover {
+      transform: scale(1.2); }
+    .container .container-dos {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+      padding-right: 1rem; }
+      .container .container-dos .ammount {
+        margin-top: 0rem; }
+      .container .container-dos .opciones {
+        margin: 0; }
+      .container .container-dos .description {
+        margin: 0;
+        margin-top: 1rem; } }
 
 @media (min-width: 900px) {
   nav {

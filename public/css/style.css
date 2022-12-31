@@ -558,8 +558,11 @@ header {
 .justify {
   justify-content: space-around; }
 
-.footer {
-  display: flex; }
+.icon {
+  font-size: 150px;
+  align-items: center;
+  text-align: center;
+  color: #0fd3ff; }
 
 .img-footer1 {
   width: 100%;
@@ -577,8 +580,20 @@ header {
   background-color: #110042; }
 
 .info-footer {
-  display: inline-block;
-  float: right; }
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.col {
+  flex: 0 0 33%;
+  max-width: 33%;
+  text-align: center; }
 
 .bg_animado {
   padding: 1rem;
@@ -694,7 +709,10 @@ header {
         margin: 0; }
       .container .container-dos .description {
         margin: 0;
-        margin-top: 1rem; } }
+        margin-top: 1rem; }
+  .col {
+    flex: 0 0 100%;
+    max-width: 100%; } }
 
 @media (min-width: 900px) {
   nav {
@@ -709,7 +727,10 @@ header {
     height: 300px; }
     .scroller .scroller-item {
       width: 180px;
-      height: 180px; } }
+      height: 180px; }
+  .col {
+    flex: 0 0 50%;
+    max-width: 50%; } }
 
 @media (min-width: 1280px) {
   /* Pendiente en product */ }

@@ -141,6 +141,10 @@
       }
     }
   }
+  .col{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 900px) {
@@ -161,6 +165,10 @@
       width: 180px;
       height: 180px;
     }
+  }
+  .col{
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 

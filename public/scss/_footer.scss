@@ -1,6 +1,5 @@
 .footer{
-    display: flex;
-    
+   
 }
 .img-footer1{
     width: 100%;
@@ -18,6 +17,22 @@
     background-color: $fondo_obscuro;
 }
 .info-footer{
-    display: inline-block;
-    float: right;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+  
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col{
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+
+
 }

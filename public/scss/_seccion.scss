@@ -9,7 +9,8 @@
 .section-product{
     display: flex;
     flex-wrap: wrap;
-    padding: 4px;
+    padding: 8px;
+    
 
     .title-product{
         width: 100%;
@@ -19,13 +20,27 @@
     }
 
 }
+.contain-product{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 50px;
+    padding: 20px;
+    border: 3px solid $fondo_claro;
+    background-color: $fondo_obscuro;
+    box-shadow: 0px 2px 10px $lineas;
+    
+}
+
 .product{
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-   gap: 8px;
-    background: $fondo_obscuro;
-    box-shadow: 0px 2px 10px $lineas;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px $fondo_obscuro;
     
 
     .img-product{
@@ -39,9 +54,7 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 8px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: $lineas;
+        border-top: 1px solid $fondo_obscuro;
 
         
     }
@@ -49,17 +62,19 @@
     .nom-product{
         width: 100%;
         font-size: 16px;
-        color: $titulos;
+        color: $fondo_claro;
         
     }
     .ofert-product{
         width: 100%;
         font-size: 16px;
+        font-weight: bold;
         color: $lineas;
     }
     .precio-product{
         font-size: 20px;
-        color: $blanco;
+        font-weight: bold;
+        color: $titulos;
     }
 
 }

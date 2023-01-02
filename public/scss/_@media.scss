@@ -107,6 +107,9 @@
     width: 25%;
     
   }
+  .product2{
+    width: 25%;
+  }
   
 }
 
@@ -222,18 +225,23 @@
       }
     }
   }
-<<<<<<< HEAD
+
   .img-product{
     width: 23%;
   }
-  .col{
-=======
+  
   .col {
->>>>>>> 4d12e27f3eee683ff0e2748314512b6742195e37
+
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .container-selec{
+    width: 23%;
+  }
   .product{
+    width: 23%;
+  }
+  .product2{
     width: 23%;
   }
   .product:hover .info-product{

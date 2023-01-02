@@ -1,71 +1,65 @@
-.product {
-    background: $fondo_obscuro;
-    padding: 3rem;
-    border: 4px solid $lineas;
+.main-product{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
 
-
-
-    .img {
-        width: 25px;
-    }
+   
 }
+.section-product{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
 
-.product-shadow {
-    box-shadow: 0 4px 4px #0e0e0e;
+    .title-product{
+        width: 100%;
+        font-size: 24px;
 
-}
-
-.description-section {
-    border: 3px solid $lineas;
-    border-radius: 5px;
-
-    background-color: $lineas;
-    align-items: center;
-
-    h2 {
-        color: $titulos;
-        margin-left: 5px;
-        text-align: center;
+       
     }
 
-    .text {
-        margin-left: 5px;
-    }
 }
-
-.my-1 {
+.product{
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-}
+   gap: 8px;
+    background: $fondo_obscuro;
+    box-shadow: 0px 2px 10px $lineas;
+    
 
-.truck-icon {
-    color: $lineas;
-    border: $lineas solid 1px;
-    border-radius: 50%;
-    padding: 5px;
-    position: absolute;
-    right: 15px;
-    top: -15px;
-}
+    .img-product{
+        width: 100%;
+        padding: 20px;
 
-.relative {
-    position: relative;
-}
+       
+    }
+    .info-product{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $lineas;
 
-.color-white {
-    color: $blanco;
-}
+        
+    }
 
-.lg-w-25 {
-    width: 48%;
-}
+    .nom-product{
+        width: 100%;
+        font-size: 16px;
+        color: $titulos;
+        
+    }
+    .ofert-product{
+        width: 100%;
+        font-size: 16px;
+        color: $lineas;
+    }
+    .precio-product{
+        font-size: 20px;
+        color: $blanco;
+    }
 
-.justify {
-    justify-content: space-around;
-}
-.icon{
-    font-size: 150px;
-    align-items: center;
-    text-align: center;
-    color: $titulos;
 }

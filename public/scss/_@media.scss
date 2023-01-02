@@ -36,6 +36,9 @@
     text-transform: uppercase;
     text-decoration: none;
   }
+  .img-product{
+    width: 48%;
+  }
 
   /* Product */
   .opciones {
@@ -89,6 +92,11 @@
       }
     }
   }
+  .product{
+    width: 25%;
+    
+  }
+  
 }
 
 @media (min-width: 768px) {
@@ -141,9 +149,18 @@
       }
     }
   }
+  .img-product{
+    width: 23%;
+  }
   .col{
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .product{
+    width: 23%;
+  }
+  .product:hover .info-product{
+    display: block;
   }
 }
 
@@ -170,6 +187,7 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+  
 }
 
 @media (min-width: 1280px) {

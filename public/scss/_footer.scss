@@ -1,5 +1,11 @@
 .footer{
-   
+    padding: 30px 0;
+    
+}
+.container-footer{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 .img-footer1{
     width: 100%;
@@ -14,7 +20,13 @@
     margin: auto;
     align-items: center ;
     border: 3px solid $lineas;
-    background-color: $fondo_obscuro;
+
+}
+.title-footer{
+    color: $blanco;
+    font-size: 30px;
+    
+   
 }
 .info-footer{
     width: 90%;

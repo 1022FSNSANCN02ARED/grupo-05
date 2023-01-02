@@ -55,6 +55,17 @@
 
     background-color: $fondo_obscuro;
 
+    .categoria {
+      flex-direction: column;
+      color: $titulos;
+      text-align: center;
+    }
+
+    .buttom {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
     .ammount {
       margin-bottom: 1rem;
     }
@@ -101,7 +112,6 @@
 
 @media (min-width: 768px) {
   /* Product */
-
   .container {
     display: flex;
 
@@ -138,10 +148,73 @@
       margin-top: 3rem;
       padding-right: 1rem;
       .ammount {
-        margin-top: 0rem;
+        margin-top: 0;
       }
       .opciones {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         margin: 0;
+        height: 100%;
+        .categoria {
+          flex-direction: column;
+          color: $titulos;
+          text-align: center;
+        }
+        .resta-suma {
+          transition: 0.5s;
+        }
+        .resta-suma:hover {
+          transform: scale(1.1);
+        }
+
+        .buttom {
+          margin-top: 0;
+          margin-top: 1rem;
+          transition: 1s;
+        }
+        .buttom:hover {
+          box-shadow: rgba(240, 46, 170, 0.4) 0px 5px,
+            rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px;
+        }
+        .envio {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0;
+          margin-left: 1rem;
+          margin-right: 1rem;
+
+          border: 2px solid $lineas;
+          box-shadow: 0px 2px 4px #0e0e0e;
+
+          border-radius: 5px;
+
+          h2 {
+            color: $titulos;
+            text-align: center;
+          }
+          .cp {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+
+            input {
+              border: white solid 2px;
+              border-radius: 5px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              transition: 0.7s;
+              outline: none;
+            }
+            input:focus {
+              border-color: $lineas;
+            }
+            h3 {
+              color: white;
+              margin-bottom: 5px;
+            }
+          }
+        }
       }
       .description {
         margin: 0;
@@ -149,10 +222,14 @@
       }
     }
   }
+<<<<<<< HEAD
   .img-product{
     width: 23%;
   }
   .col{
+=======
+  .col {
+>>>>>>> 4d12e27f3eee683ff0e2748314512b6742195e37
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -183,7 +260,7 @@
       height: 180px;
     }
   }
-  .col{
+  .col {
     flex: 0 0 50%;
     max-width: 50%;
   }

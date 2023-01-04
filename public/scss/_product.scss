@@ -95,3 +95,20 @@
 .size-label {
   font-size: 0.8rem;
 }
+
+.precio {
+  border: 2px solid $lineas;
+  box-shadow: 0px 2px 4px #0e0e0e;
+
+  border-radius: 5px;
+
+  background-color: $fondo_obscuro;
+
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  h2 {
+    color: $titulos;
+  }
+}

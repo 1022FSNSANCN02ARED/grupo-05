@@ -20,6 +20,9 @@ body {
 .vh-100 {
   height: 100vh; }
 
+.h-100 {
+  height: 100%; }
+
 /* ========================================================== */
 /* ====================== Text (Center, Left, Right) ====================== */
 .text-center {
@@ -514,6 +517,17 @@ header {
 .size-label {
   font-size: 0.8rem; }
 
+.precio {
+  border: 2px solid #f516cc;
+  box-shadow: 0px 2px 4px #0e0e0e;
+  border-radius: 5px;
+  background-color: #110042;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  .precio h2 {
+    color: #0fd3ff; }
+
 .main-product {
   width: 90vw;
   margin-left: auto;
@@ -723,10 +737,10 @@ header {
         transition: 0.4s; }
       .container .product-f .images .img:hover {
         transform: scale(1.2); }
-    .container .product-f .img-product {
+    .container .product-f .img-product-product {
       transition: 0.5s;
       object-fit: cover; }
-    .container .product-f .img-product:hover {
+    .container .product-f .img-product-product:hover {
       transform: scale(1.2); }
     .container .container-dos {
       display: flex;
@@ -819,4 +833,14 @@ header {
     max-width: 50%; } }
 
 @media (min-width: 1280px) {
-  /* Pendiente en product */ }
+  /* Pendiente en product */
+  .full-container {
+    display: flex;
+    height: 100%; }
+    .full-container .images {
+      height: 95%;
+      width: 20%;
+      align-items: center;
+      flex-direction: column; }
+      .full-container .images .img {
+        width: 70%; } }

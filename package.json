@@ -4,7 +4,7 @@
   "description": "ENLACE A TRELLO:",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon src/app.js",
     "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },

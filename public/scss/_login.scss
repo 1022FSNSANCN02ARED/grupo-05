@@ -1,12 +1,8 @@
 .form {
-  width: 100vw;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
 
   .form__container {
-    width: 90%;
     max-width: 28rem;
     border: 2px solid $lineas;
     background-color: $fondo_obscuro;
@@ -21,8 +17,6 @@
     }
 
     .form__display {
-      display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
       gap: 0.5rem;
@@ -36,9 +30,6 @@
         margin-bottom: 0.5rem;
       }
       .terms {
-        width: 90%;
-        display: flex;
-        justify-content: center;
         align-items: center;
         margin: 1rem 0;
         #terms {
@@ -58,9 +49,7 @@
         display: block; /* esto va con un display none y aparecería cuando hay un error en el form */
       }
       .show_password {
-        width: 90%;
         padding: 0.5rem 0;
-        display: flex;
         justify-content: flex-end;
 
         p {
@@ -88,7 +77,6 @@
         margin: 1.5rem 0;
       }
       .button {
-        width: 90%;
         background-color: $lineas;
         border-radius: 6px;
         border: none;
@@ -96,7 +84,6 @@
         padding: 10px 26px;
         cursor: pointer;
         .form__button {
-          width: 90%;
           background-color: transparent;
           border: none;
           font-size: 1em;

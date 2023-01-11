@@ -1,24 +1,21 @@
+/* dependencias requeridas */
 const express = require("express");
-//const { resolve } = require("path");
 const app = express();
+
 const path = require("path");
+//const { resolve } = require("path");
 
-app.use(express.static(path.join(__dirname, "public")));
+const mainRouter = require(".router/main-router");
 
-app.get("/", (req, res) => {
-  __dirname + res.sendFile(path.resolve(__dirname, "views/index.html"));
-});
-app.get("/login", (req, res) => {
-  __dirname + res.sendFile(path.resolve(__dirname, "views/pages/login.html"));
-});
-app.get("/product", (req, res) => {
-  __dirname + res.sendFile(path.resolve(__dirname, "views/pages/product.html"));
-});
-app.get("/register", (req, res) => {
-  __dirname +
-    res.sendFile(path.resolve(__dirname, "views/pages/register.html"));
-});
+/* ==== puerto === */
 
 app.listen(3001, () => {
   console.log("Server prendido");
 });
+
+/* ==== ruta a archivos public === */
+
+app.use(express.static(path.join(__dirname, "public")));
+
+/* === rutas a views === */
+app.use(mainRouter);

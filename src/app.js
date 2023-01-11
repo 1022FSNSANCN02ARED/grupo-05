@@ -5,7 +5,7 @@ const app = express();
 const path = require("path");
 //const { resolve } = require("path");
 
-const mainRouter = require(".router/main-router");
+const mainRouter = require("./router/main-router.js");
 
 /* ==== puerto === */
 

@@ -5,11 +5,9 @@ module.exports = {
     __dirname + res.sendFile(path.resolve(__dirname, "../views/index.html"));
   },
   login: (req, res) => {
-    __dirname +
-      res.sendFile(path.resolve(__dirname, "../views/pages/login.html"));
+    __dirname + res.sendFile(path.resolve(__dirname, "../views/login.html"));
   },
   register: (req, res) => {
-    __dirname +
-      res.sendFile(path.resolve(__dirname, "../views/pages/register.html"));
+    __dirname + res.sendFile(path.resolve(__dirname, "../views/register.html"));
   },
 };

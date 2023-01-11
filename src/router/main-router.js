@@ -14,17 +14,17 @@ const cartRouter = require("./cart-router.js");
 
 /* === rutas principales === */
 
-router.use("/", mainControllers.home);
-app.get("/login", mainControllers.login);
-app.get("/register", mainControllers.register);
+router.get("/", mainControllers.home);
+router.get("/login", mainControllers.login);
+router.get("/register", mainControllers.register);
 
 /* === rutas de products === */
 
-router.use("/products", productRouter);
+router.get("/products", productRouter);
 
 /* === rutas de cart === */
 
-router.use("/carts", cartRouter);
+router.get("/carts", cartRouter);
 
 /* ===================================================== */
 

@@ -3,6 +3,6 @@ const router = Router();
 
 const cartControllers = require("../controllers/cart-controllers.js");
 
-router.use("/", cartControllers);
+router.get("/", cartControllers.cart);
 
 module.exports = router;

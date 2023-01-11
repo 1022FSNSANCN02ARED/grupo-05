@@ -2,7 +2,7 @@
   "name": "grupo-05",
   "version": "1.0.0",
   "description": "ENLACE A TRELLO:",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.js",
     "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",

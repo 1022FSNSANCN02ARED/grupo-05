@@ -20,11 +20,11 @@ router.get("/register", mainControllers.register);
 
 /* === rutas de products === */
 
-router.get("/products", productRouter);
+router.use("/products", productRouter);
 
 /* === rutas de cart === */
 
-router.get("/carts", cartRouter);
+router.use("/carts", cartRouter);
 
 /* ===================================================== */
 

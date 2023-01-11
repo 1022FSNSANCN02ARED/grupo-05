@@ -15,7 +15,7 @@ app.listen(3001, () => {
 
 /* ==== ruta a archivos public === */
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.resolve(__dirname, "public")));
 
 /* === rutas a views === */
 app.use(mainRouter);

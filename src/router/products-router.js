@@ -4,6 +4,6 @@ const router = Router();
 const productsControllers = require("../controllers/products-controllers.js");
 
 /* http:// localhost:(Port)/products */
-router.get("/", productsControllers.product);
+router.get("/product", productsControllers.product);
 
 module.exports = router;

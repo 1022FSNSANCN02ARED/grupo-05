@@ -2,6 +2,6 @@ const path = require("path");
 
 module.exports = {
   product: (req, res) => {
-    res.render("product");
+    res.sendFile(path.resolve(__dirname, "../views/product.html"));
   },
 };

@@ -2,14 +2,12 @@ const path = require("path");
 
 module.exports = {
   home: (req, res) => {
-    res.render("index");
+    res.sendFile(path.resolve(__dirname, "../views/index.html"));
   },
   login: (req, res) => {
-    __dirname +
-      res.sendFile(path.resolve(__dirname, "../views/users/login.html"));
+    res.sendFile(path.resolve(__dirname, "../views/login.html"));
   },
   register: (req, res) => {
-    __dirname +
-      res.sendFile(path.resolve(__dirname, "../views/users/register.html"));
+    res.sendFile(path.resolve(__dirname, "../views/register.html"));
   },
 };

@@ -54,7 +54,7 @@ body {
 .align-center {
   align-items: center; }
 
-.grow-1 {
+.gorw-1 {
   flex-grow: 1; }
 
 .flex-wrap {
@@ -356,13 +356,9 @@ header {
   display: none; }
 
 .form {
-  width: 100vw;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center; }
   .form .form__container {
-    width: 90%;
     max-width: 28rem;
     border: 2px solid #f516cc;
     background-color: #110042;
@@ -375,8 +371,6 @@ header {
       padding: 1rem;
       font-size: 2em; }
     .form .form__container .form__display {
-      display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
       gap: 0.5rem;
@@ -388,9 +382,6 @@ header {
         border-radius: 4px;
         margin-bottom: 0.5rem; }
       .form .form__container .form__display .terms {
-        width: 90%;
-        display: flex;
-        justify-content: center;
         align-items: center;
         margin: 1rem 0; }
         .form .form__container .form__display .terms #terms {
@@ -406,9 +397,7 @@ header {
         display: block;
         /* esto va con un display none y aparecería cuando hay un error en el form */ }
       .form .form__container .form__display .show_password {
-        width: 90%;
         padding: 0.5rem 0;
-        display: flex;
         justify-content: flex-end; }
         .form .form__container .form__display .show_password p {
           font-size: 0.6em;
@@ -429,7 +418,6 @@ header {
         width: 96%;
         margin: 1.5rem 0; }
       .form .form__container .form__display .button {
-        width: 90%;
         background-color: #f516cc;
         border-radius: 6px;
         border: none;
@@ -437,7 +425,6 @@ header {
         padding: 10px 26px;
         cursor: pointer; }
         .form .form__container .form__display .button .form__button {
-          width: 90%;
           background-color: transparent;
           border: none;
           font-size: 1em;
@@ -584,47 +571,141 @@ header {
     font-weight: bold;
     color: #0fd3ff; }
 
-.footer {
-  padding: 30px 0; }
+/*  .footer{
+    padding: 30px 0;
+    
+}
+.container-footer{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.img-footer1{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.footer .img-footer{
+    width: 100%;
+    margin: auto;
+    align-items: center ;
+    border: 3px solid $lineas;
 
-.container-footer {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 0 15px; }
+}
+.title-footer{
+    color: $blanco;
+    font-size: 30px;
+    
+   
+}
+.info-footer{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
 
-.img-footer1 {
+  
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col{
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+
+
+}  */
+.pie-pagina {
   width: 100%;
-  margin: auto;
-  margin-top: 20px;
-  margin-left: 20px;
-  padding-left: 20px;
-  padding-top: 20px; }
+  background-color: #0d2033;
+  margin-top: auto; }
 
-.footer .img-footer {
+.pie-pagina .grupo-1 {
   width: 100%;
-  margin: auto;
-  align-items: center;
-  border: 3px solid #f516cc; }
-
-.title-footer {
-  color: #e0e0e0;
-  font-size: 30px; }
-
-.info-footer {
-  width: 90%;
-  margin: 0 auto;
-  padding: 0 15px; }
-
-.row {
+  padding: 2rem;
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; }
 
-.col {
-  flex: 0 0 33%;
-  max-width: 33%;
+.pie-pagina .grupo-1 .box figure img {
+  width: 150px; }
+
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
   text-align: center; }
+
+.pie-pagina .grupo-1 h2 {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 1rem 0 0.5rem 0;
+  text-align: center; }
+
+.pie-pagina .grupo-1 .box ul a {
+  color: #0fd3ff;
+  font-size: 0.8em; }
+
+.pie-pagina .grupo-1 .box ul {
+  display: flex;
+  gap: 0.5rem; }
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 5px;
+  background-color: #0a141d;
+  text-align: center;
+  transition: all 300ms ease; }
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: #0fd3ff; }
+
+.pie-pagina .grupo-2 {
+  background-color: #0d2033;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff; }
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px; }
+
+@media (min-width: 600px) {
+  .pie-pagina {
+    width: 100%; }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .pie-pagina .grupo-1 .box ul,
+  a {
+    flex-direction: column; }
+  .redes {
+    width: 40%;
+    text-align: center; }
+  .slogan {
+    width: 40%;
+    text-align: center; }
+  .pie-pagina .grupo-1 h2 {
+    margin-top: 0; }
+  .links {
+    display: flex;
+    gap: 1rem; }
+  .pie-pagina .grupo-1 .red-social a {
+    font-size: 1em; } }
 
 .bg_animado {
   padding: 1rem;

@@ -5,9 +5,9 @@ module.exports = {
     res.render("index");
   },
   login: (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../views/users/login.html"));
+    res.render("./users/login");
   },
   register: (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../views/users/register.html"));
+    res.render("./users/register");
   },
 };

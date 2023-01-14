@@ -1,81 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- link a Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- link a Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- link a nuestro CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link
-      rel="shortcut icon"
-      href="/imgs/Posible_logo/logo.png"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+    <%- include("../partials/head") %>
 
     <title>form Market Place</title>
   </head>
   <body>
-    <header class="bg_animado mb-3">
-      <div class="header__container">
-        <img
-          class="logo"
-          src="./imgs/posible_logo/logo.png"
-          alt="logo MarketPlace"
-        />
-        <div class="burguer-menu button__navbar">
-          <button class="menu header__button">
-            <i class="fa-solid fa-bars menu__bars"></i>
-          </button>
-        </div>
-        <div class="header__search">
-          <input
-            class="input__search"
-            type="search"
-            placeholder="Buscar en Market Place"
-          />
-          <button class="button__search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-        <div class="carrito button__navbar">
-          <button class="header__button">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-      </div>
-      <nav>
-        <ul class="categorias listas">
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-        </ul>
-        <ul class="usuario listas">
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">usuario</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include("../partials/header") %>
     <section class="form w-100 flex justify-content-center">
-      <div class="form__container w-90">
+      <div class="form__container w-90 mt-2 mb-2">
         <h3 class="form__title">Creat an Account</h3>
         <form action="" class="form__display flex justify-content-center">
           <input
@@ -162,5 +95,6 @@
         </form>
       </div>
     </section>
+    <%- include("../partials/footer") %>
   </body>
 </html>

@@ -1,79 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- link a Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- link a Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- link a nuestro CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link
-      rel="shortcut icon"
-      href="/imgs/Posible_logo/logo.png"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+    <%- include("./partials/head") %>
 
     <title>Login Market Place</title>
   </head>
   <body>
-    <header class="bg_animado">
-      <div class="header__container">
-        <img
-          class="logo"
-          src="/imgs/posible_logo/logo.png"
-          alt="logo MarketPlace"
-        />
-        <div class="burguer-menu button__navbar">
-          <button class="menu header__button">
-            <i class="fa-solid fa-bars menu__bars"></i>
-          </button>
-        </div>
-        <div class="header__search">
-          <input
-            class="input__search"
-            type="search"
-            placeholder="Buscar en Market Place"
-          />
-          <button class="button__search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-        <div class="carrito button__navbar">
-          <button class="header__button">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-      </div>
-      <nav>
-        <ul class="categorias listas">
-          <li><a href="product">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-        </ul>
-        <ul class="usuario listas">
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">usuario</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include("./partials/header") %>
     <main>
       <div class="banner">
         <img
@@ -241,45 +174,6 @@
         </div>
       </section>
     </main>
-
-    <footer class="footer bg_animado row">
-      <div class="container-footer">
-        <div class="img-footer1 col">
-          <img
-            class="img-footer"
-            src="/imgs/productos/img-cafetera-moulinex.jpg"
-            alt="img-cafetera-moulinex"
-          />
-        </div>
-        <div class="col">
-          <h3 class="title-footer">Publicidad/Promocion</h3>
-          <i class="fas fa-credit-card"></i>
-          <h3>Pagá con tarjeta o en efectivo</h3>
-          <p>
-            Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
-            efectivo en puntos de pago. ¡Y siempre es seguro!
-          </p>
-        </div>
-        <div class="col">
-          <i class="fas fa-gift"></i>
-          <h3>Envío gratis desde $ 2.500</h3>
-          <p>
-            Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
-            miles de productos. Es un beneficio de Mercado Puntos.
-          </p>
-        </div>
-        <div class="col">
-          <i class="fas fa-user-shield"></i>
-          <h3>Seguridad, de principio a fin</h3>
-          <p>
-            ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no
-            puedas hacer, porque estás siempre protegid@.
-          </p>
-        </div>
-        <div>
-          <h3>Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
-        </div>
-      </div>
-    </footer>
+    <%- include("./partials/footer") %>
   </body>
 </html>

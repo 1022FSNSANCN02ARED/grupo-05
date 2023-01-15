@@ -68,18 +68,21 @@
         <section class="section-product">
           <h2 class="title-product">Categoria</h2>
           <div class="contain-product">
-            <article class="product">
-        
+            <% productos.forEach(elProducto => { %>
+              <article class="product">
+                <img class="img-product" src="<%= elProducto.img %>" alt="<%= elProducto.alt %>">
+      
               
               <div class="info-product">
-                <% productos.forEach(elProducto => { %>
                 <h3 class="nom-product"><%= elProducto.nombre %></h3>
                 <p class="ofert-product"><%= elProducto.oferta %>></p>
                 <p class="precio-product"><%= elProducto.precio%></p>
-
-                <% }) %>
+      
               </div>
             </article>
+             
+            <% }) %>
+            
           </div>
         </section>
         

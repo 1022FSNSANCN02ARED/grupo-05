@@ -1,7 +1,9 @@
 const path = require("path");
+const productos = require("../views/data-products");
 
 module.exports = {
   product: (req, res) => {
-    res.render("product");
+    const id = req.params.id;
+    res.render("product", { productos, id });
   },
 };

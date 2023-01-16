@@ -7,9 +7,10 @@
   <body>
     <%- include("./partials/header") %>
     <main>
+      <% productos.forEach(producto => { %> <% if (id == producto.id) { %>
       <div class="container">
         <div class="product-f flex flex-d-column text-center mt-3 ml-1 mr-1">
-          <h2>Macbook Pro 2019</h2>
+          <h2><%= producto.nombre %></h2>
           <div class="stars text-left ml-1">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -20,34 +21,22 @@
           <div class="full-container">
             <div class="images none border-r-5">
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %> " class="w-50 border-r-10 img" />
               </div>
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %>" class="w-50 border-r-10 img" />
               </div>
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %>" class="w-50 border-r-10 img" />
               </div>
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %>" class="w-50 border-r-10 img" />
               </div>
             </div>
             <div class="img-s mt-1 flex align-center justify-content-sp-ar">
               <i class="fa-solid fa-arrow-left arrow-size"></i>
               <img
-                src="/imgs/productos/img-macbook-pro-2019.jpg"
+                src="<%= producto.img %>"
                 class="w-90 mb-1 border-r-5 img-product-product"
               />
               <i class="fa-solid fa-arrow-right arrow-size"></i>
@@ -57,7 +46,7 @@
         <div class="container-dos">
           <div class="opciones">
             <div class="precio flex justify-content-center">
-              <h2>$100.000</h2>
+              <h2><%= producto.precio %></h2>
             </div>
             <div class="categoria none">
               <h2>Opciones:</h2>
@@ -124,15 +113,10 @@
       <div class="description mt-1 mr-1 ml-1">
         <h2>Descripcion</h2>
         <div class="text">
-          <p>
-            La MacBook Pro es la notebook más poderosa de Apple, creada para
-            quienes se proponen nuevos desafíos y logran cosas imposibles. Tiene
-            una pantalla envolvente, procesadores superrápidos, gráficos de
-            última generación, un nuevo teclado Magic Keyboard y un increíble
-            espacio de almacenamiento.
-          </p>
+          <p><%= producto.descripcion %></p>
         </div>
       </div>
+      <% } %> <% }) %>
     </main>
     <%- include("./partials/footer") %>
   </body>

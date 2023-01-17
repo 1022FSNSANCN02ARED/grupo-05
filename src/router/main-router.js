@@ -21,6 +21,7 @@ router.get("/register", mainControllers.register);
 /* === rutas de products === */
 
 router.use("/products", productRouter);
+router.use("/add-product", productRouter);
 
 /* === rutas de cart === */
 

@@ -6,4 +6,8 @@ module.exports = {
     const id = req.params.id;
     res.render("product", { productos, id });
   },
+
+  agregar: (req, res) => {
+    res.render("products/crear-producto");
+  },
 };

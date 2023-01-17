@@ -10,4 +10,7 @@ module.exports = {
     const id = req.params.id;
     res.render("products/editar-producto", { productos, id });
   },
+  agregar: (req, res) => {
+    res.render("products/crear-producto");
+  },
 };

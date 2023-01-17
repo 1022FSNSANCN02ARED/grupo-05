@@ -93,7 +93,9 @@
           <div class="contain-product">
             <% productos.forEach(elProducto => { %>
               <article class="product">
-                <img class="img-product" src="<%= elProducto.img %>" alt="<%= elProducto.alt %>">
+                <a href="/product/<%= elProducto.id %> ">
+                  <img class="img-product" src="<%= elProducto.img %>" alt="<%= elProducto.alt %>">
+                </a>
       
               
               <div class="info-product">

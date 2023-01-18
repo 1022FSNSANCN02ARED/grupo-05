@@ -5,6 +5,8 @@ $fondo_obscuro: #110042;
 $fondo_claro: #34265e;
 $lineas: #f516cc;
 $rojo: #ff0000;
+$bg_darkblue: #0d2033;
+$bg_dark: #0a141d;
 
 /* ====================== Width ====================== */
 .vw-100 {
@@ -63,9 +65,15 @@ $rojo: #ff0000;
 .justify-content-sp-ev {
   justify-content: space-evenly;
 }
+.justify-content-sp-bt {
+  justify-content: space-between;
+}
 
 .justify-content-end {
   justify-content: flex-end;
+}
+.justify-content-start {
+  justify-content: flex-start;
 }
 
 .align-center {
@@ -292,6 +300,9 @@ $rojo: #ff0000;
 
 .border-r-5 {
   border-radius: 5px;
+}
+.border-r-6 {
+  border-radius: 6px;
 }
 
 .border-r-10 {

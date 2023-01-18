@@ -1,7 +1,3 @@
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 @import "style_root.scss";
 @import "header.scss";
 @import "banner.scss";
@@ -9,14 +5,18 @@ body {
 @import "login.scss";
 @import "product.scss";
 @import "seccion.scss";
+@import "carrito.scss";
 @import "footer.scss";
 
-
+body {
+  font-family: "Poppins", sans-serif;
+  background: $bg_dark;
+}
 
 .bg_animado {
   padding: 1rem;
   color: #fff;
-  background: linear-gradient(45deg, #602dac, #3723b8, #2973da, #030724);
+  background: linear-gradient(45deg, #030724, #91008f, #f516cc, #030724);
   background-size: 400% 400%;
   position: relative;
   animation: cambiar 10s ease-in-out infinite;
@@ -37,4 +37,3 @@ body {
 }
 
 @import "@media.scss";
-

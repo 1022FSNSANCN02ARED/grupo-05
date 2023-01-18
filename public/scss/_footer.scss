@@ -51,7 +51,7 @@
 
 .pie-pagina {
   width: 100%;
-  background-color: #0d2033;
+  background-color: $bg_darkblue;
   margin-top: auto;
 }
 
@@ -99,17 +99,17 @@
   line-height: 45px;
   color: #fff;
   margin-right: 5px;
-  background-color: #0a141d;
+  background-color: $bg_dark;
   text-align: center;
   transition: all 300ms ease;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover {
-  color: #0fd3ff;
+  color: $titulos;
 }
 
 .pie-pagina .grupo-2 {
-  background-color: #0d2033;
+  background-color: $bg_darkblue;
   padding: 15px 10px;
   text-align: center;
   color: #fff;

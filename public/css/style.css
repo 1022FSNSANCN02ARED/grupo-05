@@ -608,9 +608,13 @@ header {
     .cart__container .cart__article .cart__options .option__list {
       gap: 20px; }
       .cart__container .cart__article .cart__options .option__list .menu__dots {
+        display: flex;
         flex-grow: 1; }
   .cart__container .total__container {
     box-shadow: 0 0 2px #f516cc; }
+
+.article__container :nth-child(3) {
+  flex: 0 1 8%; }
 
 @media (min-width: 600px) {
   .cart__p {

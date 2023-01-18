@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("./partials/head") %>
-    <title>crea produtc</title>
-</head>
-<body>
-    <form action="POST">
-        
+    <%- include("../partials/head") %>
 
+    <title>Login Market Place</title>
+  </head>
+<body>
+    <%- include("../partials/header") %>
+
+    <form action="" method="post">
+        <input id="new-titel" type="text" placeholder="Título del producto" maxlength="30" >
+        <label for="new-titel"> Título de producto</label>
+
+        <input id="new-price" type="tel" placeholder="Ingrese precio de producto" maxlength="7">
+        <label for="new-price">Ingrese precio de producto</label>
+
+        <textarea name="" id="new-decription" cols="30" rows="10" placeholder="Ingrese descripción del producto"></textarea>
+        <label for="new-decription"> Descripción del producto</label>
 
     </form>
-    
+
+    <%- include("../partials/footer") %>
 </body>
 </html>

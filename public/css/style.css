@@ -577,6 +577,9 @@ header {
     font-weight: bold;
     color: #0fd3ff; }
 
+.hide {
+  display: none; }
+
 .cart__container {
   color: #e0e0e0;
   margin: 3rem auto;
@@ -626,7 +629,7 @@ header {
     align-items: center; }
   .menu__dots {
     display: none !important; }
-  .none {
+  .hide {
     display: block; }
   .total h6 {
     flex-grow: 1;

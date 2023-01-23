@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 .cart__container {
   color: $blanco;
   margin: 3rem auto;
@@ -71,7 +75,7 @@
   .menu__dots {
     display: none !important;
   }
-  .none {
+  .hide {
     display: block;
   }
   .total h6 {

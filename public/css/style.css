@@ -577,6 +577,9 @@ header {
     font-weight: bold;
     color: #0fd3ff; }
 
+.hide {
+  display: none; }
+
 .cart__container {
   color: #e0e0e0;
   margin: 3rem auto;
@@ -632,7 +635,61 @@ header {
     flex-grow: 1;
     display: flex;
     justify-content: end; } }
->>>>>>> 95bf13d781debd69f1fe4feb32a6aea9501c0526
+
+.crea {
+  min-height: 100vh;
+  align-items: center; }
+  .crea .crea-container {
+    max-width: 28rem;
+    border: 2px solid #f516cc;
+    background-color: #110042;
+    box-shadow: 0px 2px 4px #0e0e0e;
+    border-radius: 6px;
+    text-align: center;
+    color: #e0e0e0; }
+    .crea .crea-container .crea-display {
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.5rem; }
+  .crea .crea-title {
+    color: #0fd3ff;
+    padding: 1rem;
+    font-size: 2em; }
+  .crea .input-img {
+    width: 90%;
+    padding: 10px 26px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.9rem;
+    background-color: white;
+    color: #413f3f; }
+  .crea input {
+    width: 90%;
+    padding: 10px 26px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.9rem; }
+  .crea .container-button {
+    background-color: #f516cc;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 2px 4px #0e0e0e;
+    padding: 10px 26px;
+    cursor: pointer; }
+    .crea .container-button .crea-button {
+      background-color: transparent;
+      border: none;
+      font-size: 1em;
+      cursor: pointer; }
+      .crea .container-button .crea-button span {
+        color: #e0e0e0;
+        font-weight: 600; }
+    .crea .container-button:hover {
+      background-color: #34265e;
+      box-shadow: 0 0 6px 6px #f516cc;
+      transform: scale(0.9);
+      transition: all 400ms; }
 
 /*  .footer{
     padding: 30px 0;

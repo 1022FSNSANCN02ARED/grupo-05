@@ -11,7 +11,7 @@ INTEGRANTES:
 [ADM] Lautaro Sayavedra
 [BE] Baltazar Demichele
 [DB] Federico Gay
-[FE] Mariana Martínez
+[FE] Mariana Martínez 
 
 TEMÁTICA ELEGIDA:
 

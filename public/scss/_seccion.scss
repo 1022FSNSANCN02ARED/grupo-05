@@ -1,52 +1,54 @@
-.main-product{
-    color: var(--blanco);
+
+.section-product{
+  color: var(--blanco);
   margin: 1rem auto;
   width: 98%;
   max-width: 1200px;
   
-
-   
 }
-.section-product{
-    margin: 1rem auto;
-    width: 98%;
-    
   
     
     
 
-    .title-product{
-        width: 100%;
-        font-size: 24px;
+.title-product{
+      margin-top: 3rem;
+      margin-left: 10px;
+      letter-spacing: 1px;
+      color: $blanco;
 
        
-    }
-
 }
-.contain-product{
-    margin: 1rem auto;
-    width: 98%;
-    box-shadow: 0 0 4px -1px #0e0e0e;
-    box-shadow: 2px 2px 15px var(--lineas);
-    
-    display: flex;
-    overflow-x: scroll;
-    padding: 24px;
-    border-radius: 8px;
-    gap: 12px;
+
+
+.section-product .contain-product{
+  margin: 1rem auto;
+  width: 98%;
+
+  box-shadow: 0 0 4px -1px #0e0e0e;
+  box-shadow: 2px 2px 15px var(--lineas);
+
+  display: flex;
+  overflow-x: scroll;
+  padding: 24px;
+  border-radius: 8px;
+  gap: 12px;
     
 }
 
 .product{
-    border-radius: 8px;
-    background-color: #fff;
-    cursor: pointer;
-    box-shadow: 0 0 6px var(--lineas);
-    
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 6px var(--lineas);
+}   
+.contain-product{
+  box-shadow: 0 0 4px -1px #0e0e0e;
+  box-shadow: 2px 2px 15px var(--lineas);
 
+}
     .img-product{
-        width: 100%;
-        padding: 20px;
+      width: 8rem;
+      margin: 0.8rem;
 
        
     }
@@ -78,11 +80,12 @@
         font-weight: bold;
         color: $titulos;
     }
-    .contain-product::-webkit-scrollbar {
+.contain-product::-webkit-scrollbar {
         display: none;
-      }
-
 }
+
+      // ************** BENEFICIOS CASHBACK *********************
+
 .benefits-cashback-container {
     color: var(--blanco);
     padding: 1rem;
@@ -229,9 +232,15 @@
   }
   
   @media (min-width: 600px) {
+    
+    .product{
+      font-size: 1em;
+      width: 10rem;
+
+    }
     .benefit-container {
       flex-direction: row;
     }
   }
   @media (min-width: 900px) {
-  }  
+  }

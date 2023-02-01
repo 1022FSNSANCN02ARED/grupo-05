@@ -36,9 +36,7 @@
     text-transform: uppercase;
     text-decoration: none;
   }
-  .img-product {
-    width: 48%;
-  }
+  
 
   /* Product */
   .opciones {
@@ -102,6 +100,9 @@
         justify-content: center;
       }
     }
+  }
+  .img-product{
+    width: 23%;
   }
   .product {
     width: 25%;
@@ -225,7 +226,7 @@
   }
 
   .img-product {
-    width: 23%;
+    width: 24%;
   }
 
   .col {

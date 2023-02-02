@@ -11,20 +11,20 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #EDEAE5;
+  background-color: #0a141d;
 }
 
 .bg_animado {
   padding: 1rem;
   color: #fff;
-  //background: linear-gradient(45deg, #030724, #91008f, #f516cc, #030724);
-  background-color: #026670;
+  background: linear-gradient(45deg, #030724, #91008f, #f516cc, #030724);
+  
   background-size: 400% 400%;
   position: relative;
   animation: cambiar 10s ease-in-out infinite;
 }
 
-/*@keyframes cambiar {
+@keyframes cambiar {
   0% {
     background-position: 0 50%;
   }
@@ -36,6 +36,6 @@ body {
   100% {
     background-position: 0 50%;
   }
-}*/
+}
 
 @import "@media.scss";

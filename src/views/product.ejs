@@ -6,17 +6,19 @@
   </head>
   <body>
     <%- include("./partials/header") %>
-    <main>
+    <main class="color">
       <% productos.forEach(producto => { %> <% if (id == producto.id) { %>
       <div class="container">
         <div class="product-f flex flex-d-column text-center mt-3 ml-1 mr-1">
-          <h2><%= producto.nombre %></h2>
-          <div class="stars text-left ml-1">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+          <div class="flex justify-content-sp-bt w-90">
+            <h2 class="font-weight-precio"><%= producto.nombre %></h2>
+            <div class="stars text-left ml-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
           <div class="full-container">
             <div class="images none border-r-5">
@@ -45,13 +47,14 @@
         </div>
         <div class="container-dos">
           <div class="opciones">
-            <div class="precio flex justify-content-center">
-              <h2>$<%= producto.precio %></h2>
+            <div class="precio flex flex-d-column">
+              <h3 class="w-90 font-weight-precio">$<%= producto.precio %></h3>
+              <p class="w-90 font-weight">En 12 cuotas de</p>
             </div>
             <div class="categoria none">
-              <h2>Opciones:</h2>
+              <h2 class="font-weight-precio">Opciones:</h2>
               <div class="option-1">
-                <label for="ram" class="color-label">RAM:</label>
+                <label for="ram" class="color-label font-weight">RAM:</label>
                 <select name="ram">
                   <option value="8gb">8gb</option>
                   <option value="16gb">16gb</option>
@@ -59,7 +62,9 @@
                 </select>
               </div>
               <div class="option-2">
-                <label for="cpu" class="color-label">Procesador:</label>
+                <label for="cpu" class="color-label font-weight"
+                  >Procesador:</label
+                >
                 <select name="cpu">
                   <option value="i3">Intel i3</option>
                   <option value="i5">Intel i5</option>
@@ -67,7 +72,9 @@
                 </select>
               </div>
               <div class="option-3">
-                <label for="color" class="color-label">Color:</label>
+                <label for="color" class="color-label font-weight"
+                  >Color:</label
+                >
                 <select name="color">
                   <option value="gris">Gris</option>
                   <option value="blanca">Blanca</option>
@@ -76,7 +83,7 @@
               </div>
             </div>
             <div class="ammount flex flex-d-column mt-1 mr-1 ml-1 text-center">
-              <h2>Cantidad</h2>
+              <h2 class="font-weight-precio">Cantidad</h2>
               <div
                 class="justify-content-center ammount-f flex justify-content-sp-ev align-center mb-1 ml-6 mr-6"
               >
@@ -87,12 +94,12 @@
               </div>
             </div>
             <div class="envio none">
-              <h2>Envios</h2>
+              <h2 class="font-weight-precio">Envios</h2>
               <div class="cp">
-                <h3>Codigo Postal:</h3>
+                <h3 class="font-weight">Codigo Postal:</h3>
                 <input type="text" id="cp" placeholder="Tu codigo postal..."
                 required maxlength="4" " />
-                <label class="size-label"
+                <label class="size-label font-weight"
                   ><a
                     href="https://codigopostal.com.ar/"
                     target="_blank"
@@ -111,7 +118,7 @@
         </div>
       </div>
       <div class="description mt-1 mr-1 ml-1">
-        <h2>Descripcion</h2>
+        <h2 class="font-weight-precio">Descripcion</h2>
         <div class="text">
           <p><%= producto.descripcion %></p>
         </div>

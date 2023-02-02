@@ -28,9 +28,9 @@
     gap: 10px;
     padding-left: 50px;
     padding: 20px;
-    border: 3px solid $fondo_claro;
-    background-color: $fondo_obscuro;
-    box-shadow: 0px 2px 10px $lineas;
+    border: 3px solid #9fedd9;
+    background-color: #1973B8;;
+    box-shadow: 0px 2px 10px #FED9C7;
     
 }
 
@@ -62,14 +62,14 @@
     .nom-product{
         width: 100%;
         font-size: 16px;
-        color: $fondo_claro;
+        color: #026670;
         
     }
     .ofert-product{
         width: 100%;
         font-size: 16px;
         font-weight: bold;
-        color: $lineas;
+        color: #fce181;
     }
     .precio-product{
         font-size: 20px;

@@ -51,7 +51,8 @@
 
 .pie-pagina {
   width: 100%;
-  background-color: $bg_darkblue;
+  background-color: 
+  #0c8d99;
   margin-top: auto;
 }
 
@@ -82,7 +83,7 @@
 }
 
 .pie-pagina .grupo-1 .box ul a {
-  color: #0fd3ff;
+  color: $bg_dark;
   font-size: 0.8em;
 }
 
@@ -99,7 +100,7 @@
   line-height: 45px;
   color: #fff;
   margin-right: 5px;
-  background-color: $bg_dark;
+  background-color: #0c8d99;
   text-align: center;
   transition: all 300ms ease;
 }
@@ -109,7 +110,7 @@
 }
 
 .pie-pagina .grupo-2 {
-  background-color: $bg_darkblue;
+  background-color: #0c8d99;
   padding: 15px 10px;
   text-align: center;
   color: #fff;

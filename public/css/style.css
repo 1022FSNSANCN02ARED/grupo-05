@@ -543,9 +543,9 @@ header {
   gap: 10px;
   padding-left: 50px;
   padding: 20px;
-  border: 3px solid #34265e;
-  background-color: #110042;
-  box-shadow: 0px 2px 10px #f516cc; }
+  border: 3px solid #9fedd9;
+  background-color: #1973B8;
+  box-shadow: 0px 2px 10px #FED9C7; }
 
 .product {
   width: 100%;
@@ -566,12 +566,12 @@ header {
   .product .nom-product {
     width: 100%;
     font-size: 16px;
-    color: #34265e; }
+    color: #026670; }
   .product .ofert-product {
     width: 100%;
     font-size: 16px;
     font-weight: bold;
-    color: #f516cc; }
+    color: #fce181; }
   .product .precio-product {
     font-size: 20px;
     font-weight: bold;
@@ -743,7 +743,7 @@ header {
 }  */
 .pie-pagina {
   width: 100%;
-  background-color: #0d2033;
+  background-color: #0c8d99;
   margin-top: auto; }
 
 .pie-pagina .grupo-1 {
@@ -769,7 +769,7 @@ header {
   text-align: center; }
 
 .pie-pagina .grupo-1 .box ul a {
-  color: #0fd3ff;
+  color: #0a141d;
   font-size: 0.8em; }
 
 .pie-pagina .grupo-1 .box ul {
@@ -784,7 +784,7 @@ header {
   line-height: 45px;
   color: #fff;
   margin-right: 5px;
-  background-color: #0a141d;
+  background-color: #0c8d99;
   text-align: center;
   transition: all 300ms ease; }
 
@@ -792,7 +792,7 @@ header {
   color: #0fd3ff; }
 
 .pie-pagina .grupo-2 {
-  background-color: #0d2033;
+  background-color: #0c8d99;
   padding: 15px 10px;
   text-align: center;
   color: #fff; }
@@ -829,24 +829,29 @@ header {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #0a141d; }
+  background: #EDEAE5; }
 
 .bg_animado {
   padding: 1rem;
   color: #fff;
-  background: linear-gradient(45deg, #030724, #91008f, #f516cc, #030724);
+  background-color: #026670;
   background-size: 400% 400%;
   position: relative;
   animation: cambiar 10s ease-in-out infinite; }
 
-@keyframes cambiar {
+/*@keyframes cambiar {
   0% {
-    background-position: 0 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0 50%; } }
+    background-position: 0 50%;
+  }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}*/
 @media (min-width: 600px) {
   .logo {
     display: block;

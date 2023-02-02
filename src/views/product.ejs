@@ -10,9 +10,9 @@
       <% productos.forEach(producto => { %> <% if (id == producto.id) { %>
       <div class="container">
         <div class="product-f flex flex-d-column text-center mt-3 ml-1 mr-1">
-          <div class="flex justify-content-sp-bt w-90">
+          <div class="flex w-100 justify-content-sp-ev mt-05">
             <h2 class="font-weight-precio"><%= producto.nombre %></h2>
-            <div class="stars text-left ml-1">
+            <div class="stars text-left flex align-center">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -48,8 +48,13 @@
         <div class="container-dos">
           <div class="opciones">
             <div class="precio flex flex-d-column">
-              <h3 class="w-90 font-weight-precio">$<%= producto.precio %></h3>
-              <p class="w-90 font-weight">En 12 cuotas de</p>
+              <h3 class="w-90 font-weight-precio ml-1">
+                $<%= producto.precio %>
+              </h3>
+              <p class="w-90 font-weight ml-1">En 12 cuotas de</p>
+              <a href="#" class="w-90 text-decoration ml-1">
+                <p class="medios-pago">Ver distintos medios de pago</p></a
+              >
             </div>
             <div class="categoria none">
               <h2 class="font-weight-precio">Opciones:</h2>
@@ -82,15 +87,18 @@
                 </select>
               </div>
             </div>
-            <div class="ammount flex flex-d-column mt-1 mr-1 ml-1 text-center">
-              <h2 class="font-weight-precio">Cantidad</h2>
+            <div class="ammount flex justify-content-center mt-1 mr-1 ml-1">
               <div
-                class="justify-content-center ammount-f flex justify-content-sp-ev align-center mb-1 ml-6 mr-6"
+                class="flex justify-content-sp-ar w-90 mt-1 mb-1 select_product border-r-5 p-1"
               >
-                <i class="fa-solid fa-plus resta-suma"></i>
-                <!-- Esto se cambia por un input type number para darle funcionalidad -->
-                <p>1</p>
-                <i class="fa-solid fa-minus resta-suma"></i>
+                <label for="">Cantidad</label>
+                <select name="cantidad" class="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
             </div>
             <div class="envio none">
@@ -109,17 +117,19 @@
                 >
               </div>
             </div>
-            <div class="buttom flex justify-content-center mt-1">
-              <button type="submit">
+            <div class="flex justify-content-center">
+              <button type="submit" class="buttom w-90 p-1 border-r-5 w-50">
                 <span>Comprar</span>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="description mt-1 mr-1 ml-1">
-        <h2 class="font-weight-precio">Descripcion</h2>
-        <div class="text">
+      <div class="description mt-1 mr-1 ml-1 mb-1">
+        <div class="ml-1">
+          <h2 class="font-weight-precio">Descripcion</h2>
+        </div>
+        <div class="font-weight ml-05">
           <p><%= producto.descripcion %></p>
         </div>
       </div>

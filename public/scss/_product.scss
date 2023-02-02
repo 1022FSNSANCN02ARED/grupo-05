@@ -27,46 +27,27 @@
 
 .stars {
   color: $lineas;
+  font-size: 0.7rem;
 }
 
 .ammount {
-  border: 1px solid $lineas;
-  box-shadow: 0 0 6px $lineas;
-  border-radius: 5px;
-
   background-color: #0a141d;
 
-  .ammount-f {
+  .select_product{
     border: 1px solid $lineas;
     box-shadow: 0 0 6px $lineas;
-    min-width: 5rem;
-    max-width: 100%;
-
-    border-radius: 15px;
-
-    background-color: $lineas;
+    background-color: #0d2033;
   }
 }
 
 .buttom {
-  width: 8rem;
-  height: 2rem;
 
   background-color: $lineas;
+  border: 1px solid $lineas;
+  box-shadow: 0 0 6px $lineas;
 
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15px;
-
-  button {
-    background: none;
-    border: 0;
-    color: inherit;
-
-    span {
-      font-size: 19px;
-    }
-  }
+  color: white;
+  font-size: 1rem;
 }
 
 .description {
@@ -81,10 +62,10 @@
     margin-left: 5px;
   }
 
-  .text {
+  /* .text {
     margin-left: 5px;
     color: white;
-  }
+  } */
 }
 
 .color-label {
@@ -106,4 +87,7 @@
   margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  .medios-pago {
+    color: rgb(28, 85, 189);
+  }
 }

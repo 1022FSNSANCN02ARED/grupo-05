@@ -3,7 +3,11 @@
   font-weight: 300; }
 
 .font-weight-precio {
-  font-weight: 500; }
+  font-weight: 500;
+  font-size: 1.2rem; }
+
+.text-decoration {
+  text-decoration: none; }
 
 /* ====================== Width ====================== */
 .vw-100 {
@@ -14,6 +18,9 @@
 
 .w-90 {
   width: 90%; }
+
+.w-70 {
+  width: 85%; }
 
 .w-50 {
   width: 50%; }
@@ -103,6 +110,9 @@
   margin: 5rem; }
 
 /* ========== Top ========== */
+.mt-05 {
+  margin-top: 0.5rem; }
+
 .mt-1 {
   margin-top: 1rem;
   /* 1rem = 16 px */ }
@@ -163,6 +173,9 @@
   margin-bottom: 6rem; }
 
 /* ========== Left ========== */
+.ml-05 {
+  margin-left: 0.5rem; }
+
 .ml-1 {
   margin-left: 1rem;
   /* 1rem = 16 px */ }
@@ -470,45 +483,34 @@ header {
       margin-right: 0.5rem; }
 
 .stars {
-  color: #f516cc; }
+  color: #f516cc;
+  font-size: 0.7rem; }
 
 .ammount {
-  border: 1px solid #f516cc;
-  box-shadow: 0 0 6px #f516cc;
-  border-radius: 5px;
   background-color: #0a141d; }
-  .ammount .ammount-f {
+  .ammount .select_product {
     border: 1px solid #f516cc;
     box-shadow: 0 0 6px #f516cc;
-    min-width: 5rem;
-    max-width: 100%;
-    border-radius: 15px;
-    background-color: #f516cc; }
+    background-color: #0d2033; }
 
 .buttom {
-  width: 8rem;
-  height: 2rem;
   background-color: #f516cc;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15px; }
-  .buttom button {
-    background: none;
-    border: 0;
-    color: inherit; }
-    .buttom button span {
-      font-size: 19px; }
+  border: 1px solid #f516cc;
+  box-shadow: 0 0 6px #f516cc;
+  color: white;
+  font-size: 1rem; }
 
 .description {
   border: 1px solid #f516cc;
   box-shadow: 0 0 6px #f516cc;
   border-radius: 5px;
-  background-color: #0a141d; }
+  background-color: #0a141d;
+  /* .text {
+    margin-left: 5px;
+    color: white;
+  } */ }
   .description h2 {
     margin-left: 5px; }
-  .description .text {
-    margin-left: 5px;
-    color: white; }
 
 .color-label {
   color: white; }
@@ -524,6 +526,8 @@ header {
   margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem; }
+  .precio .medios-pago {
+    color: #1c55bd; }
 
 .main-product {
   width: 90vw;
@@ -711,11 +715,6 @@ header {
 
 .buy :first-child {
   background: var(--fondo_claro); }
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
 
 .select {
   border-radius: 6px;

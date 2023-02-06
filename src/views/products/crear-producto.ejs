@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+
+    <title>Login Market Place</title>
+  </head>
+<body>
+    <%- include("../partials/header") %>
+    <section class="crea w-100 flex justify-content-center">
+        <div class="crea-container w-90 mb-2 mt-2">
+          <h3 class="crea-title">Create A  Product</h3>
+            <form action="/crear-producto" method="post"  class="crea-display flex justify-content-center">
+           
+                <label for="new-img">Ingrese imagenes</label> 
+                <input id="new-img" type="file" name="new-img"
+                accept=".jpg, .jpeg, .png"  multiple class="input-img">
+                
+                <label for="new-titel" class="title"> Título de producto</label>
+                <input id="new-titel" type="text" placeholder="Título del producto" maxlength="30" >
+                
+                <label for="new-price" class="title">Ingrese precio de producto</label>
+                <input id="new-price" type="tel" placeholder="Ingrese precio de producto" maxlength="7">
+                
+                <label for="new-decription" class="title"> Descripción del producto</label>
+                <textarea name="" id="new-decription" cols="30" rows="10" placeholder="Ingrese descripción del producto"></textarea>
+               
+                <div class="container-button w-90">
+                    <button class="crea-button w-90" id="new-button">
+                      <span>Create A Product</span>
+                    </button>
+                  </div>
+        
+            </form>
+        </div>
+       
+    </section>
+
+    <%- include("../partials/footer") %>
+</body>
+</html>

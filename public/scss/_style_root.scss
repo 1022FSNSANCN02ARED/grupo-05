@@ -5,6 +5,21 @@ $fondo_obscuro: #110042;
 $fondo_claro: #34265e;
 $lineas: #f516cc;
 $rojo: #ff0000;
+$bg_darkblue: #0d2033;
+$bg_dark: #0a141d;
+
+.font-weight {
+  font-weight: 300;
+}
+
+.font-weight-precio {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.text-decoration{
+  text-decoration: none;
+}
 
 /* ====================== Width ====================== */
 .vw-100 {
@@ -17,6 +32,11 @@ $rojo: #ff0000;
 .w-90 {
   width: 90%;
 }
+
+.w-70{
+  width: 85%;
+}
+
 .w-50 {
   width: 50%;
 }
@@ -63,9 +83,15 @@ $rojo: #ff0000;
 .justify-content-sp-ev {
   justify-content: space-evenly;
 }
+.justify-content-sp-bt {
+  justify-content: space-between;
+}
 
 .justify-content-end {
   justify-content: flex-end;
+}
+.justify-content-start {
+  justify-content: flex-start;
 }
 
 .align-center {
@@ -119,6 +145,10 @@ $rojo: #ff0000;
 }
 
 /* ========== Top ========== */
+.mt-05{
+  margin-top: 0.5rem;
+}
+
 .mt-1 {
   margin-top: 1rem; /* 1rem = 16 px */
 }
@@ -179,6 +209,10 @@ $rojo: #ff0000;
 }
 
 /* ========== Left ========== */
+.ml-05{
+  margin-left : 0.5rem;
+}
+
 .ml-1 {
   margin-left: 1rem; /* 1rem = 16 px */
 }
@@ -292,6 +326,9 @@ $rojo: #ff0000;
 
 .border-r-5 {
   border-radius: 5px;
+}
+.border-r-6 {
+  border-radius: 6px;
 }
 
 .border-r-10 {

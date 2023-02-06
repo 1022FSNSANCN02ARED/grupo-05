@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <title>Product Market Place</title>
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+    <main>
+      <section class="cart__container w-100">
+        <% productos.forEach(elProducto => { %>
+
+        <article class="cart__article">
+          <div
+            class="article__container flex justify-content-sp-bt align-center p-1"
+          >
+            <img
+              class="cart__img border-r-6"
+              src="<%= elProducto.img %>"
+              alt="<%= elProducto.alt %>"
+            />
+            <div class="cart__info">
+              <p class="cart__p mb-1"><%= elProducto.nombre %></p>
+              <div class="cantidad flex justify-content-start border-r-6">
+                <button class="cantidad__button cursor-pointer">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <div class="cantidad__number text-center border-r-6">1</div>
+                <button class="cantidad__button cursor-pointer">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <span class="article__price">$<%= elProducto.precio %></span>
+          </div>
+
+          <div class="cart__options w-100 mb-2">
+            <ul class="option__list flex">
+              <li class="cursor-pointer">Quitar</li>
+              <li class="cursor-pointer">Mas productos del vendedor</li>
+              <li class="menu__dots justify-content-end mr-1 cursor-pointer">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </li>
+              <li class="cursor-pointer hide">Continuar comparando</li>
+            </ul>
+          </div>
+        </article>
+        <% }) %>
+        <div class="total__container">
+          <div class="total mt-3 flex justify-content-sp-bt align-center p-1">
+            <p>Se han cargado x artículos</p>
+            <h6 class="mr-1">Total</h6>
+            <span class="mr-1">$99.999,99</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include("./partials/footer") %>
+  </body>
+</html>

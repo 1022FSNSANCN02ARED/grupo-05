@@ -10,7 +10,9 @@ const productRouter = require("./router/products-router");
 
 /* ==== puerto === */
 
-app.listen(3001, () => {
+const Port = process.env.PORT || 3001;
+
+app.listen(Port, () => {
   console.log("Server prendido");
 });
 

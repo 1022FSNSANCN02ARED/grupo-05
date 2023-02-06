@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+    <title>form Market Place</title>
+  </head>
+  <body>
+    <%- include("../partials/header") %>
+    <section class="form w-100 flex justify-content-center">
+      <div class="form__container w-90 mb-2 mt-2">
+        <h3 class="form__title">Login</h3>
+        <form action="" class="form__display flex justify-content-center">
+          <input
+            placeholder="user name"
+            type="text"
+            required
+            maxlength="16"
+            id="user_name"
+            name="user__name"
+          />
+          <input
+            placeholder="password"
+            type="password"
+            required
+            maxlength="16"
+            id="password"
+            name="password"
+          />
+          <span class="form__error"
+            >Nombre de usuario o contraseña inválido</span
+          >
+          <div class="show_password flex w-90">
+            <i class="fa-solid fa-eye"></i>
+            <!-- esto va con un display none para que no aparezca hasta que el usuario haga click, y cuando ocurra el evento se va a mostrar la contraseña  -->
+            <i class="fa-solid fa-eye-slash"></i>
+            <p>Mostrar contraseña</p>
+          </div>
+          <a href="#" class="form__a">¿Olvidaste tu contraseña? </a>
+
+          <div class="button w-90">
+            <button class="form__button w-90" id="form__button">
+              <span>Ingresar</span>
+            </button>
+          </div>
+          <span class="form__or">o</span>
+
+          <div class="button form__with w-90">
+            <button class="form__button form__google w-90">
+              <i class="fa-brands fa-google"></i> Ingresa con Google
+            </button>
+          </div>
+          <div class="button form__with w-90">
+            <button class="form__button form__apple w-90">
+              <i class="fa-brands fa-apple"></i> Ingresa con apple
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <%- include("../partials/footer") %>
+  </body>
+</html>

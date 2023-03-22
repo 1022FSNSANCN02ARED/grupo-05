@@ -1,120 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include("./partials/head") %>
     <title>Product Market Place</title>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <!-- Logo -->
-    <link
-      rel="shortcut icon"
-      href="/imgs/Posible_logo/logo.png"
-      type="image/x-icon"
-      sizes="96x96"
-    />
   </head>
   <body>
-    <header class="bg_animado">
-      <div class="header__container">
-        <img
-          class="logo"
-          src="./imgs/posible_logo/logo.png"
-          alt="logo MarketPlace"
-        />
-        <div class="burguer-menu button__navbar">
-          <button class="menu header__button">
-            <i class="fa-solid fa-bars menu__bars"></i>
-          </button>
-        </div>
-        <div class="header__search">
-          <input
-            class="input__search"
-            type="search"
-            placeholder="Buscar en Market Place"
-          />
-          <button class="button__search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-        <div class="carrito button__navbar">
-          <button class="header__button">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </button>
-        </div>
-      </div>
-      <nav>
-        <ul class="categorias listas">
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-          <li><a href="#">categoría</a></li>
-        </ul>
-        <ul class="usuario listas">
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">usuario</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+    <%- include("./partials/header") %>
+    <main class="color">
+      <% productos.forEach(producto => { %> <% if (id == producto.id) { %>
       <div class="container">
         <div class="product-f flex flex-d-column text-center mt-3 ml-1 mr-1">
-          <h2>Macbook Pro 2019</h2>
-          <div class="stars text-left ml-1">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+          <div class="flex w-100 justify-content-sp-ev mt-05">
+            <h2 class="font-weight-precio"><%= producto.nombre %></h2>
+            <div class="stars text-left flex align-center">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
           <div class="full-container">
             <div class="images none border-r-5">
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %> " class="w-50 border-r-10 img" />
               </div>
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %>" class="w-50 border-r-10 img" />
               </div>
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %>" class="w-50 border-r-10 img" />
               </div>
               <div class="flex align-center justify-content-center">
-                <img
-                  src="/imgs/productos/img-macbook-pro-2019.jpg"
-                  class="w-50 border-r-10 img"
-                />
+                <img src="<%= producto.img %>" class="w-50 border-r-10 img" />
               </div>
             </div>
             <div class="img-s mt-1 flex align-center justify-content-sp-ar">
               <i class="fa-solid fa-arrow-left arrow-size"></i>
               <img
-                src="/imgs/productos/img-macbook-pro-2019.jpg"
+                src="<%= producto.img %>"
                 class="w-90 mb-1 border-r-5 img-product-product"
               />
               <i class="fa-solid fa-arrow-right arrow-size"></i>
@@ -123,13 +47,19 @@
         </div>
         <div class="container-dos">
           <div class="opciones">
-            <div class="precio flex justify-content-center">
-              <h2>$100.000</h2>
+            <div class="precio flex flex-d-column">
+              <h3 class="w-90 font-weight-precio ml-1">
+                $<%= producto.precio %>
+              </h3>
+              <p class="w-90 font-weight ml-1">En 12 cuotas de</p>
+              <a href="#" class="w-90 text-decoration ml-1">
+                <p class="medios-pago">Ver distintos medios de pago</p></a
+              >
             </div>
             <div class="categoria none">
-              <h2>Opciones:</h2>
+              <h2 class="font-weight-precio">Opciones:</h2>
               <div class="option-1">
-                <label for="ram" class="color-label">RAM:</label>
+                <label for="ram" class="color-label font-weight">RAM:</label>
                 <select name="ram">
                   <option value="8gb">8gb</option>
                   <option value="16gb">16gb</option>
@@ -137,7 +67,9 @@
                 </select>
               </div>
               <div class="option-2">
-                <label for="cpu" class="color-label">Procesador:</label>
+                <label for="cpu" class="color-label font-weight"
+                  >Procesador:</label
+                >
                 <select name="cpu">
                   <option value="i3">Intel i3</option>
                   <option value="i5">Intel i5</option>
@@ -145,7 +77,9 @@
                 </select>
               </div>
               <div class="option-3">
-                <label for="color" class="color-label">Color:</label>
+                <label for="color" class="color-label font-weight"
+                  >Color:</label
+                >
                 <select name="color">
                   <option value="gris">Gris</option>
                   <option value="blanca">Blanca</option>
@@ -153,24 +87,27 @@
                 </select>
               </div>
             </div>
-            <div class="ammount flex flex-d-column mt-1 mr-1 ml-1 text-center">
-              <h2>Cantidad</h2>
+            <div class="ammount flex justify-content-center mt-1 mr-1 ml-1">
               <div
-                class="justify-content-center ammount-f flex justify-content-sp-ev align-center mb-1 ml-6 mr-6"
+                class="flex justify-content-sp-ar w-90 mt-1 mb-1 select_product border-r-5 p-1"
               >
-                <i class="fa-solid fa-plus resta-suma"></i>
-                <!-- Esto se cambia por un input type number para darle funcionalidad -->
-                <p>1</p>
-                <i class="fa-solid fa-minus resta-suma"></i>
+                <label for="">Cantidad</label>
+                <select name="cantidad" class="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
             </div>
             <div class="envio none">
-              <h2>Envios</h2>
+              <h2 class="font-weight-precio">Envios</h2>
               <div class="cp">
-                <h3>Codigo Postal:</h3>
+                <h3 class="font-weight">Codigo Postal:</h3>
                 <input type="text" id="cp" placeholder="Tu codigo postal..."
                 required maxlength="4" " />
-                <label class="size-label"
+                <label class="size-label font-weight"
                   ><a
                     href="https://codigopostal.com.ar/"
                     target="_blank"
@@ -180,27 +117,24 @@
                 >
               </div>
             </div>
-            <div class="buttom flex justify-content-center mt-1">
-              <button type="submit">
+            <div class="flex justify-content-center">
+              <button type="submit" class="buttom w-90 p-1 border-r-5 w-50">
                 <span>Comprar</span>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="description mt-1 mr-1 ml-1">
-        <h2>Descripcion</h2>
-        <div class="text">
-          <p>
-            La MacBook Pro es la notebook más poderosa de Apple, creada para
-            quienes se proponen nuevos desafíos y logran cosas imposibles. Tiene
-            una pantalla envolvente, procesadores superrápidos, gráficos de
-            última generación, un nuevo teclado Magic Keyboard y un increíble
-            espacio de almacenamiento.
-          </p>
+      <div class="description mt-1 mr-1 ml-1 mb-1">
+        <div class="ml-1">
+          <h2 class="font-weight-precio">Descripcion</h2>
+        </div>
+        <div class="font-weight ml-05">
+          <p><%= producto.descripcion %></p>
         </div>
       </div>
+      <% } %> <% }) %>
     </main>
-    <footer></footer>
+    <%- include("./partials/footer") %>
   </body>
 </html>

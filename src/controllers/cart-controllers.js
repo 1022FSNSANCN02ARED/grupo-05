@@ -1,7 +1,9 @@
 const path = require("path");
+const productos = require("../data/data-products");
 
 module.exports = {
   cart: (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../views/pages/cart.html"));
+    const id = req.params.id;
+    res.render("cart", { productos, id });
   },
 };

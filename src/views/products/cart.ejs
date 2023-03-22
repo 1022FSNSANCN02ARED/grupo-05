@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head") %>
+
+  <body>
+    <%- include("../partials/headerNavbar") %>
+
+    <!-- ************** CARRITO ********************* -->
+
+    <section class="cart__container">
+      <% products.forEach(oneProduct => { %>
+
+      <article class="cart__article">
+        <div class="article__container">
+          <img
+            class="cart__img"
+            src="/imgs/productos-img/<%= oneProduct.image %>"
+            alt=""
+          />
+          <div class="cart__info">
+            <p class="cart__p"><%= oneProduct.name %></p>
+            <div class="cantidad">
+              <button class="cantidad__button">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <div class="cantidad__number">1</div>
+              <button class="cantidad__button">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <span class="article__price">$<%= getFinalPrice(oneProduct) %></span>
+        </div>
+
+        <div class="cart__options">
+          <ul>
+            <li>Quitar</li>
+            <li>Mas productos del vendedor</li>
+            <li class="menu__dots">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </li>
+            <li class="none">Continuar comparando</li>
+          </ul>
+        </div>
+      </article>
+
+      <% }) %>
+
+      <div class="total__container">
+        <div class="total">
+          <p>Se han cargado <%= products.length %> artículos</p>
+          <h6>Total</h6>
+          <span>$<%= getTotalPay(products) %> </span>
+        </div>
+      </div>
+    </section>
+    <!-- ************** CARRITO ********************* -->
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.benefits-cashback-container {
+  color: var(--blanco);
+  padding: 1rem;
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 0 6px var(--lineas);
+}
+
+.cashback-title {
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.benefit-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefit-banner {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.show-benefit {
+  width: 100%;
+  height: 100%;
+}
+
+.benefit-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 6px var(--lineas);
+}
+
+@media (min-width: 600px) {
+  .benefit-container {
+    flex-direction: row;
+  }
+}
+@media (min-width: 900px) {
+}

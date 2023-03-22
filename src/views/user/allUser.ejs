@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/headerNavbar") %>
+    <main>
+        <% users.forEach(theUser => { %>
+            <div>
+                <h1><%= theUser.nombre %></h1>
+                <h2><%= theUser.apellido %></h2>
+                <h2><%= theUser.edad %></h2>
+            </div>
+        <% }) %>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+</html>

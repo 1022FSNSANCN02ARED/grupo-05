@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "nombre": "Federico",
+    "apellido": "Gay",
+    "edad": 29
+  },
+  {
+    "id": 2,
+    "nombre": "Agustin",
+    "apellido": "Tarico",
+    "edad": 31
+  },
+  {
+    "id": 3,
+    "nombre": "Lautaro",
+    "apellido": "Sayavedra",
+    "edad": 20
+  },
+  {
+    "nombre": "Fortunato",
+    "apellido": "Tarico",
+    "edad": 6
+  }
+]

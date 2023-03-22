@@ -1,27 +1,25 @@
-/* dependencias requeridas */
-const express = require("express");
-const app = express();
-
 const path = require("path");
-//const { resolve } = require("path");
+const express = require("express");
 
-const mainRouter = require("./router/main-router.js");
-const productRouter = require("./router/products-router");
+const mainRouter = require("./routers/main-router");
+const utilities = require("./utilities");
+const methodOverride = require("method-override");
 
-/* ==== puerto === */
+const app = express();
+app.listen(3002);
 
-app.listen(3001, () => {
-  console.log("Server prendido");
-});
+//***** FUNCIONES GLOBALES ******//
+app.locals = utilities;
 
-/* ==== ruta a archivos public === */
-
-app.use(express.static(path.resolve(__dirname, "../public")));
-
-/* === rutas a views === */
-app.use(mainRouter);
-app.use(productRouter);
-
-/* === Seteamos el engine view === */
-app.set("view engine", "ejs");
+//***** SETEO DE EJS ******//
 app.set("views", path.join(__dirname, "./views"));
+app.set("view engine", "ejs");
+
+//***** RUTA A PUBLIC ******//
+app.use(express.static(path.join(__dirname, "../public")));
+
+//***** PARA EJECUTAR PUT Y DELETE EN AL ACTION ******//
+app.use(methodOverride("_method"));
+
+//***** ENRUTADOR PRINCIPAL ******//
+app.use(mainRouter);

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head") %>
+  <body>
+    <%- include("../partials/headerNavbar") %>
+    <main class="container-main">
+      <section class="crea w-100 flex justify-content-center">
+        <div class="crea-container w-90 mb-2 mt-2">
+          <h3 class="crea-title">Crear Producto</h3>
+
+          <form
+            action="/products/store"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <!-- enctype="multipart/form-data" -->
+            <div>
+              <div>
+                <label for="name">Nombre del producto:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ej: Samsung Galaxy s22"
+                />
+              </div>
+              <div>
+                <label for="price">Precio del producto:</label>
+                <input
+                  type="tel"
+                  id="price"
+                  name="price"
+                  placeholder="Ej: 98765"
+                />
+              </div>
+              <div>
+                <label for="discount">Descuento: %</label>
+                <input
+                  type="text"
+                  id="discount"
+                  name="discount"
+                  placeholder="Ej: 15"
+                />
+              </div>
+              <div>
+                <label for="pays">Cuotas:</label>
+                <input type="text" id="pays" name="pays" placeholder="Ej: 12" />
+              </div>
+
+              <div class="div-select-crea">
+                <label for="category">Categoría:</label>
+                <select name="category" id="category">
+                  <option value="">Elegí</option>
+                  <option value="laptops">Laptops</option>
+                  <option value="celulares">Celulares</option>
+                  <option value="audio">Audio</option>
+                  <option value="gaming">Gaming</option>
+                  <option value="electro">Electro</option>
+                  <option value="deportes">Deportes</option>
+                </select>
+              </div>
+              <div class="div-select-crea">
+                <label for="sendFree">Envío gratis:</label>
+                <select name="sendFree" id="sendFree">
+                  <option value="">Elegí</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+                </select>
+              </div>
+              <div class="div-select-crea">
+                <label for="sendToDay">Envío en el día:</label>
+                <select name="sendToDay" id="sendToDay">
+                  <option value="">Elegí</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="description">Descipción:</label>
+                <textarea name="description" id="description"></textarea>
+              </div>
+
+              <div>
+                <label for="image">Imagen:</label>
+                <input type="file" id="image" name="image" accept="image/*" />
+              </div>
+              <div>
+                <button type="submit" class="container-button">Guardar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include("../partials/footer")%>
+  </body>
+</html>

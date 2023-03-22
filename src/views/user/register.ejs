@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head") %>
+
+  <body>
+    <%- include("../partials/headerNavbar") %>
+
+    <main class="container-main">
+      <section class="login">
+        <div class="login__container">
+          <h3 class="login__title">Crear cuenta</h3>
+          <form
+            action="/user/register"
+            class="login__form"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <% if (locals.errors && errors.first__name) { %>
+            <div class="input__error">
+              <!--  -->
+              <%= errors.first__name.msg %>
+            </div>
+            <% } %>
+            <input
+              class="<%= locals.errors && errors.first__name ? 'invalid' : null %>"
+              placeholder="first name"
+              type="text"
+              maxlength="16"
+              id="first_name"
+              name="first__name"
+              value="<%= locals.oldData ? oldData.first__name : null %>"
+            />
+
+            <% if (locals.errors && errors.last__name) { %>
+            <div class="input__error">
+              <!--  -->
+              <%= errors.last__name.msg %>
+            </div>
+            <% } %>
+            <input
+              class="<%= locals.errors && errors.last__name ? 'invalid' : null %>"
+              placeholder="last name"
+              type="text"
+              maxlength="16"
+              id="last_name"
+              name="last__name"
+              value="<%= locals.oldData ? oldData.last__name : null %>"
+            />
+
+            <% if (locals.errors && errors.user__name) { %>
+            <div class="input__error">
+              <!--  -->
+              <%= errors.user__name.msg %>
+            </div>
+            <% } %>
+            <input
+              class="<%= locals.errors && errors.user__name ? 'invalid' : null %>"
+              placeholder="user name"
+              type="text"
+              maxlength="16"
+              id="user_name"
+              name="user__name"
+              value="<%= locals.oldData ? oldData.user__name : null %>"
+            />
+
+            <% if (locals.errors && errors.password) { %>
+            <div class="input__error">
+              <!--  -->
+              <%= errors.password.msg %>
+            </div>
+            <% } %>
+            <input
+              class="<%= locals.errors && errors.password ? 'invalid' : null %>"
+              placeholder="password"
+              type="password"
+              maxlength="16"
+              id="password"
+              name="password"
+              
+            />
+
+            <div class="show_password flex w-90">
+              <i class="fa-solid fa-eye"></i>
+              <!-- esto va con un display none para que no aparezca hasta que el usuario haga click, y cuando ocurra el evento se va a mostrar la contraseña  -->
+              <i class="fa-solid fa-eye-slash"></i>
+              <p>Mostrar contraseña</p>
+            </div>
+            <% if (locals.errors && errors.confirm__password) { %>
+            <div class="input__error">
+              <!--  -->
+              <%= errors.confirm__password.msg %>
+            </div>
+            <% } %>
+            <input
+              class="<%= locals.errors && errors.confirm__password ? 'invalid' : null %>"
+              placeholder="confirm Password"
+              type="Password"
+              maxlength="16"
+              id="confirm__password"
+              name="confirm__password"
+              
+            />
+
+            <% if (locals.errors && errors.phone) { %>
+            <div class="input__error">
+              <!--  -->
+              <%= errors.phone.msg %>
+            </div>
+            <% } %>
+            <input
+              class="<%= locals.errors && errors.phone ? 'invalid' : null %>"
+              placeholder="(011) 1234 5678"
+              type="tel"
+              maxlength="16"
+              id="phone"
+              name="phone"
+              value="<%= locals.oldData ? oldData.phone : null %>"
+              pattern="[0-9]{2||3} [0-9]{4}[0-9]{3||4}"
+            />
+
+            <label>Provincia de residencia</label>
+            <select
+              name="province"
+              id="province"
+              class="<%= locals.errors && errors.province ? 'invalid' : null %>"
+            >
+              <option value="">Selecciona tu provincia</option>
+
+              <% let province = [ "Buenos Aires", "Catamarca", "Chaco",
+              "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa",
+              "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén",
+              "Río Negro", "Salta", "San Juan", "San Luis", "Santa Cruz",
+              "SantaFe", "Santiago del Estero", "Tierra del Fuego", "Tucumán",
+              ]; %>
+              <!--  -->
+              <% for( const oneProvince of province ) { %>
+                <!-- ! REVISAR -->
+              <!-- ! PRETTIER ME MARCA UN ERROR CUANDO AGREGO DE SINTAXIS EN EL TERNARIO Y LA VISTA NO PERDURA LOS DATOS -->
+
+              <option 
+                value="<%= oneProvince %>"
+                <%= locals.oldData && (oneProvince === oldData.province) ? 'selected' : null %>
+                ><%= oneProvince %></option>
+
+              <% } %>
+            </select>
+
+
+            <!-- *========================================= -->
+            <!-- *AGREGAR CAMPO PARA SUBIR FOTO DEL USUARIO -->
+            <!-- *========================================= -->
+
+            
+            <div class="terms flex w-90 justify-content-center">
+              <% if (locals.errors && errors.terms) { %>
+              <div class="input__error">
+                <!--  -->
+                <%= errors.terms.msg %>
+              </div>
+              <% } %>
+              <input
+                class="<%= locals.errors && errors.terms ? 'invalid' : null %>"
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="<%= locals.oldData ? oldData.terms : null %>"
+              />
+              <label for="terms"
+                >Aceptar <a href="#">términos y condiciones</a></label
+              >
+            </div>
+            <div class="w-90">
+              <button class="button login__button" id="login__button">
+                <span>Create an Account</span>
+              </button>
+            </div>
+            <strong> Ya tienes una cuenta <a href="#"> Sing in</a> </strong>
+            <span class="form__or">o</span>
+
+            <div class="w-90">
+              <button class="button login__with login__button login__google">
+                <i class="fa-brands fa-google"></i> Ingresa con Google
+              </button>
+            </div>
+            <div class="w-90">
+              <button class="button login__with login__button login__apple">
+                <i class="fa-brands fa-apple"></i> Ingresa con apple
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include("../partials/footer") %>
+  </body>
+</html>

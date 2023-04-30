@@ -1,0 +1,40 @@
+.form {
+  text-align: center;
+  justify-content: center;
+  margin: 1rem 5rem 0 5rem;
+  gap: 1rem;
+}
+
+.form input {
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem;
+}
+
+.form button {
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.form .avatar {
+  background: #fff;
+  color: #0000008b;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: 100;
+}
+
+.country {
+  padding: 0.5rem;
+}
+
+/* === ERRORES === */
+
+.text-danger {
+  color: rgb(167, 8, 8);
+}
+.form .invalid {
+  border: 2px solid red;
+}

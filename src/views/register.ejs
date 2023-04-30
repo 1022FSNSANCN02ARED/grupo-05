@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <section class="flex flex-direccion-c margin-1 image box-shadow">
+        <h1>Register</h1>
+        <form method="post" action="/user/register" enctype="multipart/form-data" class="margin-b-1">
+          <div class="form flex flex-direccion-c">
+            <label for="NombreApellido" class="d-none">Nombre y Apellido</label>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Nombre y Apellido"
+              class="box-shadow <%= locals.errors && errors.fullName ? 'invalid' : null %>"
+              id="NombreApellido"
+              value="<%= locals.oldData ? oldData.fullName : null %>"
+            />
+            <!--  -->
+            <% if (locals.errors && errors.fullName) { %>
+
+            <div class="text-danger"><%= errors.fullName.msg %></div>
+
+            <% } %>
+            <!--  -->
+
+            <label for="email" class="d-none">email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ingresar email..."
+              class="box-shadow <%= locals.errors && errors.email ? 'invalid' : null %>"
+              value="<%= locals.oldData ? oldData.email : null %>"
+            />
+            <!--  -->
+            <% if (locals.errors && errors.email) { %>
+
+            <div class="text-danger"><%= errors.email.msg %></div>
+
+            <% } %>
+            <!--  -->
+
+            <div class="flex justify-c align-items-c">
+              <label for="password" class="d-none">password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Ingresar contraseña..."
+                id="password"
+                class="w-90 box-shadow <%= locals.errors && errors.password ? 'invalid' : null %>"
+              />
+              <i id="eye" class="fa-regular fa-eye f-size-1"></i>
+            </div>
+            <!--  -->
+            <% if (locals.errors && errors.password) { %>
+
+            <div class="text-danger"><%= errors.password.msg %></div>
+
+            <% } %>
+            <!--  -->
+
+            <label for="avatar" class="avatar box-shadow <%= locals.errors && errors.avatar ? 'invalid' : null %>">Imagen de Perfil</label>
+            <input
+              type="file"
+              name="avatar"
+              id="avatar"
+              class="box-shadow d-none"
+            />
+            <% if (locals.errors && errors.avatar) { %>
+
+            <div class="text-danger"><%= errors.avatar.msg %></div>
+
+            <% } %>
+            <!--  -->
+            <!--  <div class="flex justify-c align-items-c">
+              <label for="" class="d-none">AAAAAAAAAA</label>
+              <input type="password" placeholder="Confirmar contraseña..." id="pass" class="w-90 box-shadow" />
+              <i id="eye" class="fa-regular fa-eye f-size-1"></i>
+            </div> -->
+
+            <label><b>País de nacimiento:</b></label>
+								<select 
+									name="country" 
+									class="box-shadow country <%= locals.errors && errors.country ? 'invalid' : null %>"
+								>
+									<option value="">Elegí un país</option>
+									<%  
+										let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];
+									%>
+									<% for (const oneCountry of countries) { %>
+										<option 
+											value="<%= oneCountry %>"
+											<%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %> 
+										> <%= oneCountry %> </option>
+									<% } %>
+								</select>
+								<% if (locals.errors && errors.country) { %>
+									<div class="text-danger">
+										<%= errors.country.msg %>
+									</div>
+								<% } %>
+
+            <div class="flex justify-c align-items-c gap">
+              <button type="submit" class="box-shadow w-90">Registrarme</button>
+              <button type="reset" class="box-shadow w-90">Cancelar</button>
+            </div>
+            <button class="box-shadow">
+              <i class="fa-brands fa-google mr-1"></i>
+              <span>Registrarme con Google</span>
+            </button>
+            <button class="box-shadow">
+              <i class="fa-brands fa-apple mr-1"></i>
+              <span>Registrarme con Apple</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <section class="margin-1 image padding-1">
+        <div class="flex justify-c">
+          <h2><%= product.name %></h2>
+          <h2>$<%= product.price %></h2>
+        </div>
+        <!-- Titulo y Calificacion -->
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+        </div>
+        <!-- Imagenes carrousel -->
+        <div class="scroll margin-1 padding-1 images-product">
+          <div class="flex gap">
+            <article>
+              <img src="<%= product.image %>" alt="game" class="maxw bor-10" />
+            </article>
+            <article>
+              <img src="<%= product.image %>" alt="game" class="maxw bor-10" />
+            </article>
+            <article>
+              <img src="<%= product.image %>" alt="game" class="maxw bor-10" />
+            </article>
+            <article>
+              <img src="<%= product.image %>" alt="game" class="maxw bor-10" />
+            </article>
+          </div>
+        </div>
+        <!-- Imagen principal -->
+        <div class="margin-1 padding-1 images-product image">
+          <img src="<%= product.image %>" alt="game" class="maxw image" />
+        </div>
+      </section>
+      <!-- Descripcion -->
+      <section class="margin-1 image padding-1">
+        <h2>Descripcion</h2>
+        <p><%= product.description %></p>
+      </section>
+      <!-- Requisitos -->
+      <section class="margin-1 image padding-1">
+        <h2 class="text-align-c margin-b">Requisitos</h2>
+        <article class="flex gap text-align-c maxw">
+          <div class="text-align-l">
+            <h3>Minimos</h3>
+            <ul class="list-none">
+              <li>Procesador: i3</li>
+              <li>Ram: 4gb</li>
+              <li>Almacenamiento: 20gb</li>
+              <li>Sistema Operativo: Windows 10</li>
+            </ul>
+          </div>
+          <hr />
+          <div class="text-align-r maxw">
+            <h3>Recomendados</h3>
+            <ul class="list-none">
+              <li>Procesador: i5</li>
+              <li>Ram: 8gb</li>
+              <li>Almacenamiento: 20gb</li>
+              <li>Sistema Operativo: Windows 10</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

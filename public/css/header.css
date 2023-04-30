@@ -1,0 +1,12 @@
+nav {
+  font-family: "Rubik", sans-serif;
+  box-shadow: 0 0 6px #222;
+  height: 2rem;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #fffdd1;
+}

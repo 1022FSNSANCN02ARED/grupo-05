@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <section class="flex flex-direccion-c margin-1 image">
+        <h1>Login</h1>
+        <form action="" class="margin-b-1">
+          <div class="form flex flex-direccion-c">
+            <input type="text" placeholder="Ingresar usuario..." class="box-shadow" />
+            <div class="flex justify-c align-items-c">
+              <input type="password" placeholder="Ingresar contraseña..." id="password" class="w-90 box-shadow" />
+              <i id="eye" class="fa-regular fa-eye"></i>
+            </div>
+            <button type="submit" class="box-shadow">Enviar</button>
+            <p>Olvidaste tu contraseña?</p>
+            <button class="box-shadow"><i class="fa-brands fa-google"></i>Ingresa con Google</button>
+            <button class="box-shadow"><i class="fa-brands fa-apple"></i>Ingresa con Apple</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

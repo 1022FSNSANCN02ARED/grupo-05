@@ -1,0 +1,32 @@
+/* Footer */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 0;
+  margin-top: auto;
+}
+
+footer h3 {
+  color: #fff;
+}
+
+footer p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer ul li a:hover {
+  transform: scale(1.2);
+}

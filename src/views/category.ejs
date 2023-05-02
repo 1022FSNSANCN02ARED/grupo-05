@@ -8,13 +8,15 @@
         class="category_container justify-c-c margin-1 box-shadow padding-1 image"
       >
         <% category.product.forEach(game => { %>
-        <article class="item bor-1">
-          <img
-            src="<%= game.image %>"
-            alt="<%= game.name %>"
-            class="maxw bor-1"
-          />
-        </article>
+        <a href="/product/showProduct/<%= game.id %>">
+          <article class="item bor-1">
+            <img
+              src="<%= game.image %>"
+              alt="<%= game.name %>"
+              class="maxw bor-1"
+            />
+          </article>
+        </a>
         <% }) %>
       </section>
     </main>

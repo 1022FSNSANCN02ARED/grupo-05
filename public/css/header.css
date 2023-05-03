@@ -1,7 +1,9 @@
-nav {
+.container-header{
+  width: 100%;
+  height: 120px;
   font-family: "Rubik", sans-serif;
   box-shadow: 0 0 6px #222;
-  height: 2rem;
+  border: 5px solid black;
 }
 
 a:link,
@@ -9,4 +11,9 @@ a:visited,
 a:active {
   text-decoration: none;
   color: #fffdd1;
+}
+
+.logo-header{
+  width: 80px;
+  height: 80px;
 }

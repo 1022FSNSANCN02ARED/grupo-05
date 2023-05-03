@@ -14,4 +14,22 @@ module.exports = {
       res.render("category", { category });
     });
   },
+
+  searchProduct: (req, res) => {
+    db.Product.findAll().then((product) => {
+      let busqueda = req.query.search;
+      let found = [];
+
+      product.forEach((game) => {
+        if (
+          game.name.includes(busqueda) ||
+          game.name.includes(busqueda.toUpperCase())
+        ) {
+          found.push(game);
+        }
+      });
+
+      res.render("search", { found });
+    });
+  },
 };

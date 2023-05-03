@@ -2,7 +2,12 @@
   <nav>
     <ul class="flex justify-c margin-1 list-none">
       <li><a href="/">Logo</a></li>
-      <input type="text" />
+      <form action="/product/searchProduct" method="get">
+        <input type="text" name="search" />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
       <div class="flex list-none gap">
         <li><a href="/user/login">Ingresar</a></li>
         <li><a href="/user/register">Registrarte</a></li>

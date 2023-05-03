@@ -8,11 +8,9 @@ INTEGRANTES:
 
 [PA] Agustín Tarico: Tengo 31 años, soy fan del basquet y el rugby. Siempre me gustó el mundo informático pero nunca me animé a entrar de lleno, era mas un hobbie, hasta principios de éste año que dejé mi trabajo como admin de consorcios y me dediqué de lleno a la programación.
 
-[DB] Federico Gay: Tengo 29 años, jugador de Handball y fan de los deportes. Soy Tecnico Electronico y siempre me gusto todo lo que engloba a la tecnologia, hace unos años empece a introducirme al mundo de la programacion y ahi es donde realmente encontre lo que me gustaba y queria dedicarme para mi futuro. 
+[DB] Federico Gay: Tengo 29 años, jugador de Handball y fan de los deportes. Soy Tecnico Electronico y siempre me gusto todo lo que engloba a la tecnologia, hace unos años empece a introducirme al mundo de la programacion y ahi es donde realmente encontre lo que me gustaba y queria dedicarme para mi futuro.
 
-[ADM] Lautaro Sayavedra
-[BE] Baltazar Demichele
-[FE] Mariana Martínez
+[ADM] Lautaro Sayavedra: Tengo 21 años, soy fanatico del futbol. Soy Tecnico en Informatica y siempre me atrajo el mundo IT, hace 3 años decidi ingresar a Ingenieria en Sistemas para aprender sobre este mundo y ver mas programacion e otras areas que eran nuevas para mi. En que area me voy a especializar todavia no lo se, pero se que es en esta industria. Y mientras tanto disfruto del trayecto.
 
 TEMÁTICA ELEGIDA:
 

@@ -223,3 +223,17 @@ article i,
 h5 {
   filter: drop-shadow(8px 8px 4px #222);
 }
+
+@media (min-width: 481px) {
+  /* tablet */
+
+}
+
+@media (min-width: 769px) {
+  /* notebook */
+  
+}
+
+@media (min-width: 1281px) {
+  /* computadora */
+}

@@ -1,17 +1,18 @@
-<header class="container-header">
-  <nav>
-    <ul class="flex justify-c margin-1 list-none">
-      <li><a href="/"><img src="/images/logo.png" class="logo-header"></a></li>
+<header>
+  <nav class="container-header padding-1">
+    <div class="c-logo text-align-c">
+      <a href="/"><img src="/images/logo.png" alt="logo" class="logo-header"></a>
+    </div>
+    <div class="c-search text-align-c">
       <form action="/product/searchProduct" method="get">
-        <input type="text" name="search" />
-        <button type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <input type="search" placeholder="Busca tu Archivo" class="buscador" />
       </form>
-      <div class="flex list-none gap">
-        <li><a href="/user/login">Ingresar</a></li>
-        <li><a href="/user/register">Registrarte</a></li>
-      </div>
-    </ul>
+    </div>
+    <div class="c-login text-align-c">
+      <a href="/user/login">Ingresar</a>
+    </div>
+    <div class="c-register text-align-c">
+      <a href="/user/register">Registrarte</a>
+    </div>
   </nav>
 </header>

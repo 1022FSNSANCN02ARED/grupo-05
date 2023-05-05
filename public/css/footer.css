@@ -1,32 +1,48 @@
-/* Footer */
-
-footer {
+.container-footer {
+  width: 100%;
   background-color: #222;
   color: #fff;
-  padding: 50px 0;
-  margin-top: auto;
+  padding: 20px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-footer h3 {
-  color: #fff;
+.contactos, .redes, .nosotros {
+  width: calc((100%)/3);
+  text-align: center;
 }
 
-footer p {
-  font-size: 16px;
-  color: #bbb;
-}
-
-footer ul li {
+.redes ul li {
   display: inline-block;
   margin-right: 10px;
 }
 
-footer ul li a {
+.redes ul li a {
   color: #fff;
   font-size: 24px;
   transition: all 0.2s ease-in-out;
 }
 
-footer ul li a:hover {
-  transform: scale(1.2);
+.redes ul li a:hover {
+  transform: scale(1.5);
+}
+
+@media (max-width: 481px) {
+  /* tablet */
+  .container-footer {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: grid;
+  }
+
+  .contactos, .redes, .nosotros {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
 }

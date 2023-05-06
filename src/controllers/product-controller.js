@@ -23,7 +23,8 @@ module.exports = {
       product.forEach((game) => {
         if (
           game.name.includes(busqueda) ||
-          game.name.includes(busqueda.toUpperCase())
+          game.name.toUpperCase().includes(busqueda) ||
+          game.name.toLowerCase().includes(busqueda)
         ) {
           found.push(game);
         }

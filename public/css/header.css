@@ -1,9 +1,9 @@
 .container-header{
+  width: 100%;
   display: flex;
   align-items: center;
   height: 120px;
   background: black;
-  border: solid #0c6061 3px;
   font-family: "Rubik", sans-serif;
 }
 
@@ -31,32 +31,34 @@
 
 .container-buscador {
   width: 50%;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  border-radius: 6px;
-  padding-right: 4px;
+  position: relative;
 }
 
-.buscador{
+.input-search{
   width: 80%;
+  height: 50px;
   margin-left: 10%;
-  height: 35px;
-  padding: 4px 10px;
-  color: white;
-  font-size: 13px;
-  border: 0;
-  background: #0c6061;
+  margin-top: 35px;
+  background: #2b303b;
+  border: none;
+  font-size: 11pt;
+  color: #63717f;
+  padding-left: 45px;
+  border-radius: 5px;
 }
 
-.boton-lupa {
+
+.icon{
   position: absolute;
-  z-index: 5;
-  margin-left: 29%;
-  height: 35px;
-  border: inherit;
-  background: transparent;
-  color: white;
+  margin-left: 13%;
+  z-index: 1;
+  color: #4f5b66;
+  line-height: 120px;
+}
+
+.input-search:hover, .input-search:focus, .input-search:active{
+  outline:none;
+  background: #ffffff;
 }
 
 .menu-left {
@@ -119,24 +121,32 @@
   }
 
   .menu-items {
-    display: none;
+    display: block;
     width: 100%;
-    flex-direction: column;
-    gap: 16px;
     position: absolute;
     top: 120px;
     left: 0;
-    padding: 20px;
     background: #161b22;
   }
 
+  .container-buscador {
+    width: 100%;
+  }
+
+  .input-search {
+    width: 70%;
+    margin-bottom: 35px;
+  }
+
   .menu-left {
+    width: 100%;
     flex-direction: column;
   }
 
-  .menu-left a {
-    border-bottom: 2px solid #30363d;
-    padding-bottom: 10px;
+  .registro, .ingreso {
+    width: 100%;
+    text-align: start;
+    padding-left: 10%;
   }
 
   .container-logo {
@@ -153,15 +163,7 @@
 }
 
 @media (max-width: 769px) {
-  .boton-lupa {
-    position: absolute;
-    z-index: 5;
-    margin-left: 27%;
-    height: 35px;
-    border: inherit;
-    background: transparent;
-    color: white;
-  }
+  
 }
 
 body.open .menu-items {

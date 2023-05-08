@@ -127,8 +127,6 @@ body {
   margin-top: 2rem;
 }
 
-
-
 .category i {
   font-size: 2rem;
   margin: 1rem;
@@ -209,6 +207,15 @@ body {
   position: relative;
 }
 
+.imagen-año {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  position: relative;
+  z-index: 0;
+}
+
 .titulo-año {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fffdd1;
@@ -229,12 +236,10 @@ h5 {
 
 @media (min-width: 481px) {
   /* tablet */
-
 }
 
 @media (min-width: 769px) {
   /* notebook */
-  
 }
 
 @media (min-width: 1281px) {

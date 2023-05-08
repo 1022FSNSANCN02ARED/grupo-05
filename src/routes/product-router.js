@@ -10,5 +10,9 @@ router.get("/searchProduct", productController.searchProduct);
 //router.get("/newProduct", productController.newProduct)
 //Post de createProduct
 router.post("/createProduct", productController.createProduct);
+//Put de editProduct
+router.put("/editProduct/:id", productController.editProduct);
+//Delete de deleteProduct
+router.delete("/deleteProduct/:id", productController.deleteProduct);
 
 module.exports = router;

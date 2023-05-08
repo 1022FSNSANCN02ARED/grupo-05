@@ -16,42 +16,11 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-
   background-color: #0c6061;
-
   color: #fffdd1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-section {
-  background-color: #0f7d7e;
-}
-
-section h1 {
-  text-align: center;
-  font-size: 25px;
-}
-
-section h2 {
-  font-size: 18px;
-}
-
-figure {
-  text-align: center;
-}
-
-figcaption {
-  position: absolute;
-  bottom: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fffdd1;
-  font-size: 20px;
-  padding: 10px;
-  padding-bottom: -10px;
-  width: 100%;
-  border-radius: 0px 0px 4px 4px;
 }
 
 .box-shadow {
@@ -158,15 +127,18 @@ figcaption {
   margin-top: 2rem;
 }
 
-#category i {
+
+
+.category i {
   font-size: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
+  color: white;
 }
 
-#category h5 {
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+.category h5 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: white;
 }
 
 .scroll {
@@ -216,6 +188,38 @@ figcaption {
   width: 33.33333%;
   padding: 0 15px;
   box-sizing: border-box;
+}
+
+/*========== INDEX ===========*/
+
+.container-section {
+  background-color: #0f7d7e;
+  width: 94%;
+  margin: 3%;
+}
+
+.texto-h2 {
+  font-size: 18px;
+}
+
+.container-juego {
+  width: 94%;
+  margin: 3%;
+  text-align: center;
+  position: relative;
+}
+
+.titulo-año {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fffdd1;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  font-size: 20px;
 }
 
 article i,

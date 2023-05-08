@@ -5,22 +5,22 @@
     <%- include("./partials/header.ejs") %>
     <main>
       <!-- Juego del Año -->
-      <section class="margin-1 padding-1 image box-shadow">
+      <section class="container-section padding-1 image box-shadow">
         <!-- <h1 class="margin-b">Juego del Año</h1> -->
-        <figure>
+        <div class="container-juego">
           <a href="/product/showProduct/20">
             <img
               src="/images/elden-ring.jpg"
               alt="juego-del-año"
-              class="maxw bor-1 box-shadow"
+              class="maxw bor-1 box-shadow imagen-año"
             />
           </a>
-          <figcaption>Juego del Año</figcaption>
-        </figure>
+          <h2 class="titulo-año">Juego del Año</h2>
+        </div>
       </section>
       <!-- Juegos destacados -->
-      <section class="scroll margin-1 padding-1 box-shadow">
-        <h2 class="margin-b">Juegos Destacados</h2>
+      <section class="container-section scroll padding-1 box-shadow">
+        <h2 class="margin-b texto-h2 text-align-c">Juegos Destacados</h2>
         <div class="flex gap">
           <% product.forEach((game, i) => { %> <% if (i < 5) { %>
           <article>
@@ -36,8 +36,8 @@
         </div>
       </section>
       <!-- Categorias -->
-      <section id="category" class="scroll margin-1 padding-1 box-shadow">
-        <h2 class="margin-b">Categorias Destacadas</h2>
+      <section class="category container-section scroll padding-1 box-shadow">
+        <h2 class="margin-b texto-h2 text-align-c">Categorias Destacadas</h2>
         <div class="scroll-container flex gap justify-c-e">
           <% product.forEach((game, i ) => { i++ %> <% if (i < 5 ) { %>
           <article class="card flex w-22 h-5 bor-1 box-shadow">

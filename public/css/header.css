@@ -43,7 +43,7 @@
   margin-left: 10%;
   height: 35px;
   padding: 4px 10px;
-  color: #c9d1d9;
+  color: white;
   font-size: 13px;
   border: 0;
   background: #0c6061;
@@ -56,7 +56,7 @@
   height: 35px;
   border: inherit;
   background: transparent;
-  color: #8b949e;
+  color: white;
 }
 
 .menu-left {
@@ -149,6 +149,7 @@
     text-align: center;
   }
 
+
 }
 
 @media (max-width: 769px) {
@@ -159,7 +160,7 @@
     height: 35px;
     border: inherit;
     background: transparent;
-    color: #8b949e;
+    color: white;
   }
 }
 

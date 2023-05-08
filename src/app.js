@@ -5,6 +5,7 @@ const mainRoute = require("./routes/main-route");
 
 const app = express();
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.listen("3001", () => {

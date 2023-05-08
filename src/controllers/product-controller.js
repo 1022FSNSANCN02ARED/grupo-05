@@ -33,4 +33,18 @@ module.exports = {
       res.render("search", { found });
     });
   },
+
+  //Post
+  createProduct: (req, res) => {
+    db.Product.create({
+      awards: req.body.awards,
+      description: req.body.description,
+      image: req.body.image,
+      name: req.body.name,
+      price: req.body.price,
+      stock: req.body.stock,
+    }).then((product) => {
+      res.json(product);
+    });
+  },
 };

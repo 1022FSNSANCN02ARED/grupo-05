@@ -3,9 +3,9 @@
   <%- include("./partials/head.ejs") %>
   <body>
     <%- include("./partials/header.ejs") %>
-    <main>
-      <section class="flex flex-direccion-c margin-1 image box-shadow">
-        <h1>Register</h1>
+    <main class="container-form">
+      <section class="flex flex-direccion-c image box-shadow">
+        <h1 class="text-align-c padding-1">Register</h1>
         <form method="post" action="/user/register" enctype="multipart/form-data" class="margin-b-1">
           <div class="form flex flex-direccion-c">
             <label for="NombreApellido" class="d-none">Nombre y Apellido</label>
@@ -61,7 +61,7 @@
             <% } %>
             <!--  -->
 
-            <label for="avatar" class="avatar box-shadow <%= locals.errors && errors.avatar ? 'invalid' : null %>">Imagen de Perfil</label>
+            <label for="avatar" class="avatar box-shadow avatar-file <%= locals.errors && errors.avatar ? 'invalid' : null %>">Imagen de Perfil</label>
             <input
               type="file"
               name="avatar"
@@ -104,7 +104,7 @@
 
             <div class="flex justify-c align-items-c gap">
               <button type="submit" class="box-shadow w-90">Registrarme</button>
-              <button type="reset" class="box-shadow w-90">Cancelar</button>
+              <button type="reset" class="box-shadow w-90">Borrar Campos</button>
             </div>
             <button class="box-shadow">
               <i class="fa-brands fa-google mr-1"></i>

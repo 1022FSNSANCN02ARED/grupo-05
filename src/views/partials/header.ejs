@@ -13,12 +13,14 @@
   <div class="menu-items">
     <div class="menu-mobile">
       <div class="container-buscador">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" class="input-search" placeholder="Busca tu juego..." />
+        <form action="/product/searchProduct" method="get">
+          <span class="icon"><i class="fa fa-search"></i></span>
+          <input name="search" type="search" class="input-search" placeholder="Busca tu juego..." />
+        </form>
       </div>
       <div class="menu-left">
-        <div class="ingreso"><a href="../login.ejs" class="menu-a">Ingresar</a></div>
-        <div class="registro"><a href="../register.ejs" class="menu-a">Registrarse</a></div>
+        <div class="ingreso"><a href="/user/login" class="menu-a">Ingresar</a></div>
+        <div class="registro"><a href="/user/register" class="menu-a">Registrarse</a></div>
       </div>
     </div>
   </div>

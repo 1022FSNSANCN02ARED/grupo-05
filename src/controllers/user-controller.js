@@ -1,4 +1,5 @@
 const { validationResult } = require("express-validator");
+const db = require("../../database/models");
 
 module.exports = {
   showLogin: (req, res) => {
@@ -19,4 +20,16 @@ module.exports = {
       });
     }
   },
+
+  /* createUser: (req, res) => {
+    db.User.create({
+      name: req.body.name,
+      userName: req.body.userName,
+      email: req.body.email,
+      avatar: req.file.filename,
+      password: req.body.password,
+    }).then((user) => {
+      res.json(user);
+    });
+  }, */
 };

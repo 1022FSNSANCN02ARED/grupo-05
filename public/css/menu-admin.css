@@ -1,0 +1,51 @@
+.container-menu-admin, .container-menu-editar, 
+.container-menu-crear, .container-menu-borrar,
+.container-menu-borrar-id {
+    width: 90%;
+    margin: 3%  5%;
+    background-color: #0f7d7e;
+    border-radius: 5px;  
+}
+
+.botones-accion {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.boton-admin { 
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    margin: 2% 3% 3% 3%;
+}
+  
+.boton-admin:hover {
+    background-color: black;
+    color: white;
+}
+
+.container-menu-editar, 
+.container-menu-crear, .container-menu-borrar,
+.container-menu-borrar-id {
+    display: none;
+}
+
+body.crear .container-menu-crear {
+    display: block;
+}
+
+body.editar .container-menu-editar {
+    display: block;
+}
+
+body.buscar .container-menu-borrar-id {
+    display: block;
+}
+
+body.borrar .container-menu-borrar {
+    display: block;
+}
+
+  

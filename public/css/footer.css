@@ -3,11 +3,11 @@
   background-color: #222;
   color: #fff;
   padding: 20px;
-  left: 0px;
-  bottom: 0px;
   display: flex;
   align-items: flex-start;
   gap: 40px;
+  position: relative;
+  bottom: 0;
 }
 
 .contactos, .redes, .nosotros {

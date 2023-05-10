@@ -15,7 +15,7 @@
       <div class="container-menu-crear image box-shadow">
         <section class="flex flex-direccion-c image box-shadow">
           <h1 class="text-align-c padding-1">Crear Producto</h1>
-          <form method="post" action="#" enctype="multipart/form-data" class="margin-b-1">
+          <form method="post" action="/admin/createProduct" enctype="multipart/form-data" class="margin-b-1">
             <div class="form flex flex-direccion-c">
               <label for="NombreProducto" class="d-none">Nombre del Producto</label>
               <input type="text" name="name" placeholder="Nombre del Producto" class="box-shadow"/>
@@ -30,7 +30,7 @@
               <label for="PremiosProducto" class="d-none">Premios del Producto</label>
               <input type="text" name="awards" placeholder="Premios del Producto" class="box-shadow"/>
               <label>Selecciona la categoria del Producto:</label>
-                  <select name="categoryid" class="box-shadow country">
+                  <select name="categoryid" class="box-shadow country" id="selectCreate">
                     <option value="1">Aventura</option>
                     <option value="2">Autos</option>
                     <option value="3">Shooters</option>
@@ -47,45 +47,28 @@
       <div class="container-menu-editar image box-shadow">
         <section class="flex flex-direccion-c image box-shadow">
           <h1 class="text-align-c padding-1">Editar Producto</h1>
-          <form method="post" action="#" enctype="multipart/form-data" class="margin-b-1">
-            <div class="form flex flex-direccion-c">
-              <label for="NombreProducto" class="d-none">Nombre del Producto</label>
-              <input type="text" name="name" placeholder="Nombre del Producto" class="box-shadow"/>
-              <label for="PrecioPdocuto" class="d-none">Precio del Producto</label>
-              <input type="text" name="price" placeholder="Precio del Producto" class="box-shadow"/>
-              <label for="DescripcionPdocuto" class="d-none">Descripcion del Producto</label>
-              <input type="textarea" name="description" placeholder="Descripcion del Producto" class="box-shadow"/>
-              <label for="image" class="avatar box-shadow avatar-file">Imagen del Producto</label>
-              <input type="file" name="image" id="image" class="box-shadow d-none" placeholder="Imagen del Producto"/>
-              <label for="StockProducto" class="d-none">Stock del Producto</label>
-              <input type="text" name="stock" placeholder="Stock del Producto" class="box-shadow"/>
-              <label for="PremiosProducto" class="d-none">Premios del Producto</label>
-              <input type="text" name="awards" placeholder="Premios del Producto" class="box-shadow"/>
-              <label>Selecciona la categoria del Producto:</label>
-                  <select name="categoryid" class="box-shadow country">
-                    <option value="1">Aventura</option>
-                    <option value="2">Autos</option>
-                    <option value="3">Shooters</option>
-                    <option value="4">Indie</option>
-                  </select>
-              <div class="flex justify-c align-items-c gap">
-                <button type="submit" class="box-shadow w-90">Editar Producto</button>
-                <button type="reset" class="box-shadow w-90">Borrar Campos</button>
-              </div>
-            </div>
+          <form action="/admin/searchProductAdminEdit" method="get" class="margin-b-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input
+              name="search"
+              type="search"
+              class="input-search"
+              placeholder="Busca tu juego..."
+            />
           </form>
         </section>
       </div>
       <div class="container-menu-borrar-id image box-shadow">
         <section class="flex flex-direccion-c image box-shadow">
           <h1 class="text-align-c padding-1">Buscar Producto</h1>
-          <form method="post" action="#" enctype="multipart/form-data" class="margin-b-1">
-            <div class="form flex flex-direccion-c">
-              <label for="BuscarProducto" class="d-none">Ingrese el ID del producto</label>
-              <input type="text" name="id" placeholder="Id del Producto" class="box-shadow"/>
-              <button type="submit" class="box-shadow w-50" onclick="document.body.classList.toggle('borrar')">Buscar Producto</button>
-              
-            </div>
+          <form action="/admin/searchProductAdminDelete" method="get" class="margin-b-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input
+              name="search"
+              type="search"
+              class="input-search"
+              placeholder="Busca tu juego..."
+            />
           </form>
         </section>
       </form>

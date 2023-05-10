@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <section
+        class="category_container justify-c-c margin-1 box-shadow padding-1 image"
+        id="sectionSearch"
+      >
+        <% found.forEach(game => { %>
+        <a href="/admin/showProductAdminEdit/<%= game.id %>">
+          <article class="item bor-1">
+            <img
+              src="<%= game.image %>"
+              alt="<%= game.name %>"
+              class="maxw bor-1"
+            />
+          </article>
+        </a>
+        <% }) %>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

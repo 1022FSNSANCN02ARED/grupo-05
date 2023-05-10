@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliminar Producto</title>
+  </head>
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/header.ejs") %>
+  </body>
+  <main>
+    <section class="flex flex-direccion-c image box-shadow">
+      <form
+        method="post"
+        action="/admin/deleteProduct/<%= product.id %>?_method=DELETE"
+        enctype="multipart/form-data"
+        class="margin-b-1"
+      >
+        <div class="form flex flex-direccion-c">
+          <label for="NombreProducto">Nombre del Producto</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre del Producto"
+            class="box-shadow"
+            value="<%= product.name %>"
+          />
+
+          <label for="DescripcionPdocuto">Descripcion del Producto</label>
+          <input
+            type="textarea"
+            name="description"
+            placeholder="Descripcion del Producto"
+            class="box-shadow"
+            value="<%= product.description %>"
+          />
+
+          <label for="StockProducto">Stock del Producto</label>
+          <input
+            type="text"
+            name="stock"
+            placeholder="Stock del Producto"
+            class="box-shadow"
+            value="<%= product.stock %>"
+          />
+
+          <div class="flex justify-c align-items-c gap">
+            <button type="submit" class="box-shadow w-90">
+              Borrar Producto
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</html>

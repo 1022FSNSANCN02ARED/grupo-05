@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require("path");
+const methodOverride = require("method-override");
 
 const mainRoute = require("./routes/main-route");
 
 const app = express();
 
+app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

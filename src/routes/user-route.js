@@ -5,7 +5,7 @@ const router = Router();
 const userController = require("../controllers/user-controller");
 
 /* MIDDLEWARES */
-const uploadFile = require("../middlewares/multer");
+const uploadFileAvatar = require("../middlewares/multerAvatar");
 const validations = require("../middlewares/validationRegister");
 
 router.get("/login", userController.showLogin);
@@ -19,7 +19,11 @@ router.get("/register", userController.showRegister);
 ); */
 
 //Create user - Postman
-router.post("/create", uploadFile.single("avatar"), userController.createUser);
+router.post(
+  "/create",
+  uploadFileAvatar.single("avatar"),
+  userController.createUser
+);
 
 /* perfil del usuario */
 /* router.get("/profile/:userId", userController.profile); */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Producto</title>
+  </head>
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/header.ejs") %>
+  </body>
+  <main>
+    <section class="flex flex-direccion-c image box-shadow">
+      <form
+        method="post"
+        action="/admin/editProduct/<%= product.id %>?_method=PUT"
+        enctype="multipart/form-data"
+        class="margin-b-1"
+      >
+        <div class="form flex flex-direccion-c">
+          <label for="NombreProducto">Nombre del Producto</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre del Producto"
+            class="box-shadow"
+            value="<%= product.name %>"
+          />
+          <label for="PrecioPdocuto">Precio del Producto</label>
+          <input
+            type="text"
+            name="price"
+            placeholder="Precio del Producto"
+            class="box-shadow"
+            value="<%= product.price %>"
+          />
+          <label for="DescripcionPdocuto">Descripcion del Producto</label>
+          <input
+            type="textarea"
+            name="description"
+            placeholder="Descripcion del Producto"
+            class="box-shadow"
+            value="<%= product.description %>"
+          />
+          <label for="image" class="avatar box-shadow avatar-file"
+            >Imagen del Producto</label
+          >
+          <input
+            type="file"
+            name="image"
+            id="image"
+            class="box-shadow d-none"
+            placeholder="Imagen del Producto"
+          />
+          <label for="StockProducto">Stock del Producto</label>
+          <input
+            type="text"
+            name="stock"
+            placeholder="Stock del Producto"
+            class="box-shadow"
+            value="<%= product.stock %>"
+          />
+          <label for="PremiosProducto">Premios del Producto</label>
+          <input
+            type="text"
+            name="awards"
+            placeholder="Premios del Producto"
+            class="box-shadow"
+            value="<%= product.awards %>"
+          />
+          <label>Selecciona la categoria del Producto:</label>
+          <select name="categoryid" class="box-shadow country">
+            <option value="1">Aventura</option>
+            <option value="2">Autos</option>
+            <option value="3">Shooters</option>
+            <option value="4">Indie</option>
+          </select>
+          <div class="flex justify-c align-items-c gap">
+            <button type="submit" class="box-shadow w-90">
+              Editar Producto
+            </button>
+            <button type="reset" class="box-shadow w-90">Borrar Campos</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</html>

@@ -21,7 +21,7 @@ module.exports = {
     }
   },
 
-  /* createUser: (req, res) => {
+  createUser: (req, res) => {
     db.User.create({
       name: req.body.name,
       userName: req.body.userName,
@@ -31,5 +31,5 @@ module.exports = {
     }).then((user) => {
       res.json(user);
     });
-  }, */
+  },
 };

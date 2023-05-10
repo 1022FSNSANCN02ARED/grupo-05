@@ -29,7 +29,7 @@ module.exports = {
       avatar: req.file.filename,
       password: req.body.password,
     }).then((user) => {
-      res.json(user);
+      res.redirect("/user/login");
     });
   },
 };

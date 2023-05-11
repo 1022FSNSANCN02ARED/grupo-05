@@ -1,33 +1,29 @@
-/* EXPRESS VALIDATOR */
-const path = require("path");
 const { body } = require("express-validator");
 
-const validations = [
-  body("fullName").notEmpty().withMessage("Debe escribir un nombre"),
+validacionesRegister = [
+  body("name").notEmpty().withMessage("Debes completar el campo nombre"),
+  body("userName")
+    .notEmpty()
+    .withMessage("El nombre de usuario debe tener al menos 4 caracteres"),
+
   body("email")
     .notEmpty()
-    .withMessage("Debe escribir un correo electrónico")
+    .withMessage("Debes completar el campo email")
     .bail()
     .isEmail()
-    .withMessage("Debes escribir un formato de correo válido"),
-  body("password").notEmpty().withMessage("Debe escribir una contraseña"),
-  body("country").notEmpty().withMessage("Tienes que elegir un país"),
-  body("avatar").custom((value, { req }) => {
-    let file = req.file;
-    let acceptedExtensions = [".jpg", ".png", ".gif"];
-
-    if (!file) {
-      throw new Error("Debe subir una imagen");
-    } else {
-      let fileExtension = path.extname(file.originalname);
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
-      }
+    .withMessage("Debes ingresar un email válido"),
+  body("password")
+    .notEmpty()
+    .withMessage("Debes completar el campo contraseña")
+    .bail()
+    .isLength({ min: 8 })
+    .withMessage("La contraseña debe tener al menos 8 caracteres"),
+  body("password2").custom((value, { req }) => {
+    if (value !== req.body.password) {
+      throw new Error("Las contraseñas no coinciden");
     }
-
     return true;
   }),
 ];
 
-module.exports = validations;
-/* EXPRESS VALIDATOR */
+module.exports = validacionesRegister;

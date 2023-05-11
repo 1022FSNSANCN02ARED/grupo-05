@@ -4,85 +4,131 @@
   <body>
     <%- include("./partials/header.ejs") %>
     <main class="container-formulario">
-      <form method="post" action="/user/create" enctype="multipart/form-data" class="formulario" id="formulario">
-        <h1 class="text-align-c padding-1 formulario__h1">Formulario de Registro</h1>
+      <form
+        method="post"
+        action="/user/create"
+        enctype="application/x-www-form-urlencoded"
+        class="formulario"
+        id="formulario"
+      >
+        <h1 class="text-align-c padding-1 formulario__h1">
+          Formulario de Registro
+        </h1>
+        <% if (locals.errors) { %>
+        <div class="error__case flex">
+          <ul>
+            <% errors.forEach(error => { %>
+
+            <li class="formulario__input-error-back">
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= error.msg %>
+            </li>
+
+            <% }) %>
+          </ul>
+        </div>
+        <% } %>
         <!-- Grupo: Nombre -->
         <div class="formulario__grupo" id="grupo__nombre">
           <label for="name" class="formulario__label">Nombre y Apellido</label>
           <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input <%= locals.errors && errors.name ? 'invalid' : null %>" name="name" id="name" placeholder="Ingrese su nombre y Apellido..." value="<%= locals.oldData ? oldData.name : null %>">
+            <input type="text" class="formulario__input" name="name" id="name"
+            placeholder="Ingrese su nombre y Apellido..." value="<%= locals.old
+            && old.name ? old.name : "" %>" />
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
-            <!--  -->
-            <% if (locals.errors && errors.name) { %>
-              <div class="text-danger"><%= errors.name.msg %></div>
-            <% } %>
-            <!--  -->
           </div>
-          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+          <p class="formulario__input-error">
+            El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+            numeros, letras y guion bajo.
+          </p>
         </div>
         <!-- Grupo: Usuario -->
         <div class="formulario__grupo" id="grupo__usuario">
           <label for="userName" class="formulario__label">Usuario</label>
           <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input <%= locals.errors && errors.userName ? 'invalid' : null %>" name="userName" id="userName" placeholder="Ingrese un Usuario" value="<%= locals.oldData ? oldData.userName : null %>">
+            <input type="text" class="formulario__input" name="userName"
+            id="userName" placeholder="Ingrese un Usuario" value="<%= locals.old
+            && old.userName ? old.userName : "" %>" />
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
-            <!--  -->
-            <% if (locals.errors && errors.userName) { %>
-              <div class="text-danger"><%= errors.userName.msg %></div>
-            <% } %>
-            <!--  -->
           </div>
-          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+          <p class="formulario__input-error">
+            El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+            numeros, letras y guion bajo.
+          </p>
         </div>
         <!-- Grupo: Correo Electronico -->
-			  <div class="formulario__grupo" id="grupo__correo">
-			  	<label for="email" class="formulario__label">Correo Electrónico</label>
-			  	<div class="formulario__grupo-input">
-			  		<input type="email" class="formulario__input <%= locals.errors && errors.email ? 'invalid' : null %>" name="email"  id="email" placeholder="Ingresar su email..." value="<%= locals.oldData ? oldData.email : null %>">
-			  		<i class="formulario__validacion-estado fas fa-times-circle"></i>
-			  		<!--  -->
-			  		<% if (locals.errors && errors.email) { %>
-			  			<div class="text-danger"><%= errors.email.msg %></div>
-			  		<% } %>
-			  		<!--  -->
-			  	</div>
-			  	<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-			  </div>
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="email" class="formulario__label"
+            >Correo Electrónico</label
+          >
+          <div class="formulario__grupo-input">
+            <input type="email" class="formulario__input" name="email"
+            id="email" placeholder="Ingresar su email..." value="<%= locals.old
+            && old.email ? old.email : "" %>" />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El correo solo puede contener letras, numeros, puntos, guiones y
+            guion bajo.
+          </p>
+        </div>
         <!-- Grupo: Contraseña -->
-			  <div class="formulario__grupo" id="grupo__password">
-				  <label for="password" class="formulario__label">Contraseña</label>
-				  <div class="formulario__grupo-input">
-					  <input type="password" class="formulario__input <%= locals.errors && errors.password ? 'invalid' : null %>" name="password" id="password">
-					  <i class="formulario__validacion-estado fas fa-times-circle"></i>
-					  <!--  -->
-					  <% if (locals.errors && errors.password) { %>
-						  <div class="text-danger"><%= errors.password.msg %></div>
-					  <% } %>
-					  <!--  -->
-				  </div>
-				  <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
-			  </div>
+        <div class="formulario__grupo" id="grupo__password">
+          <label for="password" class="formulario__label">Contraseña</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="password"
+              class="formulario__input"
+              name="password"
+              id="password"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            La contraseña tiene que ser de 4 a 12 dígitos.
+          </p>
+        </div>
         <!-- Grupo: Contraseña 2 -->
-			  <div class="formulario__grupo" id="grupo__password2">
-				  <label for="password2" class="formulario__label">Repetir Contraseña</label>
-				  <div class="formulario__grupo-input">
-					  <input type="password" class="formulario__input" name="password2" id="password2">
-					  <i class="formulario__validacion-estado fas fa-times-circle"></i>
-				  </div>
-				  <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
-			  </div>
+        <div class="formulario__grupo" id="grupo__password2">
+          <label for="password2" class="formulario__label"
+            >Repetir Contraseña</label
+          >
+          <div class="formulario__grupo-input">
+            <input
+              type="password"
+              class="formulario__input"
+              name="password2"
+              id="password2"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            Ambas contraseñas deben ser iguales.
+          </p>
+        </div>
         <!-- Mensaje correcto -->
-			  <div class="formulario__mensaje" id="formulario__mensaje">
-				  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			  </div>
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p>
+            <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
+            rellena el formulario correctamente.
+          </p>
+        </div>
         <!-- Mensaje correcto -->
-			  <div class="formulario__grupo formulario__grupo-btn-enviar">
-				  <button type="submit" class="formulario__btn" name="aprobacion" id="aprobacion">Enviar</button>
-				  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-			  </div>
-		  </form>
-	  </main>
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button
+            type="submit"
+            class="formulario__btn"
+            name="aprobacion"
+            id="aprobacion"
+          >
+            Enviar
+          </button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+            Formulario enviado exitosamente!
+          </p>
+        </div>
+      </form>
+    </main>
     <%- include("./partials/footer.ejs") %>
-    <script src="/js/formulario.js"></script>
+    <!-- <script src="/js/formulario.js"></script> -->
   </body>
 </html>

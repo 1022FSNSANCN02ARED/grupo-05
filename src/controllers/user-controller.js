@@ -1,5 +1,5 @@
-const { validationResult } = require("express-validator");
 const db = require("../../database/models");
+const { validationResult } = require("express-validator");
 
 module.exports = {
   showLogin: (req, res) => {
@@ -10,26 +10,25 @@ module.exports = {
     res.render("register");
   },
 
-  processRegister: (req, res) => {
-    const resultValidations = validationResult(req);
-
-    if (resultValidations.errors.length > 0) {
-      res.render("register", {
-        errors: resultValidations.mapped(),
-        oldData: req.body,
-      });
-    }
-  },
+  processRegister: (req, res) => {},
 
   createUser: (req, res) => {
-    db.User.create({
-      name: req.body.name,
-      userName: req.body.userName,
-      email: req.body.email,
-      avatar: req.file.filename,
-      password: req.body.password,
-    }).then((user) => {
-      res.redirect("/user/login");
-    });
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      db.User.create({
+        name: req.body.name,
+        userName: req.body.userName,
+        email: req.body.email,
+        password: req.body.password,
+      }).then((user) => {
+        res.redirect("/user/login");
+      });
+    } else {
+      res.render("register", {
+        errors: errors.array(),
+        old: req.body,
+      });
+    }
   },
 };

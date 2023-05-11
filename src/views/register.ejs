@@ -3,130 +3,86 @@
   <%- include("./partials/head.ejs") %>
   <body>
     <%- include("./partials/header.ejs") %>
-    <main class="container-form">
-      <section class="flex flex-direccion-c image box-shadow">
-        <h1 class="text-align-c padding-1">Register</h1>
-        <form method="post" action="/user/create" enctype="multipart/form-data" class="margin-b-1">
-          <div class="form flex flex-direccion-c">
-            <label for="NombreApellido" class="d-none">Nombre y Apellido</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Nombre y Apellido"
-              class="box-shadow <%= locals.errors && errors.fullName ? 'invalid' : null %>"
-              id="NombreApellido"
-              value="<%= locals.oldData ? oldData.fullName : null %>"
-            />
+    <main class="container-formulario">
+      <form method="post" action="/user/create" enctype="multipart/form-data" class="formulario" id="formulario">
+        <h1 class="text-align-c padding-1 formulario__h1">Formulario de Registro</h1>
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="name" class="formulario__label">Nombre y Apellido</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input <%= locals.errors && errors.name ? 'invalid' : null %>" name="name" id="name" placeholder="Ingrese su nombre y Apellido..." value="<%= locals.oldData ? oldData.name : null %>">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
             <!--  -->
-            <% if (locals.errors && errors.fullName) { %>
-
-            <div class="text-danger"><%= errors.fullName.msg %></div>
-
-            <% } %>
-            <label for="userName" class="d-none">Nombre de Usuario</label>
-            <input
-              type="text"
-              name="userName"
-              placeholder="Nombre de Usuario..."
-              class="box-shadow <%= locals.errors && errors.fullName ? 'invalid' : null %>"
-              id="userName"
-              value="<%= locals.oldData ? oldData.fullName : null %>"
-            />
-            <!--  -->
-
-            <label for="email" class="d-none">email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Ingresar email..."
-              class="box-shadow <%= locals.errors && errors.email ? 'invalid' : null %>"
-              value="<%= locals.oldData ? oldData.email : null %>"
-            />
-            <!--  -->
-            <% if (locals.errors && errors.email) { %>
-
-            <div class="text-danger"><%= errors.email.msg %></div>
-
+            <% if (locals.errors && errors.name) { %>
+              <div class="text-danger"><%= errors.name.msg %></div>
             <% } %>
             <!--  -->
-
-            <div class="flex justify-c align-items-c">
-              <label for="password" class="d-none">password</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Ingresar contraseña..."
-                id="password"
-                class="w-90 box-shadow <%= locals.errors && errors.password ? 'invalid' : null %>"
-              />
-              <i id="eye" class="fa-regular fa-eye f-size-1"></i>
-            </div>
-            <!--  -->
-            <% if (locals.errors && errors.password) { %>
-
-            <div class="text-danger"><%= errors.password.msg %></div>
-
-            <% } %>
-            <!--  -->
-
-            <label for="avatar" class="avatar box-shadow avatar-file <%= locals.errors && errors.avatar ? 'invalid' : null %>">Imagen de Perfil</label>
-            <input
-              type="file"
-              name="avatar"
-              id="avatar"
-              class="box-shadow d-none"
-            />
-            <% if (locals.errors && errors.avatar) { %>
-
-            <div class="text-danger"><%= errors.avatar.msg %></div>
-
-            <% } %>
-            <!--  -->
-            <!--  <div class="flex justify-c align-items-c">
-              <label for="" class="d-none">AAAAAAAAAA</label>
-              <input type="password" placeholder="Confirmar contraseña..." id="pass" class="w-90 box-shadow" />
-              <i id="eye" class="fa-regular fa-eye f-size-1"></i>
-            </div> -->
-
-            <label><b>País de nacimiento:</b></label>
-								<select 
-									name="country" 
-									class="box-shadow country <%= locals.errors && errors.country ? 'invalid' : null %>"
-								>
-									<option value="">Elegí un país</option>
-									<%  
-										let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];
-									%>
-									<% for (const oneCountry of countries) { %>
-										<option 
-											value="<%= oneCountry %>"
-											<%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %> 
-										> <%= oneCountry %> </option>
-									<% } %>
-								</select>
-								<% if (locals.errors && errors.country) { %>
-									<div class="text-danger">
-										<%= errors.country.msg %>
-									</div>
-								<% } %>
-
-            <div class="flex justify-c align-items-c gap">
-              <button type="submit" class="box-shadow w-90">Registrarme</button>
-              <button type="reset" class="box-shadow w-90">Borrar Campos</button>
-            </div>
-            <button class="box-shadow">
-              <i class="fa-brands fa-google mr-1"></i>
-              <span>Registrarme con Google</span>
-            </button>
-            <button class="box-shadow">
-              <i class="fa-brands fa-apple mr-1"></i>
-              <span>Registrarme con Apple</span>
-            </button>
           </div>
-        </form>
-      </section>
-    </main>
+          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+        <!-- Grupo: Usuario -->
+        <div class="formulario__grupo" id="grupo__usuario">
+          <label for="userName" class="formulario__label">Usuario</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input <%= locals.errors && errors.userName ? 'invalid' : null %>" name="userName" id="userName" placeholder="Ingrese un Usuario" value="<%= locals.oldData ? oldData.userName : null %>">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            <!--  -->
+            <% if (locals.errors && errors.userName) { %>
+              <div class="text-danger"><%= errors.userName.msg %></div>
+            <% } %>
+            <!--  -->
+          </div>
+          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+        <!-- Grupo: Correo Electronico -->
+			  <div class="formulario__grupo" id="grupo__correo">
+			  	<label for="email" class="formulario__label">Correo Electrónico</label>
+			  	<div class="formulario__grupo-input">
+			  		<input type="email" class="formulario__input <%= locals.errors && errors.email ? 'invalid' : null %>" name="email"  id="email" placeholder="Ingresar su email..." value="<%= locals.oldData ? oldData.email : null %>">
+			  		<i class="formulario__validacion-estado fas fa-times-circle"></i>
+			  		<!--  -->
+			  		<% if (locals.errors && errors.email) { %>
+			  			<div class="text-danger"><%= errors.email.msg %></div>
+			  		<% } %>
+			  		<!--  -->
+			  	</div>
+			  	<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			  </div>
+        <!-- Grupo: Contraseña -->
+			  <div class="formulario__grupo" id="grupo__password">
+				  <label for="password" class="formulario__label">Contraseña</label>
+				  <div class="formulario__grupo-input">
+					  <input type="password" class="formulario__input <%= locals.errors && errors.password ? 'invalid' : null %>" name="password" id="password">
+					  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+					  <!--  -->
+					  <% if (locals.errors && errors.password) { %>
+						  <div class="text-danger"><%= errors.password.msg %></div>
+					  <% } %>
+					  <!--  -->
+				  </div>
+				  <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			  </div>
+        <!-- Grupo: Contraseña 2 -->
+			  <div class="formulario__grupo" id="grupo__password2">
+				  <label for="password2" class="formulario__label">Repetir Contraseña</label>
+				  <div class="formulario__grupo-input">
+					  <input type="password" class="formulario__input" name="password2" id="password2">
+					  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+				  </div>
+				  <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			  </div>
+        <!-- Mensaje correcto -->
+			  <div class="formulario__mensaje" id="formulario__mensaje">
+				  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			  </div>
+        <!-- Mensaje correcto -->
+			  <div class="formulario__grupo formulario__grupo-btn-enviar">
+				  <button type="submit" class="formulario__btn" name="aprobacion" id="aprobacion">Enviar</button>
+				  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			  </div>
+		  </form>
+	  </main>
     <%- include("./partials/footer.ejs") %>
+    <script src="/js/formulario.js"></script>
   </body>
 </html>

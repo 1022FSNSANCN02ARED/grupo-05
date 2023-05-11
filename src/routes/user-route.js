@@ -21,7 +21,7 @@ router.get("/register", userController.showRegister);
 //Create user - Postman
 router.post(
   "/create",
-  uploadFileAvatar.single("avatar"),
+  uploadFileAvatar.single("avatar"), validations,
   userController.createUser
 );
 

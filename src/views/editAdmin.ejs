@@ -14,10 +14,23 @@
     <section class="flex flex-direccion-c image box-shadow">
       <form
         method="post"
-        action="/admin/editProduct/<%= locals.old && old.id ? old.id : product.id %>?_method=PUT"
+        action="/admin/editProduct/<%= product.id%>?_method=PUT" 
         enctype="multipart/form-data"
         class="margin-b-1"
       >
+      <% if (locals.errors) { %>
+        <div class="error__case flex">
+          <ul>
+            <% errors.forEach(error => { %>
+
+            <li class="formulario__input-error-back">
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= error.msg %>
+            </li>
+
+            <% }) %>
+          </ul>
+        </div>
+        <% } %>
         <div class="form flex flex-direccion-c">
           <label for="NombreProducto">Nombre del Producto</label>
           <input
@@ -64,10 +77,10 @@
           
           <label>Selecciona la categoria del Producto:</label>
           <select name="categoryid" class="box-shadow country">
-            <option value="1" <%= locals.old && old.categoryid ? "selected" : "" %>>Aventura</option>
-            <option value="2" <%= locals.old && old.categoryid ? "selected" : "" %>>Autos</option>
-            <option value="3" <%= locals.old && old.categoryid ? "selected" : "" %>>Shooters</option>
-            <option value="4" <%= locals.old && old.categoryid ? "selected" : "" %>>Indie</option>
+            <option value="1" <%= locals.old && old.categoryid == "1" ? "selected" : "" %>>Aventura</option>
+            <option value="2" <%= locals.old && old.categoryid == "2" ? "selected" : "" %>>Autos</option>
+            <option value="3" <%= locals.old && old.categoryid == "3" ? "selected" : "" %>>Shooters</option>
+            <option value="4" <%= locals.old && old.categoryid == "4" ? "selected" : "" %>>Indie</option>
           </select>
           <div class="flex justify-c align-items-c gap">
             <button type="submit" class="box-shadow w-90">

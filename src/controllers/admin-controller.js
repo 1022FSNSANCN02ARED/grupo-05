@@ -80,11 +80,12 @@ module.exports = {
   //Put
   editProduct: (req, res) => {
     let errors = validationResult(req);
+    let id = req.params.id;
 
+    //res.send(errors);
     if (errors.isEmpty()) {
       db.Product.update(
         {
-          id: req.params.id,
           awards: req.body.awards,
           description: req.body.description,
           image: req.file.filename,
@@ -101,7 +102,13 @@ module.exports = {
         res.redirect("/admin");
       });
     } else {
-      res.render("editAdmin", { errors: errors.array(), old: req.body });
+      db.Product.findByPk(req.params.id).then((product) => {
+        res.render("editAdmin", {
+          errors: errors.array(),
+          old: req.body,
+          product,
+        });
+      });
     }
   },
 

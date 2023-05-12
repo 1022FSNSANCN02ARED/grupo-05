@@ -11,7 +11,8 @@
     <%- include("./partials/header.ejs") %>
  
   <main>
-    <section class="flex flex-direccion-c image box-shadow">
+    <section class="container-menu-admin flex flex-direccion-c image box-shadow">
+      <h1 class="text-align-c padding-1">Editar Producto</h1>
       <form
         method="post"
         action="/admin/editProduct/<%= product.id%>?_method=PUT" 
@@ -31,62 +32,65 @@
           </ul>
         </div>
         <% } %>
-        <div class="form flex flex-direccion-c">
-          <label for="NombreProducto">Nombre del Producto</label>
+        <div class="formulario formulario__grupo flex flex-direccion-c">
+          <label for="NombreProducto" class="formulario__label">Nombre del Producto</label>
           <input
             type="text"
             name="name"
             placeholder="Nombre del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= locals.old && old.name ? old.name : product.name %>"
           />
-          <label for="PrecioPdocuto">Precio del Producto</label>
+          <label for="PrecioPdocuto" class="formulario__label">Precio del Producto</label>
           <input
             type="text"
             name="price"
             placeholder="Precio del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= locals.old && old.price ? old.price : product.price %>"
           />
-          <label for="DescripcionPdocuto">Descripcion del Producto</label>
+          <label for="DescripcionPdocuto" class="formulario__label">Descripcion del Producto</label>
           <input
             type="textarea"
             name="description"
             placeholder="Descripcion del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= locals.old && old.description ? old.description : product.description %>"
           />
-          <label for="image" class="avatar box-shadow avatar-file"
+          <label for="image" class="formulario__label"
+            >Imagen del Producto</label
+          >
+          <label for="image" class="margin-b-1 formulario__input color-label avatar-file"
             >Imagen del Producto</label
           >
           <input
             type="file"
             name="image"
             id="image"
-            class="box-shadow d-none"
+            class="d-none"
             placeholder="Imagen del Producto"
           />
-          <label for="StockProducto">Stock del Producto</label>
+          <label for="StockProducto" class="formulario__label">Stock del Producto</label>
           <input
             type="text"
             name="stock"
             placeholder="Stock del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= locals.old && old.stock ? old.stock : product.stock %>"
           />
           
-          <label>Selecciona la categoria del Producto:</label>
-          <select name="categoryid" class="box-shadow country">
+          <label class="formulario__label">Selecciona la categoria del Producto:</label>
+          <select name="categoryid" class="box-shadow country formulario__input margin-b-1">
             <option value="1" <%= locals.old && old.categoryid == "1" ? "selected" : "" %>>Aventura</option>
             <option value="2" <%= locals.old && old.categoryid == "2" ? "selected" : "" %>>Autos</option>
             <option value="3" <%= locals.old && old.categoryid == "3" ? "selected" : "" %>>Shooters</option>
             <option value="4" <%= locals.old && old.categoryid == "4" ? "selected" : "" %>>Indie</option>
           </select>
           <div class="flex justify-c align-items-c gap">
-            <button type="submit" class="box-shadow w-90">
+            <button type="submit" class="box-shadow w-90 formulario__btn">
               Editar Producto
             </button>
-            <button type="reset" class="box-shadow w-90">Borrar Campos</button>
+            <button type="reset" class="box-shadow w-90 formulario__btn">Borrar Campos</button>
           </div>
         </div>
       </form>

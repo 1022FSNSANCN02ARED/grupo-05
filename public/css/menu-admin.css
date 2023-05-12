@@ -1,6 +1,4 @@
-.container-menu-admin, .container-menu-editar, 
-.container-menu-crear, .container-menu-borrar,
-.container-menu-borrar-id {
+.container-menu-admin {
     width: 90%;
     margin: 3%  5%;
     background-color: #0f7d7e;

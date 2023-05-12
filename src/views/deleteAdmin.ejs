@@ -11,43 +11,44 @@
     <%- include("./partials/header.ejs") %>
   </body>
   <main>
-    <section class="flex flex-direccion-c image box-shadow">
+    <section class="container-menu-admin flex flex-direccion-c image box-shadow">
+      <h1 class="text-align-c padding-1">Borrar Producto</h1>
       <form
         method="post"
         action="/admin/deleteProduct/<%= product.id %>?_method=DELETE"
         enctype="multipart/form-data"
-        class="margin-b-1 formulario"
+        class="margin-b-1"
       >
-        <div class="form flex flex-direccion-c">
-          <label for="NombreProducto">Nombre del Producto</label>
+        <div class="formulario formulario__grupo flex flex-direccion-c">
+          <label for="NombreProducto" class="formulario__label">Nombre del Producto</label>
           <input
             type="text"
             name="name"
             placeholder="Nombre del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= product.name %>"
           />
 
-          <label for="DescripcionPdocuto">Descripcion del Producto</label>
+          <label for="DescripcionPdocuto" class="formulario__label">Descripcion del Producto</label>
           <input
             type="textarea"
             name="description"
             placeholder="Descripcion del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= product.description %>"
           />
 
-          <label for="StockProducto">Stock del Producto</label>
+          <label for="StockProducto" class="formulario__label">Stock del Producto</label>
           <input
             type="text"
             name="stock"
             placeholder="Stock del Producto"
-            class="box-shadow"
+            class="box-shadow formulario__input margin-b-1"
             value="<%= product.stock %>"
           />
 
-          <div class="flex justify-c align-items-c gap">
-            <button type="submit" class="box-shadow w-90">
+          <div class="flex justify-c  align-items-c gap">
+            <button type="submit" class="box-shadow  formulario__btn-borrar">
               Borrar Producto
             </button>
           </div>

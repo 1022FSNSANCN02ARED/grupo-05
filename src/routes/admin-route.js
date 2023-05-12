@@ -2,6 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const adminController = require("../controllers/admin-controller");
 const uploadFileProduct = require("../middlewares/multerProduct");
+const validationCreateProduct = require("../middlewares/validationCreateProduct");
 
 router.get("/", adminController.showAdmin);
 
@@ -9,6 +10,7 @@ router.get("/", adminController.showAdmin);
 router.post(
   "/createProduct",
   uploadFileProduct.single("image"),
+  validationCreateProduct,
   adminController.createProduct
 );
 
@@ -18,6 +20,7 @@ router.get("/showProductAdminEdit/:id", adminController.showProductAdminEdit);
 router.put(
   "/editProduct/:id",
   uploadFileProduct.single("image"),
+  validationCreateProduct,
   adminController.editProduct
 );
 

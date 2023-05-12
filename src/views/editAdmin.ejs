@@ -14,7 +14,7 @@
     <section class="flex flex-direccion-c image box-shadow">
       <form
         method="post"
-        action="/admin/editProduct/<%= product.id %>?_method=PUT"
+        action="/admin/editProduct/<%= locals.old && old.id ? old.id : product.id %>?_method=PUT"
         enctype="multipart/form-data"
         class="margin-b-1"
       >
@@ -25,7 +25,7 @@
             name="name"
             placeholder="Nombre del Producto"
             class="box-shadow"
-            value="<%= product.name %>"
+            value="<%= locals.old && old.name ? old.name : product.name %>"
           />
           <label for="PrecioPdocuto">Precio del Producto</label>
           <input
@@ -33,7 +33,7 @@
             name="price"
             placeholder="Precio del Producto"
             class="box-shadow"
-            value="<%= product.price %>"
+            value="<%= locals.old && old.price ? old.price : product.price %>"
           />
           <label for="DescripcionPdocuto">Descripcion del Producto</label>
           <input
@@ -41,7 +41,7 @@
             name="description"
             placeholder="Descripcion del Producto"
             class="box-shadow"
-            value="<%= product.description %>"
+            value="<%= locals.old && old.description ? old.description : product.description %>"
           />
           <label for="image" class="avatar box-shadow avatar-file"
             >Imagen del Producto</label
@@ -59,22 +59,15 @@
             name="stock"
             placeholder="Stock del Producto"
             class="box-shadow"
-            value="<%= product.stock %>"
+            value="<%= locals.old && old.stock ? old.stock : product.stock %>"
           />
-          <label for="PremiosProducto">Premios del Producto</label>
-          <input
-            type="text"
-            name="awards"
-            placeholder="Premios del Producto"
-            class="box-shadow"
-            value="<%= product.awards %>"
-          />
+          
           <label>Selecciona la categoria del Producto:</label>
           <select name="categoryid" class="box-shadow country">
-            <option value="1">Aventura</option>
-            <option value="2">Autos</option>
-            <option value="3">Shooters</option>
-            <option value="4">Indie</option>
+            <option value="1" <%= locals.old && old.categoryid ? "selected" : "" %>>Aventura</option>
+            <option value="2" <%= locals.old && old.categoryid ? "selected" : "" %>>Autos</option>
+            <option value="3" <%= locals.old && old.categoryid ? "selected" : "" %>>Shooters</option>
+            <option value="4" <%= locals.old && old.categoryid ? "selected" : "" %>>Indie</option>
           </select>
           <div class="flex justify-c align-items-c gap">
             <button type="submit" class="box-shadow w-90">

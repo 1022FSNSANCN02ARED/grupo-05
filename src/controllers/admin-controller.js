@@ -1,4 +1,5 @@
 const db = require("../../database/models");
+const { validationResult } = require("express-validator");
 
 module.exports = {
   showAdmin: (req, res) => {
@@ -57,7 +58,9 @@ module.exports = {
 
   //Post
   createProduct: (req, res) => {
-    if (req.file) {
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
       db.Product.create({
         awards: req.body.awards,
         description: req.body.description,
@@ -70,29 +73,36 @@ module.exports = {
         res.redirect("/admin");
       });
     } else {
-      res.send("No se cargó ninguna imagen");
+      res.render("menu-admin", { errors: errors.array(), old: req.body });
     }
   },
 
   //Put
   editProduct: (req, res) => {
-    db.Product.update(
-      {
-        awards: req.body.awards,
-        description: req.body.description,
-        image: req.file.filename,
-        name: req.body.name,
-        price: req.body.price,
-        stock: req.body.stock,
-      },
-      {
-        where: {
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      db.Product.update(
+        {
           id: req.params.id,
+          awards: req.body.awards,
+          description: req.body.description,
+          image: req.file.filename,
+          name: req.body.name,
+          price: req.body.price,
+          stock: req.body.stock,
         },
-      }
-    ).then((product) => {
-      res.redirect("/admin");
-    });
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      ).then((product) => {
+        res.redirect("/admin");
+      });
+    } else {
+      res.render("editAdmin", { errors: errors.array(), old: req.body });
+    }
   },
 
   //Delete - Postman

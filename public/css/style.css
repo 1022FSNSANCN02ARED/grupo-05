@@ -208,15 +208,6 @@ body {
   position: relative;
 }
 
-.imagen-año {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  position: relative;
-  z-index: 0;
-}
-
 .titulo-año {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fffdd1;
@@ -224,15 +215,44 @@ body {
   height: 30px;
   line-height: 30px;
   border-radius: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 5%;
   font-size: 20px;
+  margin-bottom:3%;
 }
 
 article i,
 h5 {
   filter: drop-shadow(8px 8px 4px #222);
+}
+
+/*========== JUEGO DEL AÑO ===========*/
+
+.carrusel {
+  display: flex;
+  align-items: center;
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 30px 0px;
+}
+
+.carrusel-item {
+  min-width: 300px;
+  max-width: 300px;
+  outline: 2px solid black;
+  cursor: pointer;
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel-item:hover {
+  transform: scale(1.2);
 }
 
 @media (min-width: 481px) {

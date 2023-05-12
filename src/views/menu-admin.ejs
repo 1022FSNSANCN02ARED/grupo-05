@@ -12,109 +12,115 @@
           <button class="boton-admin" onclick="document.body.classList.toggle('buscar')">Borrar Producto</button>
         </div>
       </div>
-      <div class="container-menu-crear image box-shadow">
-        <section class="flex flex-direccion-c image box-shadow">
-          <h1 class="text-align-c padding-1">Crear Producto</h1>
-          <form method="post" action="/admin/createProduct" enctype="multipart/form-data" class="margin-b-1">
-            <% if (locals.errors) { %>
-              <div class="error__case flex">
-                <ul>
-                  <% errors.forEach(error => { %>
-      
-                  <li class="formulario__input-error-back">
-                    <i class="fa-solid fa-triangle-exclamation"></i> <%= error.msg %>
-                  </li>
-      
-                  <% }) %>
-                </ul>
+      <div class="contenedor-acciones-admin">
+        <div class="superposicion-admin container-menu-crear image box-shadow">
+          <section class="flex flex-direccion-c image box-shadow">
+            <h1 class="text-align-c padding-1">Crear Producto</h1>
+            <form method="post" action="/admin/createProduct" enctype="multipart/form-data" class="margin-b-1">
+              <% if (locals.errors) { %>
+                <div class="error__case flex">
+                  <ul>
+                    <% errors.forEach(error => { %>
+        
+                    <li class="formulario__input-error-back">
+                      <i class="fa-solid fa-triangle-exclamation"></i> <%= error.msg %>
+                    </li>
+        
+                    <% }) %>
+                  </ul>
+                </div>
+                <% } %>
+              <div class="formulario formulario__grupo flex flex-direccion-c">
+                <label for="NombreProducto" class="d-none formulario__label">Nombre del Producto</label>
+                <input type="text" name="name" placeholder="Nombre del Producto" class="box-shadow formulario__input margin-b-1" value="<%= locals.old && old.name ? old.name : "" %>"/>
+  
+                <label for="PrecioPdocuto" class="d-none">Precio del Producto</label>
+                <input type="text" name="price" placeholder="Precio del Producto" class="box-shadow formulario__input margin-b-1" value="<%= locals.old && old.price ? old.price : "" %>"/>
+  
+                <label for="DescripcionPdocuto" class="d-none">Descripcion del Producto</label>
+                <input type="textarea" name="description" placeholder="Descripcion del Producto" class="box-shadow formulario__input margin-b-1" value="<%= locals.old && old.description ? old.description : "" %>"/>
+  
+                <label for="image" class="margin-b-1 formulario__input color-label avatar-file">Imagen del Producto</label>
+                <input type="file" name="image" id="image" class="d-none" placeholder="Imagen del Producto"/>
+  
+                <label for="StockProducto" class="d-none ">Stock del Producto</label>
+                <input type="text" name="stock" placeholder="Stock del Producto" class="box-shadow formulario__input margin-b-1" value="<%= locals.old && old.stock ? old.stock : "" %>"/>
+                
+                <label class="margin-b-1">Selecciona la categoria del Producto:</label>
+                    <select name="categoryid" class="box-shadow country formulario__input margin-b-1" id="selectCreate">
+                      <option value="1" <%= locals.old && old.categoryid == "1" ? "selected" : "" %>>Aventura</option>
+                      <option value="2" <%= locals.old && old.categoryid == "2" ? "selected" : "" %>>Autos</option>
+                      <option value="3" <%= locals.old && old.categoryid == "3" ? "selected" : "" %>>Shooters</option>
+                      <option value="4" <%= locals.old && old.categoryid == "4" ? "selected" : "" %>>Indie</option>
+                    </select>
+                <div class="flex justify-c align-items-c gap">
+                  <button type="submit" class="box-shadow w-90 formulario__btn">Crear Producto</button>
+                  <button type="reset" class="box-shadow w-90 formulario__btn">Borrar Campos</button>
+                </div>
               </div>
-              <% } %>
-            <div class="form flex flex-direccion-c">
-              <label for="NombreProducto" class="d-none">Nombre del Producto</label>
-              <input type="text" name="name" placeholder="Nombre del Producto" class="box-shadow" value="<%= locals.old && old.name ? old.name : "" %>"/>
-              <label for="PrecioPdocuto" class="d-none">Precio del Producto</label>
-              <input type="text" name="price" placeholder="Precio del Producto" class="box-shadow" value="<%= locals.old && old.price ? old.price : "" %>"/>
-              <label for="DescripcionPdocuto" class="d-none">Descripcion del Producto</label>
-              <input type="textarea" name="description" placeholder="Descripcion del Producto" class="box-shadow" value="<%= locals.old && old.description ? old.description : "" %>"/>
-              <label for="image" class="avatar box-shadow avatar-file">Imagen del Producto</label>
-              <input type="file" name="image" id="image" class="box-shadow d-none" placeholder="Imagen del Producto"/>
-              <label for="StockProducto" class="d-none">Stock del Producto</label>
-              <input type="text" name="stock" placeholder="Stock del Producto" class="box-shadow" value="<%= locals.old && old.stock ? old.stock : "" %>"/>
-              <label>Selecciona la categoria del Producto:</label>
-                  <select name="categoryid" class="box-shadow country" id="selectCreate">
-                    <option value="1" <%= locals.old && old.categoryid == "1" ? "selected" : "" %>>Aventura</option>
-                    <option value="2" <%= locals.old && old.categoryid == "2" ? "selected" : "" %>>Autos</option>
-                    <option value="3" <%= locals.old && old.categoryid == "3" ? "selected" : "" %>>Shooters</option>
-                    <option value="4" <%= locals.old && old.categoryid == "4" ? "selected" : "" %>>Indie</option>
-                  </select>
-              <div class="flex justify-c align-items-c gap">
-                <button type="submit" class="box-shadow w-90">Crear Producto</button>
-                <button type="reset" class="box-shadow w-90">Borrar Campos</button>
+            </form>
+          </section>
+        </div>
+        <div class="superposicion-admin container-menu-editar image box-shadow">
+          <section class="flex flex-direccion-c image box-shadow">
+            <h1 class="text-align-c padding-1">Editar Producto</h1>
+            <form action="/admin/searchProductAdminEdit" method="get" class=" container-formulario">
+              <input
+                name="search"
+                type="search"
+                class="margin-b-1 formulario__input"
+                placeholder="Busca tu juego..."
+              />
+            </form>
+          </section>
+        </div>
+        <div class="superposicion-admin container-menu-borrar-id image box-shadow">
+          <section class="flex flex-direccion-c image box-shadow">
+            <h1 class="text-align-c padding-1">Buscar Producto</h1>
+            <form action="/admin/searchProductAdminDelete" method="get" class="container-formulario">
+              <span class="icon"><i class="fa fa-search"></i></span>
+              <input
+                name="search"
+                type="search"
+                class="margin-b-1 formulario__input"
+                placeholder="Busca tu juego..."
+              />
+            </form>
+          </section>
+        </form>
+        </div>
+        <div class="superposicion-admin container-menu-borrar image box-shadow">
+          <section class="flex flex-direccion-c image box-shadow">
+            <h1 class="text-align-c padding-1">Borrar Producto</h1>
+            <form method="post" action="#" enctype="multipart/form-data" class="margin-b-1">
+              <div class="form flex flex-direccion-c">
+                <label for="NombreProducto" class="d-none">Nombre del Producto</label>
+                <input type="text" name="name" placeholder="Nombre del Producto" class="box-shadow"/>
+                <label for="PrecioPdocuto" class="d-none">Precio del Producto</label>
+                <input type="text" name="price" placeholder="Precio del Producto" class="box-shadow"/>
+                <label for="DescripcionPdocuto" class="d-none">Descripcion del Producto</label>
+                <input type="textarea" name="description" placeholder="Descripcion del Producto" class="box-shadow"/>
+                <label for="image" class="avatar box-shadow avatar-file">Imagen del Producto</label>
+                <input type="file" name="image" id="image" class="box-shadow d-none" placeholder="Imagen del Producto"/>
+                <label for="StockProducto" class="d-none">Stock del Producto</label>
+                <input type="text" name="stock" placeholder="Stock del Producto" class="box-shadow"/>
+                <label for="PremiosProducto" class="d-none">Premios del Producto</label>
+                <input type="text" name="awards" placeholder="Premios del Producto" class="box-shadow"/>
+                <label>Selecciona la categoria del Producto:</label>
+                    <select name="categoryid" class="box-shadow country">
+                      <option value="1">Aventura</option>
+                      <option value="2">Autos</option>
+                      <option value="3">Shooters</option>
+                      <option value="4">Indie</option>
+                    </select>
+                <div class="flex justify-c align-items-c gap">
+                  <button type="submit" class="box-shadow w-90">Borrar Producto</button>
+                  <button type="reset" class="box-shadow w-90">Borrar Campos</button>
+                </div>
               </div>
-            </div>
-          </form>
-        </section>
-      </div>
-      <div class="container-menu-editar image box-shadow">
-        <section class="flex flex-direccion-c image box-shadow">
-          <h1 class="text-align-c padding-1">Editar Producto</h1>
-          <form action="/admin/searchProductAdminEdit" method="get" class="margin-b-1">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input
-              name="search"
-              type="search"
-              class="input-search"
-              placeholder="Busca tu juego..."
-            />
-          </form>
-        </section>
-      </div>
-      <div class="container-menu-borrar-id image box-shadow">
-        <section class="flex flex-direccion-c image box-shadow">
-          <h1 class="text-align-c padding-1">Buscar Producto</h1>
-          <form action="/admin/searchProductAdminDelete" method="get" class="margin-b-1">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input
-              name="search"
-              type="search"
-              class="input-search"
-              placeholder="Busca tu juego..."
-            />
-          </form>
-        </section>
-      </form>
-      </div>
-      <div class="container-menu-borrar image box-shadow">
-        <section class="flex flex-direccion-c image box-shadow">
-          <h1 class="text-align-c padding-1">Borrar Producto</h1>
-          <form method="post" action="#" enctype="multipart/form-data" class="margin-b-1">
-            <div class="form flex flex-direccion-c">
-              <label for="NombreProducto" class="d-none">Nombre del Producto</label>
-              <input type="text" name="name" placeholder="Nombre del Producto" class="box-shadow"/>
-              <label for="PrecioPdocuto" class="d-none">Precio del Producto</label>
-              <input type="text" name="price" placeholder="Precio del Producto" class="box-shadow"/>
-              <label for="DescripcionPdocuto" class="d-none">Descripcion del Producto</label>
-              <input type="textarea" name="description" placeholder="Descripcion del Producto" class="box-shadow"/>
-              <label for="image" class="avatar box-shadow avatar-file">Imagen del Producto</label>
-              <input type="file" name="image" id="image" class="box-shadow d-none" placeholder="Imagen del Producto"/>
-              <label for="StockProducto" class="d-none">Stock del Producto</label>
-              <input type="text" name="stock" placeholder="Stock del Producto" class="box-shadow"/>
-              <label for="PremiosProducto" class="d-none">Premios del Producto</label>
-              <input type="text" name="awards" placeholder="Premios del Producto" class="box-shadow"/>
-              <label>Selecciona la categoria del Producto:</label>
-                  <select name="categoryid" class="box-shadow country">
-                    <option value="1">Aventura</option>
-                    <option value="2">Autos</option>
-                    <option value="3">Shooters</option>
-                    <option value="4">Indie</option>
-                  </select>
-              <div class="flex justify-c align-items-c gap">
-                <button type="submit" class="box-shadow w-90">Borrar Producto</button>
-                <button type="reset" class="box-shadow w-90">Borrar Campos</button>
-              </div>
-            </div>
-          </form>
-        </section>
+            </form>
+          </section>
+        </div>
       </div>
     </main>
   </body>

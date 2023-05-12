@@ -16,6 +16,9 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
+  position: relative;
   font-family: "Ubuntu", sans-serif;
   background-color: #0c6061;
   color: #fffdd1;
@@ -178,6 +181,12 @@ body {
   background-color: #ccc;
 }
 
+.color-label {
+  color: #0000008b;
+  line-height: 45px;
+  font-size: 14px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -222,6 +231,22 @@ body {
 article i,
 h5 {
   filter: drop-shadow(8px 8px 4px #222);
+}
+
+.formulario .avatar-file:hover {
+  background-color: #0c6061;
+  color: white;
+}
+
+.formmulario button {
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.formulario button:hover {
+  background-color: black;
+  color: white;
 }
 
 /*========== JUEGO DEL AÑO ===========*/

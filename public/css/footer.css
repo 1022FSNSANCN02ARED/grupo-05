@@ -6,8 +6,7 @@
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  position: relative;
-  bottom: 0;
+  bottom: 0px;
 }
 
 .contactos, .redes, .nosotros {

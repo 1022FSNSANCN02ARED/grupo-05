@@ -7,6 +7,15 @@
     border-radius: 5px;  
 }
 
+.container-menu-editar, .container-menu-crear, 
+.container-menu-borrar,.container-menu-borrar-id {
+    width: 90%;
+    margin: 0%  5%;
+    background-color: #0f7d7e;
+    border-radius: 5px;  
+}
+  
+
 .botones-accion {
     width: 100%;
     text-align: center;
@@ -30,6 +39,17 @@
 .container-menu-crear, .container-menu-borrar,
 .container-menu-borrar-id {
     display: none;
+}
+
+.contenedor-acciones-admin{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.superposicion-admin {
+    position: absolute;
+    top: 0;
 }
 
 body.crear .container-menu-crear {

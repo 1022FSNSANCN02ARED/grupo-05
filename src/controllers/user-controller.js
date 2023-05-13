@@ -1,5 +1,6 @@
 const db = require("../../database/models");
 const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   showLogin: (req, res) => {
@@ -10,17 +11,19 @@ module.exports = {
     res.render("register");
   },
 
-  processRegister: (req, res) => {},
+  showProfile: (req, res) => {
+    res.render("profile", { user: req.session.userLog });
+  },
 
   createUser: (req, res) => {
     let errors = validationResult(req);
 
+    //res.send(errors);
     if (errors.isEmpty()) {
-      db.User.create({
+      db.Users.create({
         name: req.body.name,
-        userName: req.body.userName,
         email: req.body.email,
-        password: req.body.password,
+        password: bcrypt.hashSync(req.body.password, 10),
       }).then((user) => {
         res.redirect("/user/login");
       });
@@ -30,5 +33,44 @@ module.exports = {
         old: req.body,
       });
     }
+  },
+
+  logedUser: (req, res) => {
+    let errors = validationResult(req);
+    req.session.userLog;
+    //res.send(errors);
+    if (errors.isEmpty()) {
+      db.Users.findOne({
+        where: {
+          email: req.body.emailLogin,
+        },
+      }).then((user) => {
+        if (user) {
+          if (bcrypt.compareSync(req.body.passwordLogin, user.password)) {
+            req.session.userLog = user;
+            let userLog = req.session.userLog;
+            if (req.body.recordame) {
+              res.cookie("recordame", userLog.email, { maxAge: 60000 });
+            }
+            res.redirect("/user/profile");
+          } else {
+            res.render("login", {
+              errors: [{ msg: "Contraseña incorrecta" }],
+            });
+          }
+        } else {
+          res.render("login", {
+            errors: [{ msg: "No se encuentra el usuario" }],
+          });
+        }
+      });
+    } else {
+      res.render("login", { errors: errors.array() });
+    }
+  },
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
   },
 };

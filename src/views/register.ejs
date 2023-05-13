@@ -42,19 +42,7 @@
           </p>
         </div>
         <!-- Grupo: Usuario -->
-        <div class="formulario__grupo" id="grupo__usuario">
-          <label for="userName" class="formulario__label">Usuario</label>
-          <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="userName"
-            id="userName" placeholder="Ingrese un Usuario" value="<%= locals.old
-            && old.userName ? old.userName : "" %>" />
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-          </div>
-          <p class="formulario__input-error">
-            El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
-            numeros, letras y guion bajo.
-          </p>
-        </div>
+
         <!-- Grupo: Correo Electronico -->
         <div class="formulario__grupo" id="grupo__correo">
           <label for="email" class="formulario__label"
@@ -120,7 +108,7 @@
             name="aprobacion"
             id="aprobacion"
           >
-            Enviar
+            Registrarse
           </button>
           <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
             Formulario enviado exitosamente!

@@ -1,14 +1,20 @@
 const express = require("express");
 const path = require("path");
 const methodOverride = require("method-override");
+const session = require("express-session");
+const { cookie } = require("express-validator");
+const cookieParser = require("cookie-parser");
+const recordameMiddleware = require("./middlewares/recordameMiddleware");
 
 const mainRoute = require("./routes/main-route");
 
 const app = express();
-
+app.use(recordameMiddleware);
 app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({ secret: "Secreto" }));
 
 app.listen("3001", () => {
   console.log("Sv andando");

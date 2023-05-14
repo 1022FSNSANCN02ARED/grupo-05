@@ -23,4 +23,7 @@ router.post("/create", validationRegister, userController.createUser);
 //Login user
 router.post("/loged", validationLogin, userController.logedUser);
 
+//Logout user
+router.get("/logout", userController.logout);
+
 module.exports = router;

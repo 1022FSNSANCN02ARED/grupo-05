@@ -41,10 +41,20 @@
           <img src="<%= product.image %>" alt="game" class="maxw image" />
         </div>
       </section>
+
       <!-- Descripcion -->
-      <section class="margin-1 image padding-1">
-        <h2>Descripcion</h2>
-        <p><%= product.description %></p>
+      <section class="margin-1 image padding-1 flex justify-c flex-direccion-c">
+        <div class="margin-b-1">
+          <h2>Descripcion</h2>
+          <p><%= product.description %></p>
+        </div>
+        <form action="#" method="post">
+          <div class="flex justify-c-c">
+            <button type="submit" class="box-shadow w-90 formulario__btn">
+              Agregar al Carrito
+            </button>
+          </div>
+        </form>
       </section>
       <!-- Requisitos -->
       <section class="margin-1 image padding-1">

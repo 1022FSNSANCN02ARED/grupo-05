@@ -94,6 +94,10 @@ body {
   padding: 1rem;
 }
 
+.padding-b {
+  padding-bottom: 1rem;
+}
+
 .list-none {
   list-style: none;
 }
@@ -215,6 +219,10 @@ body {
   font-size: 18px;
 }
 
+.texto-h2-color {
+  color: white;
+}
+
 .container-juego {
   width: 94%;
   margin: 3%;
@@ -243,7 +251,7 @@ h5 {
   color: white;
 }
 
-.formmulario button {
+.formulario button {
   border-radius: 5px;
   border: none;
   padding: 0.5rem;
@@ -284,6 +292,8 @@ h5 {
 .carrusel-item:hover {
   transform: scale(1.2);
 }
+
+
 
 @media (min-width: 481px) {
   /* tablet */

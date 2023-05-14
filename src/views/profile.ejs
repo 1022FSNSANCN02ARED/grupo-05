@@ -4,13 +4,16 @@
   <body>
     <%- include("./partials/header.ejs") %>
     <main>
-      <img src="user.avatar" />
-      <h1>Perfil</h1>
-      <h2>Nombre: <%= user.name %></h2>
-      <h2>Email: <%= user.email %></h2>
-      <form action="/user/logout" method="get">
-        <button type="submit">Cerrar Sesion</button>
-      </form>
+      <section class="container-section justify-c-c text-align-c margin-1 padding-1 box-shadow image">
+          <h1 class="formulario__label texto-h2-color">Perfil</h1>
+          <img src="<%= user.avatar %>" class="w-22"/>
+          <h2 class="formulario__label texto-h2-color texto-h2">Nombre: <%= user.name %></h2>
+          <h2 class="formulario__label texto-h2-color texto-h2 padding-b">Email: <%= user.email %></h2>
+          <form action="/user/logout" method="get">
+            <button type="submit" class="formulario__btn">Cerrar Sesion</button>
+          </form>
+      </section>
+      
     </main>
     <%- include("./partials/footer.ejs") %>
   </body>

@@ -86,7 +86,10 @@
                 </button>
               </div>
             </form>
-            <form action="/cart/clearProduct/<%= product.id %>" method="POST">
+            <form
+              action="/cart/clearProduct/<%= product.id %>?_method=delete"
+              method="POST"
+            >
               <div class="flex justify-c-c">
                 <button type="submit" class="box-shadow w-90 formulario__btn">
                   Eliminar producto

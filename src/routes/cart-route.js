@@ -8,5 +8,6 @@ router.post("/add/:id", cartController.addProduct);
 router.post("/decrease/:id", cartController.decreaseProduct);
 
 router.delete("/clearProduct/:id", cartController.clearProductFromCart);
+router.delete("/clearCart", cartController.clearCart);
 
 module.exports = router;

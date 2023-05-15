@@ -65,4 +65,13 @@ module.exports = {
 
     res.json({ cart: productInToClear });
   },
+
+  async clearCart(req, res) {
+    await db.CartProduct.destroy({
+      where: {
+        userId: req.session.userLog.id,
+      },
+    });
+    res.send("carrito vaciado");
+  },
 };

@@ -25,7 +25,6 @@ module.exports = {
         name: req.body.name,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        avatar: path.join(__dirname, "../../public/img/users/"),
       }).then((user) => {
         res.redirect("/user/login");
       });

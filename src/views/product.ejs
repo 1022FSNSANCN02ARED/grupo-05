@@ -46,7 +46,7 @@
           </div>
           <!-- Requisitos -->
           <div class="image contenedor-requisitos">
-            <h2 class=" margin-b">Requisitos</h2>
+            <h2 class="margin-b">Requisitos</h2>
             <article class="text-align-c requisitos-contenedor">
               <div class="padding-1">
                 <h3>Minimos</h3>
@@ -72,21 +72,30 @@
         </div>
         <div class="contenedor-boton">
           <div class="contenedor-boton-carrito">
-            <form action="/product/showProduct/:id" method="POST">
+            <form action="/cart/add/<%= product.id %>" method="POST">
               <div class="flex justify-c-c">
                 <button type="submit" class="box-shadow w-90 formulario__btn">
                   Agregar al Carrito
                 </button>
               </div>
             </form>
+            <form action="/cart/decrease/<%= product.id %>" method="POST">
+              <div class="flex justify-c-c">
+                <button type="submit" class="box-shadow w-90 formulario__btn">
+                  Decrementar
+                </button>
+              </div>
+            </form>
+            <form action="/cart/clearProduct/<%= product.id %>" method="POST">
+              <div class="flex justify-c-c">
+                <button type="submit" class="box-shadow w-90 formulario__btn">
+                  Eliminar producto
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-
-
-        
-
-
     </main>
     <%- include('./partials/footer.ejs') %>
     <script src="/js/cart.js"></script>

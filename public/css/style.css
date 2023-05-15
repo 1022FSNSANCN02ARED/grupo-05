@@ -2,6 +2,7 @@
 @import url("footer.css");
 @import url("form.css");
 @import url("menu-admin.css");
+@import url("cart.css");
 
 :root {
   --darkblue: #0c6061;

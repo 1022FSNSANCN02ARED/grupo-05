@@ -31,24 +31,38 @@ module.exports = {
   async decreaseProduct(req, res) {
     const productId = req.params.id;
     //Verificar si el producto está agregado
-    const products = await CartProduct.findOne({
+    const productsIn = await db.CartProduct.findOne({
       where: {
-        userId: req.userLog.id,
+        userId: req.session.userLog.id,
         productId: productId,
       },
     });
 
-    if (productInCartToModify) {
+    if (productsIn) {
       // Si está agregado: Disminuir el contador de ese Producto
       // Si el contador es 1, removerlo de la lista completamente.
-      if (productInCartToModify.amount == 1) {
-        await productInCartToModify.destroy();
+      if (productsIn.amount == 1) {
+        await productsIn.destroy();
       } else {
-        productInCartToModify.amount--;
-        await productInCartToModify.save();
+        productsIn.amount--;
+        await productsIn.save();
       }
     }
 
-    res.json({ cart: products });
+    res.json({ cart: productsIn });
+  },
+
+  async clearProductFromCart(req, res) {
+    const productId = req.params.id;
+    const productInToClear = await db.CartProduct.findOne({
+      where: {
+        userId: req.session.userLog.id,
+        productId: productId,
+      },
+    });
+
+    if (productInToClear) await productInToClear.destroy();
+
+    res.json({ cart: productInToClear });
   },
 };

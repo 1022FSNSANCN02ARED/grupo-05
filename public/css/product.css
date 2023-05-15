@@ -170,3 +170,18 @@
         margin-left: 5%;
     }
   }
+
+  @media (min-width: 1281px) {
+    /* computadora */
+    .titulo-producto, .precio-producto, .contenedor-descripcion h2, .contenedor-requisitos h2 {
+        font-size: 30px;
+    }
+
+    .contenedor-requisitos h3 {
+        font-size: 25px;
+    }
+
+    .contenedor-requisitos li {
+        font-size: 20px;
+    }
+  }

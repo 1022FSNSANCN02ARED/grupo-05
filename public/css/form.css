@@ -117,11 +117,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: -20px;
 }
 
 .formulario__btn {
   height: 45px;
-  line-height: 45px;
+  line-height: 25px;
   width: 30%;
   background: #000;
   color: #fff;
@@ -130,7 +131,7 @@
   border-radius: 3px;
   cursor: pointer;
   transition: 0.1s ease all;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 
 .formulario__btn-borrar {
@@ -196,6 +197,19 @@
   border: 3px solid #0075ff;
   outline: none;
   box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.contenedor-recordarme {
+  width: 90%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-top: 0.5rem;
+}
+
+.contenedor-recordarme label, .contenedor-recordarme input {
+  margin-left: 0.5rem;
 }
 
 /* ----- -----  Mediaqueries ----- ----- */

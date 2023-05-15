@@ -80,8 +80,8 @@
       </section>
       <!-- Juegos destacados -->
       <section class="container-section scroll padding-1 box-shadow">
-        <h2 class="margin-b texto-h2 text-align-c">Juegos Destacados</h2>
-        <div class="flex gap">
+        <h2 class="margin-t texto-h2 text-align-c">Juegos Destacados</h2>
+        <div class="flex gap container-juego">
           <% product.forEach((game, i) => { %> <% if (i < 5) { %>
           <article>
             <a href="/product/showProduct/<%= game.id %>">
@@ -97,8 +97,8 @@
       </section>
       <!-- Categorias -->
       <section class="category container-section scroll padding-1 box-shadow">
-        <h2 class="margin-b texto-h2 text-align-c">Categorias Destacadas</h2>
-        <div class="scroll-container flex gap justify-c-e">
+        <h2 class="margin-t texto-h2 text-align-c">Categorias Destacadas</h2>
+        <div class="container-juego scroll-container flex gap justify-c-e">
           <% product.forEach((game, i ) => { i++ %> <% if (i < 5 ) { %>
           <article class="card flex w-22 h-5 bor-1 box-shadow">
             <a href="/product/showCategory/<%= game.category.id %>">

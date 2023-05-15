@@ -3,6 +3,7 @@
 @import url("form.css");
 @import url("menu-admin.css");
 @import url("cart.css");
+@import url("product.css");
 
 :root {
   --darkblue: #0c6061;
@@ -217,7 +218,7 @@ body {
 }
 
 .texto-h2 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .texto-h2-color {

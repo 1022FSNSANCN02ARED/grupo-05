@@ -1,0 +1,172 @@
+.contenedor-producto {
+    background-color: #0f7d7e;
+    width: 94%;
+    margin: 3%;
+    display: flex;
+}
+
+.contenedor-img-producto {
+    width: 44%;
+    margin: 3%;
+    background-color: #0f7d7e;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-producto {
+    border-radius: 10px;
+}
+
+.contenedor-texto-boton {
+    width:44%;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-txt-producto {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.contenedor-titulo-precio {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+
+.titulo-producto {
+    width: 75%;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.precio-producto {
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.contenedor-estrellas {
+    width: 100%;
+}
+
+.contenedor-descripcion {
+    width: 100%;
+    height: 100px;
+    margin-top: 5%;
+}
+
+.contenedor-descripcion h2 {
+    font-size: 20px;
+}
+
+.contenedor-requisitos {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.contenedor-requisitos h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contenedor-requisitos h3 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.requisitos-contenedor {
+    width: 100%;
+    display: flex;
+    
+}
+
+.contenedor-boton {
+    width: 100%;
+    line-height: 30%;
+    margin-top: 5%;
+}
+
+.contenedor-boton-carrito {
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+@media (max-width: 481px) {
+    /* tablet */
+    .requisitos-contenedor {
+        width: 90%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 769px) {
+    /* notebook */
+    .contenedor-producto {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-img-producto {
+        width: 94%;
+        margin: 3%;
+        background-color: #0f7d7e;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-texto-boton {
+        width:94%;
+        margin: 3%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo-producto {
+        width: 75%;
+        font-size: 25px;
+        justify-content: center;
+    }
+    
+    .precio-producto {
+        width: 25%;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .contenedor-descripcion {
+        width: 100%;
+        height: 100px;
+        margin-top: 5%;
+    }
+    
+    .contenedor-descripcion h2 {
+        font-size: 25px;
+    }
+    
+    .contenedor-requisitos {
+        width: 100%;
+        margin-top: 5%;
+    }
+    
+    .contenedor-requisitos h2 {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .contenedor-requisitos h3 {
+        text-align: center;
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    .requisitos-contenedor {
+        width: 90%;
+        margin-left: 5%;
+    }
+  }

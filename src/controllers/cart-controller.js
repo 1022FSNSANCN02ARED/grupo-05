@@ -12,7 +12,7 @@ module.exports = {
     res.render("cart", {
       cart: products,
       totalPrice: products.reduce(
-        (acc, products) => acc + products.product.price * products.count,
+        (acc, products) => acc + products.product.price * products.amount,
         0
       ),
     });
@@ -36,7 +36,7 @@ module.exports = {
         amount: 1,
       });
     }
-    res.json({ cart: products });
+    res.redirect("/cart");
   },
 
   async decreaseProduct(req, res) {
@@ -60,7 +60,7 @@ module.exports = {
       }
     }
 
-    res.json({ cart: productsIn });
+    res.redirect("/cart");
   },
 
   async clearProductFromCart(req, res) {
@@ -74,7 +74,7 @@ module.exports = {
 
     if (productInToClear) await productInToClear.destroy();
 
-    res.json({ cart: productInToClear });
+    res.redirect("/cart");
   },
 
   async clearCart(req, res) {
@@ -83,6 +83,6 @@ module.exports = {
         userId: req.session.userLog.id,
       },
     });
-    res.send("carrito vaciado");
+    res.redirect("/cart");
   },
 };

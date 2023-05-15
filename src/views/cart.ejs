@@ -66,8 +66,14 @@
               <tbody class="cartRows"></tbody>
             </table>
             <div class="card-footer text-right">
-              <h2>Total: <span class="totalAmount">$ 0</span></h2>
+              <h2>
+                Total:
+                <span class="totalAmount">$ <%= totalPrice %></span>
+              </h2>
             </div>
+            <form action="/cart/clearCart?_method=delete" method="post">
+              <button type="submit">Vaciar Carrito</button>
+            </form>
           </div>
         </div>
         <div class="card-2">

@@ -19,14 +19,14 @@ module.exports = (sequelize) => {
     }
   );
 
-  /* CartProduct.associate = (models) => {
+  CartProduct.associate = (models) => {
     CartProduct.belongsTo(models.Product, {
       as: "product",
     });
-    CartProduct.belongsTo(models.User, {
+    CartProduct.belongsTo(models.Users, {
       as: "user",
     });
-  }; */
+  };
 
   return CartProduct;
 };

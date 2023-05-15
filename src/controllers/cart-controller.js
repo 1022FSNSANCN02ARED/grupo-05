@@ -2,9 +2,20 @@ const db = require("../../database/models");
 
 module.exports = {
   async showCart(req, res) {
-    const products = await db.CartProduct.findAll();
+    const products = await db.CartProduct.findAll({
+      where: {
+        userId: req.session.userLog.id,
+      },
+      include: ["product"],
+    });
 
-    res.render("cart", { products });
+    res.render("cart", {
+      cart: products,
+      totalPrice: products.reduce(
+        (acc, products) => acc + products.product.price * products.count,
+        0
+      ),
+    });
   },
 
   async addProduct(req, res) {

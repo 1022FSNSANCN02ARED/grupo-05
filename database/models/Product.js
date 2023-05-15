@@ -28,10 +28,10 @@ module.exports = (sequelize, DataTypes) => {
       as: "category",
       foreingKey: "categoryId",
     });
-    Product.belongsToMany(models.Users, {
+    /* Product.belongsToMany(models.Users, {
       through: models.CartProduct,
       as: "productsInCart",
-    });
+    }); */
   };
 
   return Product;

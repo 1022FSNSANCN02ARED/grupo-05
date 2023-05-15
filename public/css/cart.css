@@ -18,6 +18,7 @@
 }
 
 .card-body {
+    width: 100%;
     flex: 1 1 auto;
     padding: 1.25rem;
 }
@@ -41,9 +42,7 @@
     border-top: 1px solid #dee2e6;
 }
 
-table .th-lg {
-    min-width: 9rem;
-}
+
 
 table th {
     font-size: .9rem;
@@ -57,7 +56,6 @@ table th {
 .card-footer {
     padding: 0.75rem 1.25rem;
     background-color: rgba(0,0,0,.03);
-    border-top: 1px solid rgba(0,0,0,.125);
 }
 
 .card-header:first-child {
@@ -126,6 +124,56 @@ label {
     margin-left: 35%;
 }
 
-.btn-cart:hover {
+.btn-cart:hover, .boton-e:hover, .botones-mm:hover, .boton-vc:hover {
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
   }
+
+.botones-mm {
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contenedor-mm-cantidad  {
+    display: flex;
+    border: #000 solid 3px;
+    padding-left: 33% !important;
+}
+
+.boton-e {
+    height: 30px;
+    line-height: 30px;
+    width: 90px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+    margin-left: 35%;
+}
+
+.boton-vc {
+    height: 30px;
+    line-height: 30px;
+    width: 150px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+}

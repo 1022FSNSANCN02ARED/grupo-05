@@ -36,19 +36,19 @@
                   <th class="th-lg">
                     <strong>$<%= item.product.price %></strong>
                   </th>
-                  <th class="th-lg">
+                  <th class="th-lg flex justify-c-c margin-t">
                     <form
                       action="/cart/decrease/<%= item.product.id %>"
                       method="post"
                     >
-                      <button type="submit">-</button>
+                      <button type="submit" class="botones-mm">-</button>
                     </form>
                     <strong><%= item.amount %></strong>
                     <form
                       action="/cart/add/<%= item.product.id %>"
                       method="post"
                     >
-                      <button type="submit">+</button>
+                      <button type="submit" class="botones-mm">+</button>
                     </form>
                   </th>
                   <th>
@@ -56,7 +56,7 @@
                       action="/cart/clearProduct/<%= item.product.id %>?_method=delete"
                       method="post"
                     >
-                      <button type="submit">Eliminar</button>
+                      <button type="submit" class="boton-e">Eliminar</button>
                     </form>
                   </th>
                   <th style="width: 50px"></th>
@@ -72,7 +72,7 @@
               </h2>
             </div>
             <form action="/cart/clearCart?_method=delete" method="post">
-              <button type="submit">Vaciar Carrito</button>
+              <button type="submit" class="boton-vc">Vaciar Carrito</button>
             </form>
           </div>
         </div>

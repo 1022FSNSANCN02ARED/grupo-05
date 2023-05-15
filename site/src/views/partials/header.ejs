@@ -23,6 +23,11 @@
           />
         </form>
       </div>
+      <% if (locals.userLog) { %>
+      <div class="registro">
+        <a href="/user/profile" class="menu-a">Mi perfil</a>
+      </div>
+      <% } else { %>
       <div class="menu-left">
         <div class="ingreso">
           <a href="/user/login" class="menu-a">Ingresar</a>
@@ -31,19 +36,18 @@
           <a href="/user/register" class="menu-a">Registrarse</a>
         </div>
       </div>
-      <div class="menu-left">
+      <%}%>
+
+      <!-- <div class="menu-left">
         <div class="ingreso">
           <a href="/admin" class="menu-a">Menu Admin</a>
         </div>
-        <div class="registro">
-          <a href="/user/profile" class="menu-a">Mi perfil</a>
-        </div>
       </div>
       <div class="menu-left">
         <div class="registro">
           <a href="/user/profile" class="menu-a">Mi perfil</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="container-carrito">

@@ -5,11 +5,13 @@ const session = require("express-session");
 const { cookie } = require("express-validator");
 const cookieParser = require("cookie-parser");
 const recordameMiddleware = require("./middlewares/recordameMiddleware");
+const authRol = require("./middlewares/authRol");
 
 const mainRoute = require("./routes/main-route");
 
 const app = express();
 app.use(recordameMiddleware);
+app.use(authRol);
 app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

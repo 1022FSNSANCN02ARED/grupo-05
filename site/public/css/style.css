@@ -185,6 +185,14 @@ body {
   flex-wrap: wrap;
 }
 
+img:hover {
+  filter: brightness(1.35);
+}
+
+.estilo-destacadas:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+}
+
 .item {
   width: 150px;
   height: 150px;
@@ -226,8 +234,8 @@ body {
 }
 
 .container-juego {
-  width: 94%;
-  margin: 3%;
+  width: 98%;
+  margin: 1%;
   text-align: center;
   position: relative;
 }
@@ -240,7 +248,6 @@ body {
   line-height: 30px;
   border-radius: 5px;
   font-size: 20px;
-  margin-bottom: 3%;
 }
 
 article i,

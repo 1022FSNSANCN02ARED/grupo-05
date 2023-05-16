@@ -4,6 +4,10 @@ const adminController = require("../controllers/admin-controller");
 const uploadFileProduct = require("../middlewares/multerProduct");
 const validationCreateProduct = require("../middlewares/validationCreateProduct");
 
+const authMiddleware = require("../middlewares/authMiddleware");
+
+router.use(authMiddleware);
+
 router.get("/", adminController.showAdmin);
 
 //Create

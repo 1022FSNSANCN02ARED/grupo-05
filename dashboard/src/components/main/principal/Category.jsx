@@ -12,23 +12,18 @@ class CategoryList extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "http://127.0.0.1:3001/api/category" /* , {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    } */
-    )
+    fetch("http://127.0.0.1:3001/api/category")
       .then((response) => {
         return response.json();
       })
+
       .then((result) => {
-        console.log(result.data);
         this.setState({
           categories: result.data,
         });
+      })
+      .catch((error) => {
+        console.error(error);
       });
   }
 

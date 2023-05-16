@@ -10,7 +10,7 @@ const productAPIController = {
       limit: pageSize,
       offset: offset,
     });
-    res.json({
+    res.send({
       meta: {
         status: 200,
         total: count,

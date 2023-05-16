@@ -7,6 +7,12 @@ module.exports = {
     });
   },
 
+  showAllProduct: (req, res) => {
+    db.Product.findAll().then((found) => {
+      res.render("search", { found });
+    });
+  },
+
   showCategory: (req, res) => {
     db.Category.findByPk(req.params.id, {
       include: [{ association: "product" }],

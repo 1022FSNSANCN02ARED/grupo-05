@@ -11,7 +11,7 @@
         class="formulario"
         id="formulario"
       >
-        <h1 class="text-align-c padding-1 formulario__h1">Iniciar Sesion</h1>
+        <h1 class="text-align-c formulario__h1">Iniciar Sesion</h1>
         <% if (locals.errors) { %>
         <div class="error__case flex">
           <ul>
@@ -25,23 +25,23 @@
           </ul>
         </div>
         <% } %>
-        <div class="formulario__grupo" id="grupo__nombre">
+        <div class="formulario-grupo-login" id="grupo__nombre">
           <label for="usuario" class="formulario__label">Email</label>
           <div class="formulario__grupo-input">
             <input
               type="email"
-              class="formulario__input"
+              class="formulario-input-login"
               name="emailLogin"
               placeholder="Ingresa tu email..."
             />
           </div>
         </div>
-        <div class="formulario__grupo" id="grupo__password">
+        <div class="formulario-grupo-login" id="grupo__password">
           <label for="password2" class="formulario__label">Contraseña</label>
           <div class="formulario__grupo-input">
             <input
               type="password"
-              class="formulario__input"
+              class="formulario-input-login"
               name="passwordLogin"
               placeholder="Ingresa tu contraseña..."
             />
@@ -59,17 +59,30 @@
             name="submit"
             id="submit"
           >
-            Enviar
+            Iniciar Sesion
           </button>
           <p class="text-align-c margin-b-1">Olvidaste tu contraseña?</p>
-          <button class="box-shadow formulario__btn">
-            <i class="fa-brands fa-google"></i> Ingresa con Google
-          </button>
-          <button class="box-shadow formulario__btn">
-            <i class="fa-brands fa-apple"></i> Ingresa con Apple
-          </button>
+          <div class="flex w-100 justify-c-c ">
+            <button class="box-shadow formulario__btn">
+              <i class="fa-brands fa-google"></i> Ingresa con Google
+            </button>
+            <button class="box-shadow formulario__btn margin-l">
+              <i class="fa-brands fa-apple"></i> Ingresa con Apple
+            </button>
+          </div>
         </div>
       </form>
+      <div class="text-align-c">
+        <p class="text-align-c margin-b-1">No estas registrado? Ingresa aqui!</p>
+          <a href="/user/register" class="box-shadow w-100 margin-l text-align-c margin-b-1"><button
+            type="submit"
+            class="formulario__btn text-align-c"
+            name="submit"
+            id="submit"
+          >
+            Registrarme
+          </button></a>
+      </div>
     </main>
     <%- include("./partials/footer.ejs") %>
   </body>

@@ -204,11 +204,31 @@
   height: 20px;
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
+  margin-left: 10%;
   margin-top: 0.5rem;
 }
 
 .contenedor-recordarme label, .contenedor-recordarme input {
+  margin-left: 0.5rem;
+}
+
+.formulario-grupo-login {
+  width: 90%;
+  margin: 1% 10% 0% 10%;
+}
+
+.formulario-input-login {
+  width: 90%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.3s ease all;
+}
+
+.margin-l {
   margin-left: 0.5rem;
 }
 

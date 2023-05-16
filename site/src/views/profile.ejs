@@ -16,6 +16,13 @@
         <form action="/user/logout" method="get" class="padding-1">
           <button type="submit" class="formulario__btn">Cerrar Sesion</button>
         </form>
+        <form
+          action="/deleteUser/<%= user.id %>?_method=DELETE"
+          method="post"
+          class="padding-1"
+        >
+          <button type="submit" class="formulario__btn">Eliminar Cuenta</button>
+        </form>
       </div>
       <div class="contenedor-perfil-edicion padding-1">
         <form

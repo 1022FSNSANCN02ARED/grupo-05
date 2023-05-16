@@ -16,6 +16,7 @@ module.exports = {
     res.render("profile", { user: req.session.userLog });
   },
 
+  //Create User
   createUser: (req, res) => {
     let errors = validationResult(req);
 
@@ -36,6 +37,7 @@ module.exports = {
     }
   },
 
+  //Login User
   logedUser: (req, res) => {
     let errors = validationResult(req);
     req.session.userLog;
@@ -70,8 +72,58 @@ module.exports = {
     }
   },
 
+  //Logout User
   logout: (req, res) => {
     req.session.destroy();
     res.redirect("/");
+  },
+
+  //Delete User
+  deleteUser: (req, res) => {
+    db.Users.destroy({
+      where: {
+        id: req.session.userLog.id,
+      },
+    }).then((user) => {
+      req.session.destroy();
+      res.redirect("/");
+    });
+  },
+
+  //Edit User
+  editUser: (req, res) => {
+    let errors = validationResult(req);
+    let id = req.params.id;
+
+    if (errors.isEmpty()) {
+      db.Users.update(
+        {
+          name: req.body.name,
+          email: req.body.email,
+          avatar:
+            req.file.filename == undefined
+              ? "https://media.istockphoto.com/id/1314335932/es/vector/icono-de-perfil-de-avatar-de-usuario-ilustraci%C3%B3n-vectorial-negro-sitio-web-o-bot%C3%B3n-de.jpg?s=170667a&w=0&k=20&c=nNFiT7OBVJxhuEZDPBwW2zeFvLoONwgl3Ibq1VmX200="
+              : req.file.filename,
+          password: bcrypt.hashSync(req.body.password, 10),
+        },
+        {
+          where: {
+            id: req.session.userLog.id,
+          },
+        }
+      ).then((user) => {
+        req.session.destroy();
+
+        res.redirect("/user/login");
+      });
+    } else {
+      db.User.findByPk(req.session.userLog.id).then((user) => {
+        res.render("profileEdit", {
+          errors: errors.array(),
+          old: req.body,
+          user,
+        });
+      });
+    }
   },
 };

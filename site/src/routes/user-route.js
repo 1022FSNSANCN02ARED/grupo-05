@@ -20,6 +20,17 @@ router.get("/profile", authMiddleware, userController.showProfile);
 //Create user
 router.post("/create", validationRegister, userController.createUser);
 
+//Edit user
+router.put(
+  "/edit/:id",
+  uploadFileAvatar.single("avatar"),
+  validationRegister,
+  userController.editUser
+);
+
+//Delete user
+router.delete("/deleteUser/:id", userController.deleteUser);
+
 //Login user
 router.post("/loged", validationLogin, userController.logedUser);
 

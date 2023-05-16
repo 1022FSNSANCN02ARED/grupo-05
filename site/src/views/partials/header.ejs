@@ -32,14 +32,18 @@
   </div>
   <div class="container-perfil">
     <span class="badge"></span>
-    <a href="user/login"><img src="/images/perfil.png" class="logo-perfil" /></a>
+    <a href="/user/login"
+      ><img src="/images/perfil.png" class="logo-perfil"
+    /></a>
   </div>
   <div class="container-carrito">
     <span class="badge"></span>
-    <a href="cart"><img src="/images/carrito.png" class="carrito" /></a>
+    <a href="/cart"><img src="/images/carrito.png" class="carrito" /></a>
   </div>
-  <div class="cerrar-sesion open-menu">
+  <form action="/user/logout" method="get" class="cerrar-sesion open-menu">
     <span class="badge"></span>
-    <a href="/"><img src="/images/salir.png" class="sesion-cerrar" /></a>
-  </div>
+    <button type="submit" style="background: 0; border: 0; padding: 0">
+      <img src="/images/salir.png" class="sesion-cerrar" />
+    </button>
+  </form>
 </header>

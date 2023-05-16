@@ -4,6 +4,7 @@
 @import url("menu-admin.css");
 @import url("cart.css");
 @import url("product.css");
+@import url("profile.css");
 
 :root {
   --darkblue: #0c6061;
@@ -166,6 +167,10 @@ body {
   width: 90%;
 }
 
+.w-40 {
+  width: 60%;
+}
+
 .f-size-1 {
   font-size: 1rem;
 }
@@ -202,7 +207,7 @@ img:hover {
 
 .color-label {
   color: #0000008b;
-  line-height: 45px;
+  line-height: 40px;
   font-size: 14px;
 }
 

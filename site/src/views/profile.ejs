@@ -3,18 +3,116 @@
   <%- include("./partials/head.ejs") %>
   <body>
     <%- include("./partials/header.ejs") %>
-    <main>
-      <section class="container-section justify-c-c text-align-c margin-1 padding-1 box-shadow image">
-          <h1 class="formulario__label texto-h2-color">Perfil</h1>
-          <img src="<%= user.avatar %>" class="w-22"/>
-          <h2 class="formulario__label texto-h2-color texto-h2">Nombre: <%= user.name %></h2>
-          <h2 class="formulario__label texto-h2-color texto-h2 padding-b">Email: <%= user.email %></h2>
-          <form action="/user/logout" method="get">
-            <button type="submit" class="formulario__btn">Cerrar Sesion</button>
-          </form>
-      </section>
-      
+    <main class="container-section flex  margin-1 padding-1 box-shadow image">
+      <div class="contenedor-perfil padding-1">
+        <h1 class="formulario__label font-40 padding-1">Perfil</h1>
+        <img src="<%= user.avatar %>" class="w-40 padding-1"/>
+        <h2 class="formulario__label texto-h2-color texto-h2 padding-1"><%= user.name %></h2>
+        <h2 class="formulario__label texto-h2-color texto-h2 padding-1"><%= user.email %></h2>
+        <form action="/user/logout" method="get" class="padding-1">
+          <button type="submit" class="formulario__btn">Cerrar Sesion</button>
+        </form>
+      </div>
+      <div class="contenedor-perfil-edicion padding-1">
+        <form  method="post" action="/user/edit" enctype="application/x-www-form-urlencoded" class="formulario" >
+          <h1 class="text-align-c  formulario__h1 font-40"> Editar Perfil </h1>
+          <% if (locals.errors) { %>
+            <div class="error__case flex">
+              <ul>
+                <% errors.forEach(error => { %>
+    
+                <li class="formulario__input-error-back">
+                  <i class="fa-solid fa-triangle-exclamation"></i> <%= error.msg %>
+                </li>
+    
+                <% }) %>
+              </ul>
+            </div>
+            <% } %>
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="name" class="formulario__label">Nombre y Apellido</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="name" id="name"
+              placeholder="<%= user.name %>" value="<%= locals.old
+              && old.name ? old.name : "" %>" />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              El nombre solo puede contener letras mayusculas y minusculas.
+            </p>
+          </div>
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="email" class="formulario__label"
+              >Correo Electrónico</label
+            >
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="email"
+              id="email" placeholder="<%= user.email %>" value="<%= locals.old
+              && old.email ? old.email : "" %>" />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              El correo solo puede contener letras, numeros, puntos, guiones y
+              guion bajo.
+            </p>
+          </div>
+          <!-- Grupo: Foto Perfil -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="file" class="formulario__label">Foto de perfil</label>
+            <div class="formulario__grupo-input">
+              <label for="image" class="margin-b-1 formulario__input color-label avatar-file">Imagen del Producto</label>
+              <input type="file" name="image" id="image" class="d-none" placeholder="Imagen del Producto"/>
+            </div>
+          </div>
+          <!-- Grupo: Contraseña -->
+          <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="password"
+                class="formulario__input"
+                name="password"
+                id="password"
+                placeholder="Escriba una nueva contraseña"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              La contraseña tiene que ser de 4 a 12 dígitos.
+            </p>
+          </div>
+          <!-- Grupo: Contraseña 2 -->
+          <div class="formulario__grupo" id="grupo__password2">
+            <label for="password2" class="formulario__label"
+              >Repetir Contraseña</label
+            >
+            <div class="formulario__grupo-input">
+              <input
+                type="password"
+                class="formulario__input"
+                name="password2"
+                id="password2"
+                placeholder="Vuelve a escribir la contraseña"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              Ambas contraseñas deben ser iguales.
+            </p>
+          </div>
+          <div class="formulario__mensaje" id="formulario__mensaje">
+          </div>
+          <div class="formulario__grupo formulario__grupo-btn-enviar margin-t margin-b">
+            <button type="submit" class="formulario__btn" name="aprobacion">
+              Guardar Cambios
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
     <%- include("./partials/footer.ejs") %>
+    <script src="/js/formulario.js"></script>
   </body>
 </html>

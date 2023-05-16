@@ -1,0 +1,13 @@
+.contenedor-perfil {
+    width: 40%;
+    text-align: center;
+}
+
+.contenedor-perfil-edicion {
+    width: 60%;
+}
+
+.font-40 {
+    font-size: 40px;
+    color: white;
+}

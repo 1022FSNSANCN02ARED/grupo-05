@@ -7,6 +7,7 @@ const validationRegister = require("../middlewares/validationRegister");
 const validationLogin = require("../middlewares/validationLogin");
 const authMiddleware = require("../middlewares/authMiddleware");
 const guestMiddleware = require("../middlewares/guetMiddleware");
+const validationAvatar = require("../middlewares/validationAvatar");
 
 /* MIDDLEWARES */
 const uploadFileAvatar = require("../middlewares/multerAvatar");
@@ -21,11 +22,14 @@ router.get("/profile", authMiddleware, userController.showProfile);
 router.post("/create", validationRegister, userController.createUser);
 
 //Edit user
+router.put("/edit/:id", validationRegister, userController.editUser);
+
+//Edit avatar
 router.put(
-  "/edit/:id",
+  "/editAvatar/:id",
   uploadFileAvatar.single("avatar"),
-  validationRegister,
-  userController.editUser
+  validationAvatar,
+  userController.editAvatar
 );
 
 //Delete user

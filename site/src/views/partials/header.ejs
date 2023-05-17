@@ -1,4 +1,5 @@
 <header class="container-header">
+  <!-- Burger menu -->
   <div class="container-burger">
     <img
       onclick="document.body.classList.toggle('open')"
@@ -7,9 +8,12 @@
     />
   </div>
 
+  <!-- Logo -->
   <div class="container-logo">
     <a href="/"><img src="/images/logonpc.png" class="logo" /></a>
   </div>
+
+  <!-- Search -->
   <div class="menu-items">
     <div class="menu-mobile">
       <div class="container-buscador">
@@ -25,21 +29,30 @@
       </div>
     </div>
   </div>
+
+  <!-- Menu admin -->
   <div class="administrador-menu open-menu">
     <div class="admin-menu">
       <a href="/admin" class="menu-a">Menu Admin</a>
     </div>
   </div>
+
   <div class="container-perfil">
     <span class="badge"></span>
     <a href="/user/login"
       ><img src="/images/perfil.png" class="logo-perfil"
     /></a>
   </div>
+
+  <!-- Cart -->
   <div class="container-carrito">
     <span class="badge"></span>
     <a href="/cart"><img src="/images/carrito.png" class="carrito" /></a>
   </div>
+
+  <!-- Perfil -->
+
+  <!-- Logout -->
   <form action="/user/logout" method="get" class="cerrar-sesion open-menu">
     <span class="badge"></span>
     <button type="submit" style="background: 0; border: 0; padding: 0">

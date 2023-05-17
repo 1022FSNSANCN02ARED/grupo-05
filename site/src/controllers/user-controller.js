@@ -52,9 +52,11 @@ module.exports = {
           if (bcrypt.compareSync(req.body.passwordLogin, user.password)) {
             req.session.userLog = user;
             let userLog = req.session.userLog;
+            //res.locals.adminLog = user.rol;
             if (req.body.recordame) {
-              res.cookie("recordame", userLog.email, { maxAge: 60000 });
+              res.cookie("recordame", userLog.email, { maxAge: 60000000 });
             }
+
             res.redirect("/user/profile");
           } else {
             res.render("login", {
@@ -100,10 +102,7 @@ module.exports = {
         {
           name: req.body.name,
           email: req.body.email,
-          avatar:
-            req.file.filename == undefined
-              ? "https://media.istockphoto.com/id/1314335932/es/vector/icono-de-perfil-de-avatar-de-usuario-ilustraci%C3%B3n-vectorial-negro-sitio-web-o-bot%C3%B3n-de.jpg?s=170667a&w=0&k=20&c=nNFiT7OBVJxhuEZDPBwW2zeFvLoONwgl3Ibq1VmX200="
-              : req.file.filename,
+
           password: bcrypt.hashSync(req.body.password, 10),
         },
         {
@@ -117,10 +116,39 @@ module.exports = {
         res.redirect("/user/login");
       });
     } else {
-      db.User.findByPk(req.session.userLog.id).then((user) => {
-        res.render("profileEdit", {
+      db.Users.findByPk(req.session.userLog.id).then((user) => {
+        res.render("profile", {
           errors: errors.array(),
           old: req.body,
+          user,
+        });
+      });
+    }
+  },
+
+  editAvatar: (req, res) => {
+    let avatarErrors = validationResult(req);
+    let id = req.params.id;
+
+    if (avatarErrors.isEmpty()) {
+      db.Users.update(
+        {
+          avatar: req.file.filename,
+        },
+        {
+          where: {
+            id: req.session.userLog.id,
+          },
+        }
+      ).then((user) => {
+        req.session.destroy();
+
+        res.redirect("/user/login");
+      });
+    } else {
+      db.Users.findByPk(req.session.userLog.id).then((user) => {
+        res.render("profile", {
+          avatarErrors: avatarErrors.array(),
           user,
         });
       });

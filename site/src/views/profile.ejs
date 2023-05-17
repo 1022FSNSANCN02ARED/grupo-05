@@ -7,6 +7,45 @@
       <div class="contenedor-perfil padding-1">
         <h1 class="formulario__label font-40 padding-1">Perfil</h1>
         <img src="<%= user.avatar %>" class="w-40 padding-1" />
+        <form
+          action="/user/editAvatar/<%= user.id %>?_method=PUT"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <% if (locals.avatarErrors) { %>
+          <div class="error__case flex">
+            <ul>
+              <% avatarErrors.forEach(error => { %>
+
+              <li class="formulario__input-error-back">
+                <i class="fa-solid fa-triangle-exclamation"></i> <%= error.msg
+                %>
+              </li>
+
+              <% }) %>
+            </ul>
+          </div>
+          <% } %>
+          <!-- Grupo: Foto Perfil -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="file" class="formulario__label">Foto de perfil</label>
+            <div class="formulario__grupo-input">
+              <label
+                for="avatar"
+                class="margin-b-1 formulario__input color-label avatar-file"
+                >Editar foto de Perfil</label
+              >
+              <input
+                type="file"
+                name="avatar"
+                id="avatar"
+                class="d-none"
+                placeholder="Imagen del Producto"
+              />
+            </div>
+          </div>
+          <button type="submit">Subir</button>
+        </form>
         <h2 class="formulario__label texto-h2-color texto-h2 padding-1">
           <%= user.name %>
         </h2>
@@ -28,7 +67,7 @@
         <form
           method="post"
           action="/user/edit/<%= user.id %>?_method=PUT"
-          enctype="multipart/form-data"
+          enctype="application/x-www-form-urlencoded"
           class="formulario"
         >
           <h1 class="text-align-c formulario__h1 font-40">Editar Perfil</h1>
@@ -52,9 +91,14 @@
               >Nombre y Apellido</label
             >
             <div class="formulario__grupo-input">
-              <input type="text" class="formulario__input" name="name" id="name"
-              placeholder="<%= user.name %>" value="<%= locals.old && old.name ?
-              old.name : "" %>" />
+              <input
+                type="text"
+                class="formulario__input"
+                name="name"
+                id="name"
+                placeholder="Ingrese su nuevo nombre.."
+                value="<%= user.name %>"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario__input-error">
@@ -67,9 +111,14 @@
               >Correo Electrónico</label
             >
             <div class="formulario__grupo-input">
-              <input type="email" class="formulario__input" name="email"
-              id="email" placeholder="<%= user.email %>" value="<%= locals.old
-              && old.email ? old.email : "" %>" />
+              <input
+                type="email"
+                class="formulario__input"
+                name="email"
+                id="email"
+                placeholder="Ingresa tu nuevo email.."
+                value="<%= user.email %>"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario__input-error">
@@ -77,24 +126,7 @@
               guion bajo.
             </p>
           </div>
-          <!-- Grupo: Foto Perfil -->
-          <div class="formulario__grupo" id="grupo__correo">
-            <label for="file" class="formulario__label">Foto de perfil</label>
-            <div class="formulario__grupo-input">
-              <label
-                for="avatar"
-                class="margin-b-1 formulario__input color-label avatar-file"
-                >Imagen del Producto</label
-              >
-              <input
-                type="file"
-                name="avatar"
-                id="avatar"
-                class="d-none"
-                placeholder="Imagen del Producto"
-              />
-            </div>
-          </div>
+
           <!-- Grupo: Contraseña -->
           <div class="formulario__grupo" id="grupo__password">
             <label for="password" class="formulario__label">Contraseña</label>

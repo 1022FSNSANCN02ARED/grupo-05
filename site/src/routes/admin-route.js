@@ -8,6 +8,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 const authAdmin = require("../middlewares/authAdmin");
 
 router.use(authMiddleware);
+
 router.use(authAdmin);
 
 router.get("/", adminController.showAdmin);

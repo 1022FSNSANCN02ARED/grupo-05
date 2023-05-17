@@ -59,3 +59,34 @@
     width: 50%;
     margin: 0 auto;
 }
+
+body {
+    background-color: aquamarine;
+}
+
+.contenedor-pp {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.contenedor-pp:hover .txt-pp {
+    display: block;
+}
+
+.img-pp {
+    width: 150px;
+    height:150px;
+}
+
+.txt-pp {
+    display: none;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+    color: White;
+    bottom: -18px;
+    background-color: rgba(0, 0, 0, 0.3);
+}

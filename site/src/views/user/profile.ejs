@@ -31,40 +31,41 @@
           <% } %>
           <!-- Grupo: Foto Perfil -->
           <div class="formulario__grupo" id="grupo__correo">
-            <label for="file" class="formulario__label">Foto de perfil</label>
-            <div class="formulario__grupo-input">
+            <div class="formulario__grupo-input-ft text-align-c">
               <label
                 for="avatar"
-                class="margin-b-1 formulario__input color-label avatar-file"
-                >Editar foto de Perfil</label
+                class="margin-b-1 formulario__input-ft color-label avatar-file"
+                >Subir Foto</label
               >
               <input
                 type="file"
                 name="avatar"
                 id="avatar"
-                class="d-none"
+                class="d-none input-ft"
                 placeholder="Imagen del Producto"
               />
+              <button type="submit" class="formulario__btn-ft avatar-file">Subir</button>
             </div>
           </div>
-          <button type="submit">Subir</button>
         </form>
-        <h2 class="formulario__label texto-h2-color texto-h2 padding-1">
+        <h2 class="formulario__label texto-h2-color texto-h2 ">
           <%= user.name %>
         </h2>
-        <h2 class="formulario__label texto-h2-color texto-h2 padding-1">
+        <h2 class="formulario__label texto-h2-color texto-h2 ">
           <%= user.email %>
         </h2>
-        <form action="/user/logout" method="get" class="padding-1">
-          <button type="submit" class="formulario__btn">Cerrar Sesion</button>
-        </form>
-        <form
-          action="/deleteUser/<%= user.id %>?_method=DELETE"
-          method="post"
-          class="padding-1"
-        >
-          <button type="submit" class="formulario__btn">Eliminar Cuenta</button>
-        </form>
+        <div class="contenedor-eliminar-cerrar">
+          <form action="/user/logout" method="get" class="contenedor-form-cse">
+            <button type="submit" class="formulario__btn-cs">Cerrar Sesion</button>
+          </form>
+          <form
+            action="/deleteUser/<%= user.id %>?_method=DELETE"
+            method="post"
+            class="contenedor-form-cse"
+          >
+            <button type="submit" class="formulario__btn-e">Eliminar Cuenta</button>
+          </form>
+        </div>
       </div>
       <div class="contenedor-perfil-edicion padding-1">
         <form

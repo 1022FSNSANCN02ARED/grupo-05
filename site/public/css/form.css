@@ -42,6 +42,74 @@
   padding: 0 40px 0 10px;
   transition: 0.3s ease all;
 }
+
+formulario__grupo-input-ft {
+  display: flex;
+}
+
+.formulario__input-ft {
+  width: 30%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  transition: 0.3s ease all;
+}
+
+.formulario__btn-ft {
+  height: 45px;
+  line-height: 25px;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  margin-bottom: 1%;
+}
+
+.contenedor-eliminar-cerrar {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.contenedor-form-cse {
+  width: 50%;
+}
+
+.formulario__btn-cs {
+  width: 90%;
+  height: 45px;
+  line-height: 25px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  margin-bottom: 1%;
+}
+
+.formulario__btn-e {
+  width: 90%;
+  height: 45px;
+  line-height: 25px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  margin-bottom: 1%;
+}
+
 .formulario__input__avatar {
   width: 70%;
   background: #fff;
@@ -159,7 +227,11 @@
 }
 
 .formulario__btn:hover,
-.formulario__btn-borrar:hover {
+.formulario__btn-ft:hover,
+.formulario__btn-cs:hover,
+.formulario__btn-e:hover,
+.formulario__btn-borrar:hover,
+.avatar-file:hover {
   box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
 }
 

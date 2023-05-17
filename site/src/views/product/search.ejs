@@ -12,12 +12,13 @@
       >
         <% found.forEach(game => { %>
         <a href="/product/showProduct/<%= game.id %>">
-          <article class="item bor-1">
+          <article class="item bor-1 contenedor-pp">
             <img
               src="<%= game.image %>"
               alt="<%= game.name %>"
-              class="maxw bor-1"
+              class="img-pp bor-1"
             />
+            <p class="txt-pp"><%= game.price %></p>
           </article>
         </a>
         <% }) %>

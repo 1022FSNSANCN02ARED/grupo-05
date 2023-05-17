@@ -277,6 +277,11 @@ h5 {
   color: white;
 }
 
+.avatar-file:hover {
+  background-color: #0c6061;
+  color: white;
+}
+
 .formulario button {
   border-radius: 5px;
   border: none;

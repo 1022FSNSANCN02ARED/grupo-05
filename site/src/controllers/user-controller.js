@@ -9,6 +9,11 @@ module.exports = {
     res.render("user/login");
   },
 
+  showAdminMenu: (req, res) => {
+  const isAdmin = req.session.userLog && req.session.userLog.rol === "admin"; // Verificar si el usuario ha iniciado sesión y tiene el rol de administrador
+  res.render("admin/menu-admin", { isAdmin });
+},
+
   showRegister: (req, res) => {
     res.render("user/register");
   },

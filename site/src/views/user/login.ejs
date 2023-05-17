@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("./partials/head.ejs") %>
+  <%- include("../partials/head.ejs") %>
   <body>
-    <%- include("./partials/header.ejs") %>
+    <%- include("../partials/header.ejs") %>
     <main class="container-formulario">
       <form
         method="post"
@@ -62,7 +62,7 @@
             Iniciar Sesion
           </button>
           <p class="text-align-c margin-b-1">Olvidaste tu contraseña?</p>
-          <div class="flex w-100 justify-c-c ">
+          <div class="flex w-100 justify-c-c">
             <button class="box-shadow formulario__btn">
               <i class="fa-brands fa-google"></i> Ingresa con Google
             </button>
@@ -73,17 +73,23 @@
         </div>
       </form>
       <div class="text-align-c">
-        <p class="text-align-c margin-b-1">No estas registrado? Ingresa aqui!</p>
-          <a href="/user/register" class="box-shadow w-100 margin-l text-align-c margin-b-1"><button
+        <p class="text-align-c margin-b-1">
+          No estas registrado? Ingresa aqui!
+        </p>
+        <a
+          href="/user/register"
+          class="box-shadow w-100 margin-l text-align-c margin-b-1"
+          ><button
             type="submit"
             class="formulario__btn text-align-c"
             name="submit"
             id="submit"
           >
             Registrarme
-          </button></a>
+          </button></a
+        >
       </div>
     </main>
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>

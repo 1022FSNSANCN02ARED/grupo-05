@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eliminar Producto</title>
   </head>
-  <%- include("./partials/head.ejs") %>
+  <%- include("../partials/head.ejs") %>
   <body>
-    <%- include("./partials/header.ejs") %>
+    <%- include("../partials/header.ejs") %>
   </body>
   <main>
-    <section class="container-menu-admin flex flex-direccion-c image box-shadow">
+    <section
+      class="container-menu-admin flex flex-direccion-c image box-shadow"
+    >
       <h1 class="text-align-c padding-1">Borrar Producto</h1>
       <form
         method="post"
@@ -20,7 +22,9 @@
         class="margin-b-1"
       >
         <div class="formulario formulario__grupo flex flex-direccion-c">
-          <label for="NombreProducto" class="formulario__label">Nombre del Producto</label>
+          <label for="NombreProducto" class="formulario__label"
+            >Nombre del Producto</label
+          >
           <input
             type="text"
             name="name"
@@ -29,7 +33,9 @@
             value="<%= product.name %>"
           />
 
-          <label for="DescripcionPdocuto" class="formulario__label">Descripcion del Producto</label>
+          <label for="DescripcionPdocuto" class="formulario__label"
+            >Descripcion del Producto</label
+          >
           <input
             type="textarea"
             name="description"
@@ -38,7 +44,9 @@
             value="<%= product.description %>"
           />
 
-          <label for="StockProducto" class="formulario__label">Stock del Producto</label>
+          <label for="StockProducto" class="formulario__label"
+            >Stock del Producto</label
+          >
           <input
             type="text"
             name="stock"
@@ -47,8 +55,8 @@
             value="<%= product.stock %>"
           />
 
-          <div class="flex justify-c  align-items-c gap">
-            <button type="submit" class="box-shadow  formulario__btn-borrar">
+          <div class="flex justify-c align-items-c gap">
+            <button type="submit" class="box-shadow formulario__btn-borrar">
               Borrar Producto
             </button>
           </div>

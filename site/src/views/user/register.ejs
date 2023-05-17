@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("./partials/head.ejs") %>
+  <%- include("../partials/head.ejs") %>
   <body>
-    <%- include("./partials/header.ejs") %>
+    <%- include("../partials/header.ejs") %>
     <main class="container-formulario">
       <form
         method="post"
@@ -40,7 +40,7 @@
             El nombre solo puede contener letras mayusculas y minusculas.
           </p>
         </div>
-        
+
         <!-- Grupo: Correo Electronico -->
         <div class="formulario__grupo" id="grupo__correo">
           <label for="email" class="formulario__label"
@@ -115,7 +115,7 @@
         </div>
       </form>
     </main>
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
     <script src="/js/formulario.js"></script>
   </body>
 </html>

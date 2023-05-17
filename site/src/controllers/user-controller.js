@@ -2,18 +2,19 @@ const db = require("../../database/models");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const path = require("path");
+const { Sequelize } = require("sequelize");
 
 module.exports = {
   showLogin: (req, res) => {
-    res.render("login");
+    res.render("user/login");
   },
 
   showRegister: (req, res) => {
-    res.render("register");
+    res.render("user/register");
   },
 
   showProfile: (req, res) => {
-    res.render("profile", { user: req.session.userLog });
+    res.render("user/profile", { user: req.session.userLog });
   },
 
   //Create User
@@ -30,7 +31,7 @@ module.exports = {
         res.redirect("/user/login");
       });
     } else {
-      res.render("register", {
+      res.render("user/register", {
         errors: errors.array(),
         old: req.body,
       });
@@ -70,7 +71,7 @@ module.exports = {
         }
       });
     } else {
-      res.render("login", { errors: errors.array() });
+      res.render("user/login", { errors: errors.array() });
     }
   },
 
@@ -133,7 +134,9 @@ module.exports = {
     if (avatarErrors.isEmpty()) {
       db.Users.update(
         {
-          avatar: req.file.filename,
+          avatar: Sequelize.literal(
+            `CONCAT('/images/avatars/', '${req.file.filename}')`
+          ),
         },
         {
           where: {

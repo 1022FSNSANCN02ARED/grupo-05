@@ -9,7 +9,7 @@ module.exports = {
       include: ["product"],
     });
 
-    res.render("cart", {
+    res.render("user/cart", {
       cart: products,
       totalPrice: products.reduce(
         (acc, products) => acc + products.product.price * products.amount,

@@ -22,7 +22,7 @@ app.listen("3001", () => {
 });
 
 /* Seteo de ejs */
-app.set("views", path.join(__dirname, "./views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 /* Ruta a public */

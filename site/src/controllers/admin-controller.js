@@ -1,20 +1,21 @@
 const db = require("../../database/models");
 const { validationResult } = require("express-validator");
+const { Sequelize } = require("sequelize");
 
 module.exports = {
   showAdmin: (req, res) => {
-    res.render("menu-admin");
+    res.render("admin/menu-admin");
   },
 
   showProductAdminEdit: (req, res) => {
     db.Product.findByPk(req.params.id).then((product) => {
-      res.render("editAdmin", { product });
+      res.render("admin/editAdmin", { product });
     });
   },
 
   showProductAdminDelete: (req, res) => {
     db.Product.findByPk(req.params.id).then((product) => {
-      res.render("deleteAdmin", { product });
+      res.render("admin/deleteAdmin", { product });
     });
   },
 
@@ -33,7 +34,7 @@ module.exports = {
         }
       });
 
-      res.render("searchEdit", { found });
+      res.render("admin/searchEdit", { found });
     });
   },
 
@@ -52,7 +53,7 @@ module.exports = {
         }
       });
 
-      res.render("searchDelete", { found });
+      res.render("admin/searchDelete", { found });
     });
   },
 
@@ -64,7 +65,9 @@ module.exports = {
       db.Product.create({
         awards: req.body.awards,
         description: req.body.description,
-        image: req.file.filename,
+        image: Sequelize.literal(
+          `CONCAT('/images/products/', '${req.file.filename}')`
+        ),
         name: req.body.name,
         price: req.body.price,
         stock: req.body.stock,
@@ -73,7 +76,7 @@ module.exports = {
         res.redirect("/admin");
       });
     } else {
-      res.render("menu-admin", { errors: errors.array(), old: req.body });
+      res.render("admin/menu-admin", { errors: errors.array(), old: req.body });
     }
   },
 
@@ -88,7 +91,9 @@ module.exports = {
         {
           awards: req.body.awards,
           description: req.body.description,
-          image: req.file.filename,
+          image: Sequelize.literal(
+            `CONCAT('/images/products/', '${req.file.filename}')`
+          ),
           name: req.body.name,
           price: req.body.price,
           stock: req.body.stock,
@@ -103,7 +108,7 @@ module.exports = {
       });
     } else {
       db.Product.findByPk(req.params.id).then((product) => {
-        res.render("editAdmin", {
+        res.render("admin/editAdmin", {
           errors: errors.array(),
           old: req.body,
           product,

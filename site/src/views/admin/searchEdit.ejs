@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %>
+  <head>
+    <%- include("../partials/head.ejs") %>
+  </head>
   <body>
-    <%- include('./partials/header.ejs') %>
+    <%- include("../partials/header.ejs") %>
     <main>
       <section
         class="category_container justify-c-c margin-1 box-shadow padding-1 image"
+        id="sectionSearch"
       >
-        <% category.product.forEach(game => { %>
-        <a href="/product/showProduct/<%= game.id %>">
+        <% found.forEach(game => { %>
+        <a href="/admin/showProductAdminEdit/<%= game.id %>">
           <article class="item bor-1">
             <img
               src="<%= game.image %>"
@@ -20,6 +23,6 @@
         <% }) %>
       </section>
     </main>
-    <%- include('./partials/footer.ejs')%>
+    <%- include("../partials/footer.ejs") %>
   </body>
 </html>

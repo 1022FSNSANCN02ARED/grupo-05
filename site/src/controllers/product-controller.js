@@ -3,13 +3,13 @@ const db = require("../../database/models");
 module.exports = {
   showProduct: (req, res) => {
     db.Product.findByPk(req.params.id).then((product) => {
-      res.render("product", { product });
+      res.render("product/product", { product });
     });
   },
 
   showAllProduct: (req, res) => {
     db.Product.findAll().then((found) => {
-      res.render("search", { found });
+      res.render("product/search", { found });
     });
   },
 
@@ -17,7 +17,7 @@ module.exports = {
     db.Category.findByPk(req.params.id, {
       include: [{ association: "product" }],
     }).then((category) => {
-      res.render("category", { category });
+      res.render("product/category", { category });
     });
   },
 
@@ -36,7 +36,7 @@ module.exports = {
         }
       });
 
-      res.render("search", { found });
+      res.render("product/search", { found });
     });
   },
 };

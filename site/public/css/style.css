@@ -69,6 +69,9 @@ body {
 .flex-direccion-c {
   flex-direction: column;
 }
+.flex-direccion-r {
+  flex-direction: row;
+}
 
 /* Margin */
 .margin-1 {
@@ -127,6 +130,15 @@ body {
 
 .bor-10 {
   border-radius: 20px;
+}
+
+.bor-20 {
+  border-radius: 20rem;
+}
+
+.bor-30 {
+  border-radius: 20rem;
+  width: 20rem;
 }
 
 .card {
@@ -315,8 +327,6 @@ h5 {
 .carrusel-item:hover {
   transform: scale(1.2);
 }
-
-
 
 @media (min-width: 481px) {
   /* tablet */

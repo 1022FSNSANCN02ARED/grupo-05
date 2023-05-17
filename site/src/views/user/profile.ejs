@@ -6,7 +6,10 @@
     <main class="container-section flex margin-1 padding-1 box-shadow image">
       <div class="contenedor-perfil padding-1">
         <h1 class="formulario__label font-40 padding-1">Perfil</h1>
-        <img src="<%= user.avatar %>" class="w-40 padding-1" />
+        <img
+          src="<%= user.avatar %>"
+          class="w-40 bor-20 padding-1 border__line"
+        />
         <form
           action="/user/editAvatar/<%= user.id %>?_method=PUT"
           method="post"

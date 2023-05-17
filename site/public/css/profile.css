@@ -1,14 +1,27 @@
 .contenedor-perfil {
-    width: 40%;
-    text-align: center;
+  width: 40%;
+  text-align: center;
 }
 
 .contenedor-perfil-edicion {
-    width: 60%;
+  width: 60%;
 }
 
 .font-40 {
-    font-size: 40px;
-    color: white;
+  font-size: 40px;
+  color: white;
 }
 
+.border__line {
+  border: 1px solid #404467;
+  transition: all 0.3s ease;
+}
+
+.border__line:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(8px 8px 4px #222);
+}
+
+.p__div {
+  padding: 1rem 0 0 0;
+}

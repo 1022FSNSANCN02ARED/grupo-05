@@ -1,0 +1,123 @@
+:root {
+  --darkblue: #0c6061;
+  --lightBlue: #0f7d7e;
+  --white: #fffdd1;
+  --secondary-color: #01d293;
+  --grey: #808191;
+  --dark-01: #181b3a;
+  --dark-02: #0b0c28;
+  --grad-01-bg: linear-gradient(#ef1c1c, #e1424e);
+  --grad-02-bg: linear-gradient(#01d293, #56c57a);
+  --grad-03-bg: linear-gradient(#5137fa, #725cff);
+  --grad-04-bg: linear-gradient(#006eff, #3c8af1);
+}
+
+.loader {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 140px;
+  background-image: linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0),
+    linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: 0 0, 40px 0, 80px 0, 120px 0;
+  animation: pgfill 1s linear infinite;
+}
+
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0),
+      linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
+  }
+  25% {
+    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#808191 20px, transparent 0),
+      linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
+  }
+  50% {
+    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0),
+      linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
+  }
+  75% {
+    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0),
+      linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
+  }
+  100% {
+    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0),
+      linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0);
+  }
+}
+
+/* ============ Estilos del header ================ */
+
+.bg-NPC {
+  background: var(--darkblue);
+}
+
+.links-NPC {
+  color: var(--white);
+}
+.links-NPC:hover {
+  color: var(--grey);
+}
+/* ============ Estilos del header ================ */
+
+/* ============ Estilos de las stats ================ */
+
+.bg-red {
+  background: var(--grad-01-bg);
+}
+.bg-blue {
+  background: var(--grad-02-bg);
+}
+.bg-green {
+  background: var(--grad-03-bg);
+}
+
+/* ============ Estilos de las stats ================ */
+
+/* ============ Estilos del sidebar ================ */
+
+.bg-NPC-dark {
+  background: var(--dark-02);
+  position: sticky;
+  top: 0;
+}
+
+.border-NPC:hover {
+  background: var(--dark-01);
+  border-bottom: 2px solid var(--darkblue);
+  padding-left: 2rem !important;
+  transition: all 300ms;
+}
+
+/* ============ Estilos del sidebar ================ */
+
+/* ============ Estilos de la big card ================ */
+
+.container-NPC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-NPC {
+  background: var(--lightBlue);
+}
+
+.max-h-NPC {
+  filter: brightness(0.7);
+}
+
+.max-h-NPC:hover {
+  box-shadow: 2px 2px 4px var(--white);
+  border-radius: 6px;
+  filter: brightness(1);
+  transition: all 300ms;
+}
+
+#root {
+  background: var(--dark-01);
+}
+
+/* ============ Estilos de la big card ================ */

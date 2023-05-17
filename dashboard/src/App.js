@@ -1,16 +1,18 @@
 import "./App.css";
-import Sidebar from "./components/side/Sidebar";
-import Topbar from "./components/header/Topbar";
-import MainContent from "./components/main/MainContent";
-import Footer from "./components/footer/Footerr";
+import React from "react";
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
+import MainContent from "./components/MainContent.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+import "./styles/style.css";
 
 function App() {
   return (
-    <div id="wrapper">
+    <div id="wrapper" className="color-NPC">
       <Sidebar />
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
-          <Topbar />
+          <Header />
           <MainContent />
         </div>
         <Footer />

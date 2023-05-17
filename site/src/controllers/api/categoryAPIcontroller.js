@@ -2,19 +2,18 @@ const { Category } = require("../../../database/models");
 const pageSize = 5;
 
 const categoryAPIController = {
-  list: (req, res) => {
-    Category.findAll().then((Category) => {
-      let respuesta = {
-        meta: {
-          status: 200,
-          total: Category.length,
-          url: "api/category",
-        },
-        data: Category,
-      };
-      res.json(respuesta);
+  list: async (req, res) => {
+    const { count, rows } = await Category.findAndCountAll();
+    res.json({
+      meta: {
+        status: 200,
+        total: count,
+        url: req.originalUrl,
+      },
+      data: rows,
     });
   },
+
   /* const page = Number(req.query.page) || 1;
   const offset = (page - 1) * pageSize; */
 

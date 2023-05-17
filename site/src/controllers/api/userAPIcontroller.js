@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const path = require("path"); */
 
 const { Users } = require("../../../database/models");
-const pageSize = 5;
+const pageSize = 10;
 
 const userAPIController = {
   list: async (req, res) => {

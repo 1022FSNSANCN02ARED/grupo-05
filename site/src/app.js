@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ secret: "Secreto" }));
+app.use(cors()); //habilita o restringe quienes puede acceder al servidor
 
 app.listen("3001", () => {
   console.log("Sv andando");

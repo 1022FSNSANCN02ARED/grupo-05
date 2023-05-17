@@ -10,9 +10,9 @@ module.exports = {
   },
 
   showAdminMenu: (req, res) => {
-  const isAdmin = req.session.userLog && req.session.userLog.rol === "admin"; // Verificar si el usuario ha iniciado sesión y tiene el rol de administrador
-  res.render("admin/menu-admin", { isAdmin });
-},
+    const isAdmin = req.session.userLog && req.session.userLog.rol === "admin"; // Verificar si el usuario ha iniciado sesión y tiene el rol de administrador
+    res.render("admin/menu-admin", { isAdmin });
+  },
 
   showRegister: (req, res) => {
     res.render("user/register");
@@ -65,12 +65,12 @@ module.exports = {
 
             res.redirect("/user/profile");
           } else {
-            res.render("login", {
+            res.render("user/login", {
               errors: [{ msg: "Contraseña incorrecta" }],
             });
           }
         } else {
-          res.render("login", {
+          res.render("user/login", {
             errors: [{ msg: "No se encuentra el usuario" }],
           });
         }

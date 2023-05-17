@@ -15,6 +15,15 @@
   text-align: center;
 }
 
+.container-footer h3 {
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.container-footer p {
+  font-size: 12px;
+}
+
 .redes ul li {
   display: inline-block;
   margin-right: 10px;

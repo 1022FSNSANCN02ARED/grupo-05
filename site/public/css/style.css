@@ -5,6 +5,7 @@
 @import url("cart.css");
 @import url("product.css");
 @import url("profile.css");
+@import url("search.css");
 
 :root {
   --darkblue: #0c6061;
@@ -28,6 +29,20 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.catalogo {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #222;
+  text-decoration: none;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.catalogo:hover {
+  filter: drop-shadow(8px 8px 4px #222);
+  color: #fffdd1;
 }
 
 .box-shadow {
@@ -202,8 +217,16 @@ body {
   flex-wrap: wrap;
 }
 
+img {
+  transition: all 0.3s ease-in-out;
+}
+
 img:hover {
   filter: brightness(1.35);
+}
+
+.estilo-destacadas {
+  transition: all 0.3s ease-in-out;
 }
 
 .estilo-destacadas:hover {
@@ -327,6 +350,10 @@ h5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.carrusel-item {
+  transition: all 0.3s ease-in-out;
 }
 
 .carrusel-item:hover {

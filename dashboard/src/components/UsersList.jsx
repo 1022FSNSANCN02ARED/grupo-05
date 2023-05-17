@@ -13,11 +13,11 @@ const UsersList = () => {
       .then((response) => response.json())
       .then((result) => {
         setUsers(result.data);
-        console.log("[USERS LIST] Cambió el estado");
       });
   };
 
   const deleteUser = (user) => {
+    /* pregunta */
     fetch(`http://localhost:3001/api/users/delete/${user.id}`, {
       method: "delete",
     }).then(() => {
@@ -32,7 +32,7 @@ const UsersList = () => {
           <th>Id</th>
           <th>Nombre</th>
           <th>Email</th>
-          <th>Ver / Borrar</th>
+          <th>Eliminar Usuario</th>
         </tr>
       </thead>
       <tbody>
@@ -47,12 +47,7 @@ const UsersList = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <Link to={`/users/${user.id}`}>
-                  <button className="btn text-dark">
-                    <i className="fas fa-eye"></i>
-                  </button>
-                </Link>
-                <button className="btn text-danger" onClick={() => deleteUser(user)}>
+                <button className="btn text-danger" type="button" onClick={() => deleteUser(user)}>
                   <i className="fas fa-trash"></i>
                 </button>
               </td>

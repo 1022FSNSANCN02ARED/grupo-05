@@ -15,7 +15,7 @@ function GameAbstract({ title, desc, img, url }) {
       </div>
       <p>{desc}</p>
       <a className="btn btn-danger" target="_blank" rel="noreferrer" href={url}>
-        View movie detail
+        Ver mas
       </a>
     </>
   );

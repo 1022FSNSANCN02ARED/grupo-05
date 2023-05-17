@@ -8,6 +8,7 @@ const myStats = [
     value: "21",
     color: "red",
     icon: "fa-users",
+    url: "/users",
   },
   {
     id: 3,
@@ -15,6 +16,7 @@ const myStats = [
     value: "49",
     color: "blue",
     icon: "fa-gamepad",
+    url: "/games",
   },
   {
     id: 1,
@@ -22,6 +24,7 @@ const myStats = [
     value: "79",
     color: "green",
     icon: "fa-award",
+    url: "/category",
   },
 ];
 

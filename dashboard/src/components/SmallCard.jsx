@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function SmallCard({ title, value, icon, color }) {
+function SmallCard({ title, value, icon, color, url }) {
   return (
-    <div className="col-md-4 mb-4">
+    <Link to={url} className="col-md-4 mb-4">
       <div className={`card shadow h-100 py-2 bg-${color}`}>
         <div className="card-body">
           <div className="row no-gutters align-items-center">
@@ -16,7 +17,7 @@ function SmallCard({ title, value, icon, color }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

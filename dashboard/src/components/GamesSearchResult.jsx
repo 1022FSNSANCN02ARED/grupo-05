@@ -1,28 +1,24 @@
-function MoviesSearchResult({ movies }) {
-  // 1. estoy esperando para hacer una búsqueda; movies = null
-  if (!movies) {
+function GamesSearchResult({ games }) {
+  // 1. estoy esperando para hacer una búsqueda; games = null
+  if (!games) {
     return "Realizá tu búsqueda!";
   }
 
-  // 2. se realizó la búsqueda y tengo resultados; movies = [ con elementos ]
-  if (movies.length === 0) {
+  // 2. se realizó la búsqueda y tengo resultados; games = [ con elementos ]
+  if (games.length === 0) {
     return "No se encontraron resultados";
   }
 
-  // 3. se realizó la búsqueda y no tengo resultados; movies = []
+  // 3. se realizó la búsqueda y no tengo resultados; games = []
   return (
     <ul className="d-flex flex-wrap">
-      {movies.map((movie) => {
+      {games.map((game) => {
         return (
-          <li key={movie.imdbID} className="card" style={{ width: "18rem" }}>
-            <img
-              src={movie.Poster}
-              alt={`Poster de ${movie.Title}`}
-              className="card-img-top"
-            />
+          <li key={game.id} className="card" style={{ width: "18rem" }}>
+            <img src={game.image} alt={`Poster de ${game.name}`} className="card-img-top" />
             <div className="card-body">
-              <h2>{movie.Title}</h2>
-              <p>Year: {movie.Year}</p>
+              <h2>{game.name}</h2>
+              <p>Precio: {game.price}</p>
             </div>
           </li>
         );
@@ -31,4 +27,4 @@ function MoviesSearchResult({ movies }) {
   );
 }
 
-export default MoviesSearchResult;
+export default GamesSearchResult;

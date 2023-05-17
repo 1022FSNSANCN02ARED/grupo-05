@@ -31,20 +31,20 @@
       linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
   }
   25% {
-    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#808191 20px, transparent 0),
+    background-image: linear-gradient(#0c6061 20px, transparent 0), linear-gradient(#808191 20px, transparent 0),
       linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
   }
   50% {
-    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0),
+    background-image: linear-gradient(#0c6061 20px, transparent 0), linear-gradient(#0c6061 20px, transparent 0),
       linear-gradient(#808191 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
   }
   75% {
-    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0),
-      linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
+    background-image: linear-gradient(#0c6061 20px, transparent 0), linear-gradient(#0c6061 20px, transparent 0),
+      linear-gradient(#0c6061 20px, transparent 0), linear-gradient(#808191 20px, transparent 0);
   }
   100% {
-    background-image: linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0),
-      linear-gradient(#ef1c1c 20px, transparent 0), linear-gradient(#ef1c1c 20px, transparent 0);
+    background-image: linear-gradient(#0c6061 20px, transparent 0), linear-gradient(#0c6061 20px, transparent 0),
+      linear-gradient(#0c6061 20px, transparent 0), linear-gradient(#0c6061 20px, transparent 0);
   }
 }
 

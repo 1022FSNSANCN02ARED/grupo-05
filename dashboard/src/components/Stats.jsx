@@ -5,7 +5,7 @@ const myStats = [
   {
     id: 2,
     title: "Total de Usuarios",
-    value: "21",
+    value: "107",
     color: "red",
     icon: "fa-users",
     url: "/users",
@@ -13,7 +13,7 @@ const myStats = [
   {
     id: 3,
     title: "Juegos Disponibles",
-    value: "49",
+    value: "45",
     color: "blue",
     icon: "fa-gamepad",
     url: "/games",
@@ -21,7 +21,7 @@ const myStats = [
   {
     id: 1,
     title: "Categorías",
-    value: "79",
+    value: "4",
     color: "green",
     icon: "fa-folder-open",
     url: "/category",

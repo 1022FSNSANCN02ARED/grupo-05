@@ -23,7 +23,7 @@ const myStats = [
     title: "Categorías",
     value: "79",
     color: "green",
-    icon: "fa-award",
+    icon: "fa-folder-open",
     url: "/category",
   },
 ];

@@ -4,16 +4,16 @@ const bcrypt = require("bcryptjs");
 const path = require("path"); */
 
 const { Users } = require("../../../database/models");
-const pageSize = 10;
+/* const pageSize = 10; */
 
 const userAPIController = {
   list: async (req, res) => {
-    const page = Number(req.query.page) || 1;
-    const offset = (page - 1) * pageSize;
+    /*     const page = Number(req.query.page) || 1;
+    const offset = (page - 1) * pageSize; */
 
     const { count, rows } = await Users.findAndCountAll({
-      limit: pageSize,
-      offset: offset,
+      /*       limit: pageSize,
+      offset: offset, */
     });
     res.json({
       meta: {
@@ -33,6 +33,17 @@ const userAPIController = {
         url: req.originalUrl,
       },
       data: user,
+    });
+  },
+
+  userDelete: (req, res) => {
+    console.log(req.params);
+    Users.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then((user) => {
+      res.json("Lito borrado");
     });
   },
 };

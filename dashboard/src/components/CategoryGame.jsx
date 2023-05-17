@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from "react";
 import GameItem from "./GameItem.jsx";
 import BigCard from "./BigCard.jsx";
+import { useParams } from "react-router-dom";
+
 import "../styles/style.css";
 
-const GamesList = () => {
+const CategoryGame = () => {
   const [games, setGames] = useState([]);
+  const { id } = useParams();
+
+  console.log(id);
 
   useEffect(() => {
     fetch("http://localhost:3001/api/products")
       .then((response) => response.json())
       .then((result) => {
-        setGames(result.data);
+        const newList = result.data.filter((game) => {
+          return game.categoryId == id;
+        });
+
+        setGames(newList);
       });
   }, []);
 
@@ -31,4 +40,4 @@ const GamesList = () => {
   );
 };
 
-export default GamesList;
+export default CategoryGame;

@@ -5,6 +5,7 @@ const session = require("express-session");
 const { cookie } = require("express-validator");
 const cookieParser = require("cookie-parser");
 const recordameMiddleware = require("./middlewares/recordameMiddleware");
+const cors = require("cors");
 
 const mainRoute = require("./routes/main-route");
 

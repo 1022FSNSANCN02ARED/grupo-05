@@ -9,12 +9,8 @@ function GOTY() {
       <GameAbstract
         img={imgGOTY}
         title="Elden Ring"
-        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-        consequatur explicabo officia inventore libero veritatis iure voluptate
-        reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem
-        culpa citationem ratione aperiam voluptatum non corporis ratione aperiam
-        voluptatum quae dolorem culpa ratione aperiam voluptatum?"
-        url="/"
+        desc="Descripción: Videojuego de rol de acción desarrollado por FromSoftware en colaboración con el escritor George R.R. Martin. El juego se ambienta en un mundo de fantasía oscuro y promete un mundo abierto, una jugabilidad desafiante y una historia épica."
+        url="/games/20"
       />
     </BigCard>
   );

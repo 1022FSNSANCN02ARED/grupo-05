@@ -11,7 +11,7 @@
             <table class="table table-responsive-md mb-0">
               <thead>
                 <tr>
-                  <th style="width: 50px">
+                  <th style="width: 30px" class="th-id">
                     <strong>#</strong>
                   </th>
                   <th class="th-lg">
@@ -27,7 +27,7 @@
                 </tr>
                 <% cart.forEach(item => { %>
                 <tr>
-                  <th style="width: 50px">
+                  <th style="width: 50px" class="th-id">
                     <strong><%= item.product.id %></strong>
                   </th>
                   <th class="th-lg">
@@ -50,17 +50,30 @@
                     >
                       <button type="submit" class="botones-mm">+</button>
                     </form>
+                    <form
+                      class="delete__cart"
+                      action="/cart/clearProduct/<%= item.product.id %>?_method=delete"
+                      method="post"
+                    >
+                      <button type="submit" class="btn__cart">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </form>
                   </th>
-                  <th>
+                  <th class="mobile">
                     <form
                       action="/cart/clearProduct/<%= item.product.id %>?_method=delete"
                       method="post"
                     >
-                      <button type="submit" class="boton-e">Eliminar</button>
+                      <button type="submit" class="btn__cart">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
                     </form>
                   </th>
+
                   <th style="width: 50px"></th>
                 </tr>
+
                 <% }) %>
               </thead>
               <tbody class="cartRows"></tbody>
@@ -71,7 +84,11 @@
                 <span class="totalAmount">$ <%= totalPrice %></span>
               </h2>
             </div>
-            <form action="/cart/clearCart?_method=delete" method="post">
+            <form
+              class="clear__cart"
+              action="/cart/clearCart?_method=delete"
+              method="post"
+            >
               <button type="submit" class="boton-vc">Vaciar Carrito</button>
             </form>
           </div>

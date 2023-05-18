@@ -1,4 +1,4 @@
-.container-header{
+.container-header {
   width: 100%;
   display: flex;
   align-items: center;
@@ -12,14 +12,14 @@
   cursor: pointer;
 }
 
-.container-logo{
+.container-logo {
   width: 10%;
   height: 90px;
   padding-top: 5px;
   margin-left: 30px;
 }
 
-.logo{
+.logo {
   width: 80px;
   height: 80px;
 }
@@ -39,7 +39,7 @@
   position: relative;
 }
 
-.input-search{
+.input-search {
   width: 80%;
   height: 50px;
   margin-left: 10%;
@@ -49,9 +49,10 @@
   color: #63717f;
   padding-left: 45px;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-.icon{
+.icon {
   position: absolute;
   margin-left: 13%;
   z-index: 1;
@@ -59,8 +60,10 @@
   line-height: 50px;
 }
 
-.input-search:hover, .input-search:focus, .input-search:active{
-  outline:none;
+.input-search:hover,
+.input-search:focus,
+.input-search:active {
+  outline: none;
   background: #ffffff;
 }
 
@@ -76,12 +79,13 @@
   text-align: center;
 }
 
-.ingreso:hover, .registro:hover, 
+.ingreso:hover,
+.registro:hover,
 .container-carrito:hover,
 .container-perfil:hover,
 .administrador-menu:hover,
 .cerrar-sesion:hover {
-  background-color: #0c6061; 
+  background-color: #0c6061;
 }
 
 .registro {
@@ -97,12 +101,15 @@
   line-height: 90px;
 }
 
-.container-carrito, .container-perfil,
-.administrador-menu, .cerrar-sesion {
+.container-carrito,
+.container-perfil,
+.administrador-menu,
+.cerrar-sesion {
   width: 10%;
   height: 90px;
   text-align: center;
   color: white;
+  transition: all 0.3s ease;
 }
 
 .carrito {
@@ -113,10 +120,10 @@
 }
 
 .logo-perfil {
-    width: 35px;
-    height: 35px;
-    color: white;
-    margin-top: 26px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  margin-top: 26px;
 }
 
 .sesion-cerrar {
@@ -134,7 +141,7 @@
 
   .container-burger {
     display: block;
-    width: calc((100%)/3);
+    width: calc((100%) / 3);
     text-align: center;
   }
 
@@ -173,27 +180,25 @@
     flex-direction: column;
   }
 
-  .registro, .ingreso {
+  .registro,
+  .ingreso {
     width: 100%;
     text-align: start;
     padding-left: 10%;
   }
 
   .container-logo {
-    width: calc((100%)/3);
+    width: calc((100%) / 3);
     text-align: center;
   }
 
   .container-carrito {
-    width: calc((100%)/3);
+    width: calc((100%) / 3);
     text-align: center;
   }
-
-
 }
 
 @media (max-width: 769px) {
-  
 }
 
 body.open .menu-items {

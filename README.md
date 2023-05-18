@@ -65,6 +65,12 @@ De STEAM la posibilidad de hacer regalos a otros usuarios. Muchas veces queremos
 $ git clone https://github.com/1022FSNSANCN02ARED/grupo-05.git
 ```
 
+- Muevete a site -
+
+```
+$ cd site
+```
+
 - Instala los paquetes -
 
 ```
@@ -75,4 +81,26 @@ $ npm install
 
 ```
 $ npm run dev
+```
+
+- El servidor de express funciona en el puerto 3001-
+
+### Abres otra terminal
+
+- Muevete a dashboard -
+
+```
+$ cd dashboard
+```
+
+- Instala los paquetes -
+
+```
+$ npm install
+```
+
+- Enciende el Servidor -
+
+```
+$ npm start
 ```

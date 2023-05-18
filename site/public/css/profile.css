@@ -26,5 +26,14 @@
   padding: 1rem 0 0 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 915px) {
+  .container-section {
+    flex-direction: column;
+  }
+  .contenedor-perfil {
+    width: 100%;
+  }
+  .contenedor-perfil-edicion {
+    width: 100%;
+  }
 }
